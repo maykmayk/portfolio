@@ -1,0 +1,193 @@
+@font-face {
+    font-family: "Nueue Haas";
+    src: url('/asset/font/NeueHaasDisplay-Roman.ttf');
+}
+@font-face {
+    font-family: "Nueue Haas Medium";
+    src: url('/asset/font/NeueHaasDisplay-Mediu.ttf');
+}
+
+.arrow {
+    height: 17px;
+    transform:rotateX(180deg)
+}
+
+.body {
+    font-family: "Nueue Haas";
+    background-color: #EFEFEF;
+}
+
+.box{
+    height: 20%;
+    padding-left: 25px;
+}
+
+.divider{
+    height: 40px;
+}
+
+.dividerSolid{
+    height: 2.5px;
+    background-color: #090909;
+    border-radius: 10px;
+}
+
+.get-touch{
+    font-size: 15px;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.image{
+    border-radius: 999px 999px 0 0;
+    object-fit: cover;
+    height: 100%;
+}
+
+li {
+    float: right;
+    display: block;
+    color: #090909;
+    text-align: center;
+    padding: 25px 16px;
+    text-decoration: none;
+}
+
+.link {
+    color: #a4a4a4;
+    text-decoration: underline;
+}
+
+.logo {
+    padding-left: 25px;
+    width: 60px;
+}
+
+.navBar {
+    height: 70px;
+}
+
+.owl-carousel .owl-item .mini-logo {
+    mix-blend-mode: difference;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 2vmax;
+}
+
+.rect{
+    height: 60vh;
+    background-color: aqua;
+    width: 100%;
+    border-radius: 999px 999px 0 0;
+    z-index: 0;
+}
+
+.title {
+    padding: 25px;
+}
+
+.textAbout{
+    margin-top: 40px;
+    font-size: 25px;
+    line-height: 35px;
+}
+
+.textValues{
+    font-size: 25px;
+    line-height: 35px;
+    max-width: 70%;
+    margin-top: 7px;
+}
+
+.num{
+    font-size: 25px;
+    line-height: 35px;
+    max-width: 70%;
+    margin-top: 7px;
+    font-family:"Nueue Haas Medium"; 
+}
+
+.sectionTitle{
+    font-family:"Nueue Haas Medium"; 
+    font-size: 60px;
+    line-height: 65px;
+}
+
+.seeWorks {
+    margin-top:10px;
+    margin-right: 20px;
+    text-align: end;
+    font-size: 15px;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.side-title{
+    font-size: 17px;
+}
+
+.spanRect{
+    width: 120px;
+    vertical-align:-10%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* open menu */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #EFEFEF;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 20px;
+    top: 15px;
+    right: 35px;
+    }
+  }
