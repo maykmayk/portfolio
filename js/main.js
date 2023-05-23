@@ -1,7 +1,6 @@
 $(document).ready(function(){
     var owl = $('.owl-carousel');
     owl.owlCarousel({
-        lazyLoad:true,
         items: 6,
         loop:true,
         margin: 10,
