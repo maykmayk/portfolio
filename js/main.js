@@ -23,8 +23,7 @@ $(document).ready(function(){
             992: {
                 items:6,
             },
-
-        }
+        },
     });
 });
 
