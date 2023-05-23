@@ -19,6 +19,22 @@ body {
     overflow-x: hidden;
 }
 
+li {
+    float: right;
+    display: block;
+    color: #090909;
+    text-align: center;
+    padding: 25px 16px;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
 .arrow {
     height: 17px;
     transform:rotateX(180deg)
@@ -71,6 +87,7 @@ body {
 .dividerSolid2{
     height: 1.5px;
     background-color: #09090920;
+    mix-blend-mode: difference;
 }
 
 .footerTitle{
@@ -98,15 +115,6 @@ body {
     border-radius: 999px 999px 0 0;
     object-fit: cover;
     height: 100%;
-}
-
-li {
-    float: right;
-    display: block;
-    color: #090909;
-    text-align: center;
-    padding: 25px 16px;
-    text-decoration: none;
 }
 
 .link {
@@ -219,11 +227,11 @@ li {
     vertical-align:-10%;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+@media screen and (max-width: 767px) {
+    .leftClient{
+        text-align: left;
+        margin-left: 25px;
+    }
 }
 
 /* open menu */
@@ -300,10 +308,3 @@ ul {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
-
-@media screen and (max-width: 767px) {
-    .leftClient{
-        text-align: left;
-        margin-left: 25px;
-    }
-}
