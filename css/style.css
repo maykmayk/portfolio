@@ -7,6 +7,10 @@
     src: url("../asset/font/NeueHaasDisplay-Mediu.ttf");
 }
 
+::selection {
+    background: #F7D060;
+}
+
 a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
@@ -68,6 +72,7 @@ ul {
 
 .cardSub{
     font-size: 10px;
+    text-align: center;
 }
 
 .divider{
@@ -247,6 +252,13 @@ ul {
 .spanRectSub{
     width: 70px;
     vertical-align:-20%;
+}
+
+.subWork{
+    font-size: 15px;
+    line-height: 35px;
+    text-align: center;
+    max-width: 100%;
 }
 
 .underTitle{
