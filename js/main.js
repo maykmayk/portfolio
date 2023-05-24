@@ -33,3 +33,16 @@ function openNav() {
 function closeNav() {
     document.getElementById("myNav").style.width = "0%";
   }
+
+  var current = 0;
+  var icons = ['../asset/images/favicon1.ico', '../asset/images/favicon2.ico', '../asset/images/favicon3.ico', '../asset/images/favicon4.ico'];
+  // Every 2 seconds, switch your icon
+  setInterval(function () {
+      // Determine the next icon
+      var icon = (++current % icons.length);
+      // Grab the URL to use
+      var url = icons[icon];
+      // Update your elements
+      document.getElementById('icon-a').href = url;
+      document.getElementById('icon-b').href = url;
+  }, 2000);
