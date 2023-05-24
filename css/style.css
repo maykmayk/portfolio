@@ -244,6 +244,11 @@ ul {
     vertical-align:-10%;
 }
 
+.spanRectSub{
+    width: 70px;
+    vertical-align:-20%;
+}
+
 .underTitle{
     font-size: 12px;
 }
