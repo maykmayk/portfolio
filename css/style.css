@@ -117,6 +117,11 @@ ul {
     height: 100%;
 }
 
+.little{
+    font-size: 15px;
+    text-align: end;
+}
+
 .link {
     color: #a4a4a4;
     text-decoration: underline;
@@ -131,12 +136,24 @@ ul {
     width: 100%;
 }
 
+.nameWork{
+    font-family:"Nueue Haas Medium"; 
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    max-width: 100%;
+}
+
 .num{
     font-size: 25px;
     line-height: 35px;
     max-width: 70%;
     margin-top: 7px;
     font-family:"Nueue Haas Medium"; 
+}
+
+.magin-left{
+    margin-left: 25px;
 }
 
 .navBar {
@@ -225,6 +242,22 @@ ul {
 .spanRect{
     width: 120px;
     vertical-align:-10%;
+}
+
+.underTitle{
+    font-size: 12px;
+}
+
+.workContainer{
+    width: 100%;
+    height: 30vh;
+}
+
+.workImg{
+    border-radius: 10px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 @media screen and (max-width: 767px) {
