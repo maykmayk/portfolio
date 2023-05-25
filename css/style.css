@@ -318,6 +318,11 @@ ul {
         text-align: left;
         margin-left: 25px;
     }
+    .titleWorkPage{
+        font-size: 50px;
+        font-family:"Nueue Haas Medium"; 
+        line-height: 80%;
+    }
 }
 
 /* open menu */
