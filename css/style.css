@@ -110,10 +110,24 @@ ul {
     width: 5%;
 }
 
+.galleryImg{
+    object-fit: cover;
+    width: 100%;
+    height: 50vh;
+    border-radius: 10px;
+}
+
 .get-touch{
     font-size: 15px;
     align-self: flex-end;
     text-align: right;
+}
+
+.headerImgWork{
+    object-fit: cover;
+    width: 100%;
+    height: 50vh;
+    border-radius: 15px;
 }
 
 .image{
@@ -183,6 +197,11 @@ ul {
     width: 2vmax;
 }
 
+.padding{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
 .portrait{
     width:100%;
     height:100%;
@@ -206,6 +225,12 @@ ul {
 
 .title {
     padding: 25px;
+}
+
+.titleWorkPage{
+    font-size: 100px;
+    font-family:"Nueue Haas Medium"; 
+    line-height: 80%;
 }
 
 .textAbout{
@@ -242,6 +267,17 @@ ul {
 
 .side-title{
     font-size: 17px;
+}
+
+.sideWorkTitle{
+    font-family:"Nueue Haas Medium"; 
+    line-height: 99%;
+    font-size: 50px;
+    max-width: 80%;
+}
+.sideWorkText{
+    font-size: 15px;
+    max-width: 80%;
 }
 
 .spanRect{

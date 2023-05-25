@@ -35,7 +35,7 @@ function closeNav() {
   }
 
   var current = 0;
-  var icons = ['../asset/images/favicon1.ico', '../asset/images/favicon2.ico', '../asset/images/favicon3.ico', '../asset/images/favicon4.ico'];
+  var icons = ['../asset/images/favicon/favicon1.ico', '../asset/images/favicon/favicon2.ico', '../asset/images/favicon/favicon3.ico', '../asset/images/favicon/favicon4.ico'];
   // Every 2 seconds, switch your icon
   setInterval(function () {
       // Determine the next icon
