@@ -45,7 +45,7 @@ ul {
 }
 
 .aboutSection{
-    height: 70%;
+    height: 50%;
 }
 
 
@@ -231,7 +231,6 @@ ul {
 .titleWorkPage{
     font-size: 100px;
     font-family:"Nueue Haas Medium"; 
-    line-height: 80%;
 }
 
 .textAbout{

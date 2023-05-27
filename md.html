@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./lib/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./lib/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link id="icon-a" rel="shortcut icon" type="image/png" href="./asset/images/favicon.ico"/>
+    <link id="icon-b" rel="shortcut icon" type="image/png" href="./asset/images/favicon.ico"/>
+    <title>Michele de Vita - Portfolio</title>
+</head>
+<body>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="./works.html">Works</a>
+          <a href="../index.html">About</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    <nav class="navBar d-flex justify-content-between align-items-center">
+        <a href="./index.html"><img src="./asset/images/logo.png" class="logo"></a>
+        <ul class="elements">
+            <li class="d-block d-md-none"><img src="./asset/images/menu.svg" onclick="openNav()"></li>
+            <li class="d-none d-md-block"><a href="#">Contact</a></li>
+            <li class="d-none d-md-block"><a href="../index.html">About</a></li>
+            <li class="d-none d-md-block"><a href="./works.html">Works</a></li>
+        </ul>
+    </nav>
+
+    <div class="d-flex justify-content-center">
+        <div class="titleWorkPage lh-1">
+            A Magnificent Desolation
+        </div>
+    </div>
+    <div class="d-flex justify-content-center subWork mb-5">
+        Cinematic Short Film
+    </div>
+
+
+    <div class="row padding mb-5">
+        <div class="col-12">
+            <img src="./asset/images/works/magnificent Desolation/mdCover.png" class="headerImgWork">
+        </div>
+    </div>
+
+    <div class="padding row mb-5">
+        <div class="col-12 col-md-6">
+            <div class="sideWorkTitle">
+                "... we missed the most important thing: <br>Perseverance"
+            </div>
+            <div class="fs-6 hover-underline-animation mb-4"><a href="https://www.behance.net/mayke">
+                See more...<img src="./asset/images/arrow-down-right.svg" class="arrow" draggable="false"></a>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="sideWorkText">
+                A Magnificent Desolation is a film who celebrates the values that have made space exploration possible: the human spirit of curiosity, determination, and exploration. It reminds us of the power of innovation, collaboration, and risk-taking to achieve the seemingly impossible. It invites us to dream big, push boundaries, and reach for the stars. The film is a full sensory experience that evokes wonder, awe, and inspiration. It is a call to action to pursue our passions and to always strive for new horizons. This short cinematic film is more than just a story about space exploration; it's a celebration of the values that have made it possible. It is a reminder that humanity has an inherent desire to explore and to push the boundaries of what is possible.
+            </div>
+        </div>
+    </div>
+
+<!-- gallery -->
+<div class="d-flex justify-content-center mb-4">
+    Hover to play
+</div>
+<div class="padding row mb-4">
+        <video src="./asset/images/works/MagnDes.mp4" type="video/mp4" loop class="hover-to-play w-100">
+        </video>
+</div>
+<div class="d-flex justify-content-center">
+    Hover to play
+</div>
+<!-- end gallery -->
+    <div class="dividerSection"></div>
+
+    <footer>
+        <div class="row p-0 noMarg">
+            <div class="col-1 col-md-2"></div>
+            <div class="col-0 col-md-8 d-flex aligns-items-center justify-content-center row mb-4">
+                <div class="footerTitle mb-2">Disruptive. Visionary. Strategic.</div>
+                <div class="footerText">If you have a potential project or and think I'd be the ideal partner to bring it to life, please get in touch at <span class="link"><a href="mailto:indirizzo@email.com?subject=Oggetto%20del%20messaggio">mvitade@gmail.com</a></span>. I'd love to hear from you!
+                </div>
+                <div class="footerText mb-3">No cookies over there. Your free to go 👋
+                </div>
+                <div>
+                    <a href="./index.html"><img class="footerLogo mx-auto d-block" src="./asset/images/logo.png"></a>
+                </div>
+            </div>
+            <div class="col-1 col-md-2"></div>
+        </div>
+        <div class="dividerSolid2 mb-4"></div>
+        <div class="row mb-4">
+            <div class="col2"></div>
+            <div class="col8">
+                <div class="footerText">
+                    © 2023 Michele de Vita. All Rights Reserved. 
+                </div>
+            </div>
+            <div class="col2"></div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <script src="./lib/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
