@@ -1,10 +1,10 @@
 const _app = {}
 
-_app.openNav = () => {
+function openNav() {
     document.getElementById("myNav").style.width = "100%";
 }
   
-_app.closeNav = () => {
+function closeNav() {
     document.getElementById("myNav").style.width = "0%";
 }
 
@@ -43,9 +43,27 @@ _app.owlCarousel = () => {
         },
         1000:{
             items:5,
-        }
+        },
+        1200:{
+            items:6,
+        },
+        1500:{
+          items:7,
+      }
       }
     });
+  });
+
+  $('.owl-carousel').on('changed.owl.carousel', function(event) {
+    var currentItem = event.item.index;
+    var animatedImage = $('.owl-item').eq(currentItem).find('.animated-image');
+  
+    // Anima l'immagine in base alla direzione di scorrimento
+    if (event.relatedTarget.direction == 'left') {
+      animatedImage.css('transform', 'translateZ(-50px)');
+    } else {
+      animatedImage.css('transform', 'translateZ(50px)');
+    }
   });
 }
 
