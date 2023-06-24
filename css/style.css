@@ -6,6 +6,10 @@
     font-family: "Nueue Haas Medium";
     src: url("../asset/font/NeueHaasDisplay-Mediu.ttf");
 }
+@font-face {
+    font-family: "Editorial Reg";
+    src: url("../asset/font/PPEditorialNew-Regular.otf");
+}
 
 ::selection {
     background: #F7D060;
@@ -230,7 +234,8 @@ ul {
 
 .titleWorkPage{
     font-size: 100px;
-    font-family:"Nueue Haas Medium"; 
+    font-family:"Editorial Reg"; 
+    letter-spacing: -4px;
 }
 
 .textAbout{
@@ -247,9 +252,10 @@ ul {
 }
 
 .sectionTitle{
-    font-family:"Nueue Haas Medium"; 
+    font-family:"Editorial Reg"; 
     font-size: 60px;
     line-height: 65px;
+    letter-spacing: -3px;
 }
 
 .seeMore{
@@ -270,10 +276,11 @@ ul {
 }
 
 .sideWorkTitle{
-    font-family:"Nueue Haas Medium"; 
+    font-family:"Editorial Reg"; 
     line-height: 99%;
     font-size: 50px;
     max-width: 80%;
+    letter-spacing: -2px;
 }
 .sideWorkText{
     font-size: 15px;
