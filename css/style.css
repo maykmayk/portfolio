@@ -8,7 +8,7 @@
 }
 @font-face {
     font-family: "Editorial Reg";
-    src: url("../asset/font/PPEditorialNew-Regular.otf");
+    src: url("../asset/font/InstrumentSerif-Regular.ttf");
 }
 
 ::selection {
@@ -41,6 +41,10 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
+}
+
+.titleSideBar{
+    font-size: 30px;
 }
 
 .arrow {
