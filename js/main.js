@@ -56,11 +56,11 @@ _app.logoHover = () => {
 	const logoHead = document.querySelector('.logo');
 
 	logoHead.addEventListener('mouseover', () => {
-		logoHead.src = '../asset/images/logoHeadChromed.png';
+		logoHead.src = './asset/images/logoHeadChromed.png';
 	});
 
 	logoHead.addEventListener('mouseout', () => {
-		logoHead.src = '../asset/images/logo.png';
+		logoHead.src = './asset/images/logo.png';
 	});
 }
 
