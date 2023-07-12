@@ -154,6 +154,37 @@ ul {
     text-decoration: underline;
 }
 
+.logoFooter{
+    max-width: 80%;
+}
+
+.copy {
+    font-family:"Nueue Haas"; 
+    font-size: 10px;
+}
+
+.bigFoot{
+    font-family: "Editorial Reg";
+    font-size: 150px;
+    letter-spacing: -4px;
+}
+
+.helloFoot{
+    font-family:"Nueue Haas"; 
+    font-size: 20px;
+}
+
+.mailFoot {
+    font-family:"Nueue Haas"; 
+    font-size: 20px;
+}
+
+.linksFooter{
+    font-family:"Nueue Haas"; 
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
 .logo {
     padding-left: 25px;
     width: 60px;
