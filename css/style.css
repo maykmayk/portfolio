@@ -263,6 +263,12 @@ ul {
     z-index: 0;
 }
 
+@media screen and (max-width: 767px) {
+    .rect {
+        height: 30vh;
+    }
+}
+
 .title {
     padding: 25px;
 }
