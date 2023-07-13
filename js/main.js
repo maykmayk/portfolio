@@ -1,11 +1,11 @@
 const _app = {}
 
 function openNav() {
-		document.getElementById("myNav").style.width = "100%";
+	document.querySelector(".menuMob").style.marginTop = "0px";
 }
 	
 function closeNav() {
-		document.getElementById("myNav").style.width = "0%";
+	document.querySelector(".menuMob").style.marginTop = "-40vh";
 }
 
 _app.owlCarousel = () => {
