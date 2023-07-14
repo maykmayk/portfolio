@@ -20,6 +20,10 @@ a, a:hover, a:focus, a:active {
     color: inherit;
 }
 
+a {
+    cursor: pointer;
+}
+
 body {
     font-family: "Nueue Haas";
     background-color: #EFEFEF;
@@ -470,4 +474,8 @@ ul {
     font-size: 50px;
     font-family: "Editorial Reg";
     line-height: 100%;
+}
+
+.menuIcon:hover{
+    cursor: pointer;
 }
