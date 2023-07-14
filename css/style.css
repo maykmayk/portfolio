@@ -150,7 +150,21 @@ ul {
 
 .little{
     font-size: 15px;
-    text-align: end;
+    position: absolute; 
+    margin: 14px;
+    padding: 5px 20px;  
+    background-color: #EFEFEF; 
+    border: 1px solid #EFEFEF; 
+    text-align: center;
+    border-radius: 999px;
+    transition: .5s background-color;
+    -webkit-transition: .5s background-color;
+    -moz-transition: .5s background-color;
+}
+
+.little:hover{
+    background-color: transparent;
+    color: #EFEFEF;
 }
 
 .link {
