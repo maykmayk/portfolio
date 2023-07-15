@@ -1,10 +1,10 @@
 const _app = {}
 
-function openNav() {
+_app.openNav = () => {
 	document.querySelector(".menuMob").style.marginTop = "0px";
 }
 	
-function closeNav() {
+_app.closeNav = () => {
 	document.querySelector(".menuMob").style.marginTop = "-40vh";
 }
 
