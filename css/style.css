@@ -372,11 +372,17 @@ ul {
     height: 30vh;
 }
 
+
 .workImg{
     border-radius: 10px;
     object-fit: cover;
     width: 100%;
     height: 100%;
+    transition: all 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.workImg:hover{
+    border-radius: 0px;
 }
 
 @media screen and (max-width: 767px) {
@@ -492,4 +498,67 @@ ul {
 
 .menuIcon:hover{
     cursor: pointer;
+}
+
+.aboutCont {
+    border-radius: 15px;
+    height: 23vw;
+    aspect-ratio: 1/1;
+}
+
+.contImgAbout{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius: 15px;
+    opacity: 0.4;
+    transition: filter 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.contImgAbouta{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius: 15px;
+}
+
+.contImgAbout:hover{
+    webkit-filter: blur(4px); /* Chrome, Safari, Opera */
+    filter: blur(4px);
+}
+
+.absAbout{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+}
+
+.descToAbout {
+    font-family: "Nueue Haas";
+    color: #EFEFEF;
+}
+
+.goToAbout {
+    padding: 5px;
+    background-color: #EFEFEF;
+    border-radius: 999px;
+}
+
+.overlayAboutImg{
+    background: #090909;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.iconTopAboutCont{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 10px;
+    color: #EFEFEF;
+}
+
+.iconTopAboutCont{
+    width: 20px;
 }
