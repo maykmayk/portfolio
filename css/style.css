@@ -87,13 +87,9 @@ ul {
     text-align: center;
 }
 
-.divider{
-    height: 40px;
-}
-
-.dividerSection{
-    height: 200px;
-}
+.divider {
+    height: 20vh;
+  }
 
 .dividerSolid{
     height: 2.5px;
@@ -235,6 +231,7 @@ ul {
 
 .navBar {
     height: 70px;
+    transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .noMarg{
@@ -488,6 +485,7 @@ ul {
     margin-top: -40vh;
     
     transition: margin 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
 }
 
 .elMobMen{

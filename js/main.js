@@ -2,10 +2,12 @@ const _app = {}
 
 _app.openNav = () => {
 	document.querySelector(".menuMob").style.marginTop = "0px";
+	document.querySelector(".navBar").style.opacity = "0";
 }
 	
 _app.closeNav = () => {
 	document.querySelector(".menuMob").style.marginTop = "-40vh";
+	document.querySelector(".navBar").style.opacity = "1";
 }
 
 _app.owlCarousel = () => {
@@ -67,8 +69,13 @@ _app.logoHover = () => {
 _app.startUp = () => {
 	_app.owlCarousel();
 	_app.logoHover();
-	_app.openNav();
-	_app.closeNav();
+
+	document.querySelector(".menuIcon").addEventListener("click", () => {
+		_app.openNav();
+	})
+	document.querySelector(".closebtn").addEventListener("click", () => {
+		_app.closeNav();
+	})
 }
 
 _app.startUp();
