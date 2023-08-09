@@ -11,6 +11,14 @@
     src: url("../asset/font/InstrumentSerif-Regular.ttf");
 }
 
+:root {
+    --white: #EFEFEF;
+    --black: #090909;
+    --link: #a4a4a4;
+    --orange: #F97B22;
+}
+  
+
 ::selection {
     background: #F7D060;
 }
@@ -26,7 +34,7 @@ a {
 
 body {
     font-family: "Nueue Haas";
-    background-color: #EFEFEF;
+    background-color: var(--white);
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -34,7 +42,7 @@ body {
 li {
     float: right;
     display: block;
-    color: #090909;
+    color: var(--black);
     text-align: center;
     padding: 25px 16px;
     text-decoration: none;
@@ -70,7 +78,7 @@ ul {
     height: 200px;
     border-radius: 10px;
     background-color: #F4F4F4;
-    border: #0909091a .4px solid;
+    border: var(--black)1a .4px solid;
 }
 
 .card-container{
@@ -93,14 +101,14 @@ ul {
 
 .dividerSolid{
     height: 2.5px;
-    background-color: #090909;
+    background-color: var(--black);
     border-radius: 10px;
     /* mix-blend-mode: exclusion; */
 }
 
 .dividerSolid2{
     height: 1.5px;
-    background-color: #09090920;
+    background-color: var(--black)20;
 }
 
 .footerTitle{
@@ -149,8 +157,8 @@ ul {
     position: absolute; 
     margin: 14px;
     padding: 5px 20px;  
-    background-color: #EFEFEF; 
-    border: 1px solid #EFEFEF; 
+    background-color: var(--white); 
+    border: 1px solid var(--white); 
     text-align: center;
     border-radius: 999px;
     transition: .5s background-color;
@@ -160,11 +168,11 @@ ul {
 
 .little:hover{
     background-color: transparent;
-    color: #EFEFEF;
+    color: var(--white);
 }
 
 .link {
-    color: #a4a4a4;
+    color: var(--link);
     text-decoration: underline;
 }
 
@@ -272,17 +280,13 @@ ul {
 
 .rect{
     height: 60vh;
-    background-color: #F97B22;
+    background-color: var(--orange);
     width: 100%;
     border-radius: 999px 999px 0 0;
     z-index: 0;
 }
 
-@media screen and (max-width: 767px) {
-    .rect {
-        height: 30vh;
-    }
-}
+
 
 .title {
     padding: 25px;
@@ -382,18 +386,6 @@ ul {
     border-radius: 0px;
 }
 
-@media screen and (max-width: 767px) {
-    .leftClient{
-        text-align: left;
-        margin-left: 25px;
-    }
-    .titleWorkPage{
-        font-size: 50px;
-        font-family:"Nueue Haas Medium"; 
-        line-height: 80%;
-    }
-}
-
 /* open menu */
 .overlay {
     height: 100%;
@@ -419,7 +411,7 @@ ul {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
-    color: #EFEFEF;
+    color: var(--white);
     display: block;
     transition: 0.3s;
   }
@@ -432,19 +424,13 @@ ul {
     font-size: 30px;
   }
   
-  @media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-    font-size: 100px;
 
-    }
-}
 
 /* underline hover */
 .hover-underline-animation {
     display: inline-block;
     position: relative;
-    color: #090909;
+    color: var(--black);
   }
   
   .hover-underline-animation::after {
@@ -455,7 +441,7 @@ ul {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #090909;
+    background-color: var(--black);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
@@ -481,7 +467,7 @@ ul {
 
 .menuMob{
     height: 40vh;
-    background-color: #F97B22;
+    background-color: var(--orange);
     margin-top: -40vh;
     
     transition: margin 1s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -496,4 +482,28 @@ ul {
 
 .menuIcon:hover{
     cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .rect {
+        height: 30vh;
+    }
+    .leftClient{
+        text-align: left;
+        margin-left: 25px;
+    }
+    .titleWorkPage{
+        font-size: 50px;
+        letter-spacing: -2px;
+        /* font-family:"Nueue Haas Medium";  */
+        line-height: 80%;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 100px;
+
+    }
 }
