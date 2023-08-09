@@ -54,21 +54,8 @@ _app.owlCarousel = () => {
 	});
 }
 
-_app.logoHover = () => {
-	const logoHead = document.querySelector('.logo');
-
-	logoHead.addEventListener('mouseover', () => {
-		logoHead.src = './asset/images/logoHeadChromed.png';
-	});
-
-	logoHead.addEventListener('mouseout', () => {
-		logoHead.src = './asset/images/logo.png';
-	});
-}
-
 _app.startUp = () => {
 	_app.owlCarousel();
-	_app.logoHover();
 
 	document.querySelector(".menuIcon").addEventListener("click", () => {
 		_app.openNav();
