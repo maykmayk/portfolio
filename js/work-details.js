@@ -13,6 +13,7 @@ function loadWorkDetails(workId) {
 			slogan: "Where food tastes like famiglia",
             text: "Nunnarella is a wannabe traditional Italian restaurant that brings the authentic taste of Italy to your table. With its warm and welcoming atmosphere, Nullarella takes pride in its traditional approach to cooking, with recipes passed down from generations of Italian families. The new revamped branding showcases the passion and commitment that goes into every dish we serve. We've taken inspiration from Italy's rich cultural heritage, its colors, textures, and designs to create an ambiance that transports you to a different world.",
             showSeeMore: true,
+            showMoreLink: "https://www.behance.net/mayke",
             haveImages: true,
             images: [
                 "./asset/images/works/nunnarella/1Nunna.jpg",
@@ -34,6 +35,7 @@ function loadWorkDetails(workId) {
 			slogan: "Empower your design without limits",
             text: "Are you tired of feeling isolated in your design work? Look no further than Visart App! This platform is designed to connect you to the world's best creators, giving you the opportunity to collaborate and learn from the best in the business. With a soft touch in user interface design, this app is intuitive and easy to use, making it simple to share your work, get feedback, and connect with other designers. Whether you're looking to expand your network or learn new skills, this web app is the perfect tool for transforming your design process.",
             showSeeMore: true,
+            showMoreLink: "https://www.behance.net/mayke",
             haveImages: true,
             images: [
                 "./asset/images/works/visart/1Vis.png",
@@ -55,6 +57,7 @@ function loadWorkDetails(workId) {
 			slogan: "Find your concert tribe and rock on!",
             text: "Welcome to Happening, the ultimate destination for discovering and booking tickets to the hottest concerts, festivals, and live events in your area. This app makes it easy to find events by genre, location, and date, and our streamlined checkout process makes booking tickets a breeze. Join happening and start experiencing the best live events your city has to offer!",
             showSeeMore: false,
+            showMoreLink: "",
             haveImages: true,
             images: [
                 "./asset/images/works/happening/1Happening.png",
@@ -69,7 +72,8 @@ function loadWorkDetails(workId) {
 			coverUrl: "./asset/images/works/verSacrumCover.png",
 			slogan: "Igniting artistic allure through fashion",
             text: "",
-            showSeeMore: false,
+            showSeeMore: true,
+            showMoreLink: "https://www.versacrumbrand.com",
             haveImages: true,
             images: [
                 "./asset/images/works/verSacrum/vs1.png",
@@ -85,6 +89,7 @@ function loadWorkDetails(workId) {
 			slogan: "we missed the most important thing: <br>Perseverance",
             text: "A Magnificent Desolation is a film who celebrates the values that have made space exploration possible: the human spirit of curiosity, determination, and exploration. It reminds us of the power of innovation, collaboration, and risk-taking to achieve the seemingly impossible. It invites us to dream big, push boundaries, and reach for the stars. The film is a full sensory experience that evokes wonder, awe, and inspiration. It is a call to action to pursue our passions and to always strive for new horizons. This short cinematic film is more than just a story about space exploration; it's a celebration of the values that have made it possible. It is a reminder that humanity has an inherent desire to explore and to push the boundaries of what is possible.",
             showSeeMore: false,
+            showMoreLink: "",
             haveImages: false,
             images: [
                 "",
@@ -142,7 +147,7 @@ function loadWorkDetails(workId) {
             </div>
             ${work.showSeeMore ? `
                 <div class="fs-6 hover-underline-animation mb-4 mt-3">
-                    <a href="https://www.behance.net/mayke">
+                    <a href="${work.showMoreLink}" target="_blank">
                         See more...<img src="./asset/images/icons/arrow-down-right.svg" class="arrow" draggable="false">
                     </a>
                 </div>
