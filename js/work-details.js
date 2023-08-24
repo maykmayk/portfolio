@@ -171,7 +171,7 @@ function loadWorkDetails(workId) {
 	
     ${work.showSeeMore ? `
     <div class="d-flex justify-content-center">
-        <div class="fs-6 hover-underline-animation mb-4 mt-3"><a href="https://www.behance.net/mayke">
+        <div class="fs-6 hover-underline-animation mb-4 mt-3"><a href="${work.showMoreLink}" target="_blank">
             See more...<img src="./asset/images/icons/arrow-down-right.svg" class="arrow" draggable="false"></a>
         </div>
     </div>
