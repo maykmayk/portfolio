@@ -11,6 +11,8 @@ function loadWorkDetails(workId) {
 			subTitle: "Crafting Delicious Experiences",
 			coverUrl: "./asset/images/works/nunnarella/headerImg.jpg",
 			slogan: "Where food tastes like famiglia",
+            genre: true,
+            genreName: "Brand Design",
             text: "Nunnarella is a wannabe traditional Italian restaurant that brings the authentic taste of Italy to your table. With its warm and welcoming atmosphere, Nullarella takes pride in its traditional approach to cooking, with recipes passed down from generations of Italian families. The new revamped branding showcases the passion and commitment that goes into every dish we serve. We've taken inspiration from Italy's rich cultural heritage, its colors, textures, and designs to create an ambiance that transports you to a different world.",
             showSeeMore: true,
             showMoreLink: "https://www.behance.net/mayke",
@@ -33,6 +35,8 @@ function loadWorkDetails(workId) {
 			subTitle: "Connect Your Design Activity",
 			coverUrl: "./asset/images/works/visart/visartCover.png",
 			slogan: "Empower your design without limits",
+            genre: true,
+            genreName: "Web Design",
             text: "Are you tired of feeling isolated in your design work? Look no further than Visart App! This platform is designed to connect you to the world's best creators, giving you the opportunity to collaborate and learn from the best in the business. With a soft touch in user interface design, this app is intuitive and easy to use, making it simple to share your work, get feedback, and connect with other designers. Whether you're looking to expand your network or learn new skills, this web app is the perfect tool for transforming your design process.",
             showSeeMore: true,
             showMoreLink: "https://www.behance.net/mayke",
@@ -44,7 +48,7 @@ function loadWorkDetails(workId) {
                 "./asset/images/works/visart/4Vis.png",
                 "./asset/images/works/visart/2Vis.png",
                 "./asset/images/works/visart/6Vis.png",
-                "./asset/images/works/visart/7Vis.jpg",
+                "./asset/images/works/visart/7Vis.png",
                 "./asset/images/works/visart/8Vis.png",
             ],
             haveVideo: false,
@@ -55,6 +59,8 @@ function loadWorkDetails(workId) {
 			subTitle: "Made for those who wanna live.",
 			coverUrl: "./asset/images/works/happening/happeningCover.png",
 			slogan: "Find your concert tribe and rock on!",
+            genre: true,
+            genreName: "Web App Development",
             text: "Welcome to Happening, the ultimate destination for discovering and booking tickets to the hottest concerts, festivals, and live events in your area. This app makes it easy to find events by genre, location, and date, and our streamlined checkout process makes booking tickets a breeze. Join happening and start experiencing the best live events your city has to offer!",
             showSeeMore: false,
             showMoreLink: "",
@@ -71,6 +77,8 @@ function loadWorkDetails(workId) {
 			subTitle: "Art Is Erotic",
 			coverUrl: "./asset/images/works/verSacrumCover.png",
 			slogan: "Igniting artistic allure through fashion",
+            genre: true,
+            genreName: "Web Development",
             text: "",
             showSeeMore: true,
             showMoreLink: "https://www.versacrumbrand.com",
@@ -87,6 +95,8 @@ function loadWorkDetails(workId) {
 			subTitle: "Cinematic Short Film",
 			coverUrl: "./asset/images/works/magnificent Desolation/mdCover.png",
 			slogan: "we missed the most important thing: <br>Perseverance",
+            genre: true,
+            genreName: "Cinematic Short Film",
             text: "A Magnificent Desolation is a film who celebrates the values that have made space exploration possible: the human spirit of curiosity, determination, and exploration. It reminds us of the power of innovation, collaboration, and risk-taking to achieve the seemingly impossible. It invites us to dream big, push boundaries, and reach for the stars. The film is a full sensory experience that evokes wonder, awe, and inspiration. It is a call to action to pursue our passions and to always strive for new horizons. This short cinematic film is more than just a story about space exploration; it's a celebration of the values that have made it possible. It is a reminder that humanity has an inherent desire to explore and to push the boundaries of what is possible.",
             showSeeMore: false,
             showMoreLink: "",
@@ -96,7 +106,7 @@ function loadWorkDetails(workId) {
                 "",
             ],
             haveVideo: true,
-            urlVideo: "https://www.youtube.com/embed/B0g1aZwxek"
+            urlVideo: "https://www.youtube-nocookie.com/embed/B0g1aZwxekg?si=N2v5waI9IYJduDaB&amp;start=1"
         }
 	};
 
@@ -135,8 +145,14 @@ function loadWorkDetails(workId) {
     </div>
 
     <div class="row padding mb-5">
-        <div class="col-12">
+        <div class="col-12 position-relative">
             <img src="${work.coverUrl || ''}" class="headerImgWork">
+            ${work.genre ? `
+            <div class="position-absolute bottom-0 m-3 d-flex gap-2">
+                <div class="genreWork">${work.genreName}</div>
+            </div>
+            ` : ''}
+            
         </div>
     </div>
 
@@ -163,7 +179,7 @@ function loadWorkDetails(workId) {
 	<!-- gallery -->
         ${work.haveVideo ? `
         <div class="padding row mb-4">
-            <iframe width="560" height="590" src="${work.urlVideo}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="${work.urlVideo}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         ` : ''}
         ${work.haveImages ? imagesHtml : ''}
