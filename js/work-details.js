@@ -97,6 +97,22 @@ function loadWorkDetails(workId) {
             ],
             haveVideo: true,
             urlVideo: "https://www.youtube-nocookie.com/embed/B0g1aZwxekg?si=N2v5waI9IYJduDaB&amp;start=1"
+        },
+        regular: {
+            name: "Regular",
+			subTitle: "Typo Fanzine",
+			coverUrl: "./asset/images/works/regularCover.png",
+			slogan: "The Font Folklore",
+            text: "Regular ain't your typical typography magazine bossing you around with what fonts to use. Nah! Each month, we'll hook you up with the juiciest typo news, unveil the most mesmerizing font of the month, and drop some mind-blowing typographic tricks that'll leave you saying, 'Whoa! So buckle up, typo explorers, 'cause Regular's about to rock your typophile world!",
+            showSeeMore: false,
+            showMoreLink: "",
+            haveImages: false,
+            images: [
+                "",
+                "",
+            ],
+            haveVideo: false,
+            urlVideo: ""
         }
 	};
 
