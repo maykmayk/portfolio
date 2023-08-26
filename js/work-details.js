@@ -78,6 +78,8 @@ function loadWorkDetails(workId) {
             images: [
                 "./asset/images/works/verSacrum/vs1.png",
                 "./asset/images/works/verSacrum/vs2.png",
+                "./asset/images/works/verSacrum/vs3.png",
+                "./asset/images/works/verSacrum/vs4.png",
             ],
             haveVideo: false,
             urlVideo: "",
