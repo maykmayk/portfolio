@@ -16,14 +16,19 @@
     <div class="menuMob d-flex flex-column align-items-between p-3 ps-4">
         <div class="d-flex justify-content-between">
             <div>
-                <img src="./asset/images/logo.png" class="logo p-0">
+                <img src="./asset/images/logo_white.png" class="logo p-0">
             </div>
             <a href="javascript:void(0)" class="closebtn" onclick="_app.closeNav()">&times;</a>
         </div>
-        <div class="mt-auto d-flex justify-content-between  align-items-end">
-            <div class="d-flex flex-column">
-                <div class="elMobMen"><a href="./index.html#aboutSection" onclick="_app.closeNav()">About</a></div>
-                <div class="elMobMen"><a href="./works.html">Works</a></div>
+        <div class="mt-auto d-flex justify-content-between align-items-end">
+            <div class="d-flex flex-column gap-5">
+                <svg id="stroke" xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 2 300 0">
+                    <defs>
+                        <path id="line" d="M2 2c49.7 2.6 100 3.1 150 1.7-46.5 2-93 4.4-139.2 7.3 45.2-1.5 90.6-1.8 135.8-.6" fill="none" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+                    </defs>
+                </svg>
+                <div class="elMobMen"><a href="#aboutSection" onclick="_app.closeNav()">About<svg class="button-stroke" viewBox="0 0 154 13"><use href="#line"></use></svg><svg class="button-stroke" viewBox="0 0 154 13"><use href="#line"></use></svg></a></div>
+                <div class="elMobMen"><a href="./works.html">Works<svg class="button-stroke" viewBox="0 0 154 13"><use href="#line"></use></svg><svg class="button-stroke" viewBox="0 0 154 13"><use href="#line"></use></svg></a></div>
             </div>
             <div class="d-flex flex-column">
                 <div class="text-end">
