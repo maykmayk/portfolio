@@ -6,7 +6,7 @@ _app.openNav = () => {
 }
 	
 _app.closeNav = () => {
-	document.querySelector(".menuMob").style.marginTop = "-40vh";
+	document.querySelector(".menuMob").style.marginTop = "-100vh";
 	document.querySelector(".navBar").style.opacity = "1";
 }
 

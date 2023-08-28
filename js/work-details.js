@@ -9,6 +9,7 @@ function loadWorkDetails(workId) {
 		nunnarella: {
 			name: "Nunnarella",
 			subTitle: "Crafting Delicious Experiences",
+            haveCover: true,
 			coverUrl: "./asset/images/works/nunnarella/headerImg.jpg",
 			slogan: "Where food tastes like famiglia",
             text: "Nunnarella is a wannabe traditional Italian restaurant that brings the authentic taste of Italy to your table. With its warm and welcoming atmosphere, Nullarella takes pride in its traditional approach to cooking, with recipes passed down from generations of Italian families. The new revamped branding showcases the passion and commitment that goes into every dish we serve. We've taken inspiration from Italy's rich cultural heritage, its colors, textures, and designs to create an ambiance that transports you to a different world.",
@@ -31,6 +32,7 @@ function loadWorkDetails(workId) {
 		visart: {
 			name: "Visart",
 			subTitle: "Connect Your Design Activity",
+            haveCover: true,
 			coverUrl: "./asset/images/works/visart/visartCover.png",
 			slogan: "Empower your design without limits",
             text: "Are you tired of feeling isolated in your design work? Look no further than Visart App! This platform is designed to connect you to the world's best creators, giving you the opportunity to collaborate and learn from the best in the business. With a soft touch in user interface design, this app is intuitive and easy to use, making it simple to share your work, get feedback, and connect with other designers. Whether you're looking to expand your network or learn new skills, this web app is the perfect tool for transforming your design process.",
@@ -53,8 +55,9 @@ function loadWorkDetails(workId) {
 		happening: {
 			name: "Happening",
 			subTitle: "Made for those who wanna live.",
+            haveCover: true,
 			coverUrl: "./asset/images/works/happening/happeningCover.png",
-			slogan: "Find your concert tribe and rock on!",
+            slogan: "Find your concert tribe and rock on!",
             text: "Welcome to Happening, the ultimate destination for discovering and booking tickets to the hottest concerts, festivals, and live events in your area. This app makes it easy to find events by genre, location, and date, and our streamlined checkout process makes booking tickets a breeze. Join happening and start experiencing the best live events your city has to offer!",
             showSeeMore: false,
             showMoreLink: "",
@@ -69,6 +72,7 @@ function loadWorkDetails(workId) {
         versacrum: {
             name: "Ver Sacrum",
 			subTitle: "Art Is Erotic",
+            haveCover: true,
 			coverUrl: "./asset/images/works/verSacrumCover.png",
 			slogan: "Igniting artistic allure through fashion",
             text: "",
@@ -87,6 +91,7 @@ function loadWorkDetails(workId) {
         md: {
             name: "A Magnificent Desolation",
 			subTitle: "Cinematic Short Film",
+            haveCover: true,
 			coverUrl: "./asset/images/works/magnificent Desolation/mdCover.png",
 			slogan: "we missed the most important thing: <br>Perseverance",
             text: "A Magnificent Desolation is a film who celebrates the values that have made space exploration possible: the human spirit of curiosity, determination, and exploration. It reminds us of the power of innovation, collaboration, and risk-taking to achieve the seemingly impossible. It invites us to dream big, push boundaries, and reach for the stars. The film is a full sensory experience that evokes wonder, awe, and inspiration. It is a call to action to pursue our passions and to always strive for new horizons. This short cinematic film is more than just a story about space exploration; it's a celebration of the values that have made it possible. It is a reminder that humanity has an inherent desire to explore and to push the boundaries of what is possible.",
@@ -103,6 +108,7 @@ function loadWorkDetails(workId) {
         regular: {
             name: "Regular",
 			subTitle: "Typo Fanzine",
+            haveCover: true,
 			coverUrl: "./asset/images/works/regularCover.png",
 			slogan: "The Font Folklore",
             text: "Regular ain't your typical typography magazine bossing you around with what fonts to use. Nah! Each month, we'll hook you up with the juiciest typo news, unveil the most mesmerizing font of the month, and drop some mind-blowing typographic tricks that'll leave you saying, 'Whoa! So buckle up, typo explorers, 'cause Regular's about to rock your typophile world!",
@@ -112,6 +118,25 @@ function loadWorkDetails(workId) {
             images: [
                 "",
                 "",
+            ],
+            haveVideo: false,
+            urlVideo: ""
+        },
+        spark: {
+            name: "The Spark",
+			subTitle: "Personal Branding",
+            haveCover: false,
+            videoCover: "./asset/images/works/spark/introSpark.mp4",
+			slogan: "Design that tells a story",
+            text: "",
+            showSeeMore: false,
+            showMoreLink: "",
+            haveImages: true,
+            images: [
+                "./asset/images/works/spark/spark1.png",
+                "./asset/images/works/spark/spark2.png",
+                "./asset/images/works/spark/spark3.png",
+                "./asset/images/works/spark/spark4.png",
             ],
             haveVideo: false,
             urlVideo: ""
@@ -153,8 +178,15 @@ function loadWorkDetails(workId) {
     </div>
 
     <div class="row padding mb-5">
-        <div class="col-12 position-relative">
-            <img src="${work.coverUrl || ''}" class="headerImgWork">
+        <div class="col-12">
+            ${work.haveCover ? `
+                <img src="${work.coverUrl}" class="headerImgWork">
+            ` : `
+                <video class="headerImgWork" autoplay loop>
+                    <source src="${work.videoCover}" type="video/mp4">
+                    Il tuo browser non supporta la riproduzione di video.
+                </video>
+            `}
         </div>
     </div>
 
