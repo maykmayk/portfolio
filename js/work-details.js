@@ -203,7 +203,7 @@ function loadWorkDetails(workId) {
                 </div>
             ` : ''}
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 mt-md-0 mt-3">
             <div class="sideWorkText">
                 ${work.text || ''}
             </div>
