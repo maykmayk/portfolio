@@ -137,6 +137,8 @@ function loadWorkDetails(workId) {
                 "./asset/images/works/spark/spark2.png",
                 "./asset/images/works/spark/spark3.png",
                 "./asset/images/works/spark/spark4.png",
+                "./asset/images/works/spark/spark5.png",
+                "./asset/images/works/spark/spark6.png",
             ],
             haveVideo: false,
             urlVideo: ""
@@ -182,8 +184,8 @@ function loadWorkDetails(workId) {
             ${work.haveCover ? `
                 <img src="${work.coverUrl}" class="headerImgWork">
             ` : `
-                <video class="headerImgWork" autoplay loop>
-                    <source src="${work.videoCover}" type="video/mp4">
+                <video class="headerImgWork" autoplay="" loop="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                    <source src="${work.videoCover}" data-wf-ignore="true" type="video/mp4">
                     Il tuo browser non supporta la riproduzione di video.
                 </video>
             `}
