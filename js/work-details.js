@@ -52,23 +52,6 @@ function loadWorkDetails(workId) {
             haveVideo: false,
             urlVideo: "",
 		},
-		happening: {
-			name: "Happening",
-			subTitle: "Made for those who wanna live.",
-            haveCover: true,
-			coverUrl: "./asset/images/works/happening/happeningCover.png",
-            slogan: "Find your concert tribe and rock on!",
-            text: "Welcome to Happening, the ultimate destination for discovering and booking tickets to the hottest concerts, festivals, and live events in your area. This app makes it easy to find events by genre, location, and date, and our streamlined checkout process makes booking tickets a breeze. Join happening and start experiencing the best live events your city has to offer!",
-            showSeeMore: false,
-            showMoreLink: "",
-            haveImages: true,
-            images: [
-                "./asset/images/works/happening/1Happening.png",
-                "./asset/images/works/happening/3Happening.gif",
-            ],
-            haveVideo: false,
-            urlVideo: "",
-        },
         versacrum: {
             name: "Ver Sacrum",
 			subTitle: "Art Is Erotic",
