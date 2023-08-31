@@ -28,6 +28,8 @@ function loadWorkDetails(workId) {
             ],
             haveVideo: false,
             urlVideo: "",
+            nextProjectLink: "./work-details.html?work=visart",
+            nextProject: "Visart"
         },
 		visart: {
 			name: "Visart",
@@ -51,6 +53,8 @@ function loadWorkDetails(workId) {
             ],
             haveVideo: false,
             urlVideo: "",
+            nextProjectLink: "./work-details.html?work=versacrum",
+            nextProject: "Ver Sacrum"
 		},
         versacrum: {
             name: "Ver Sacrum",
@@ -70,6 +74,8 @@ function loadWorkDetails(workId) {
             ],
             haveVideo: false,
             urlVideo: "",
+            nextProjectLink: "./work-details.html?work=md",
+            nextProject: "Magnificent Desolation"
         },
         md: {
             name: "A Magnificent Desolation",
@@ -86,7 +92,9 @@ function loadWorkDetails(workId) {
                 "",
             ],
             haveVideo: true,
-            urlVideo: "https://www.youtube-nocookie.com/embed/B0g1aZwxekg?si=N2v5waI9IYJduDaB&amp;start=1"
+            urlVideo: "https://www.youtube-nocookie.com/embed/B0g1aZwxekg?si=N2v5waI9IYJduDaB&amp;start=1",
+            nextProjectLink: "./work-details.html?work=regular",
+            nextProject: "Regular"
         },
         regular: {
             name: "Regular",
@@ -103,7 +111,9 @@ function loadWorkDetails(workId) {
                 "",
             ],
             haveVideo: false,
-            urlVideo: ""
+            urlVideo: "",
+            nextProjectLink: "./work-details.html?work=spark",
+            nextProject: "Spark"
         },
         spark: {
             name: "The Spark",
@@ -124,7 +134,9 @@ function loadWorkDetails(workId) {
                 "./asset/images/works/spark/spark6.png",
             ],
             haveVideo: false,
-            urlVideo: ""
+            urlVideo: "",
+            nextProjectLink: "./work-details.html?work=nunnarella",
+            nextProject: "Nunnarella"
         }
 	};
 
@@ -211,6 +223,16 @@ function loadWorkDetails(workId) {
         </div>
     </div>
     ` : ''}
+    <div class="d-flex w-100 justify-content-center mt-5">
+        <div class="fs-5">
+            <div class="seeWorks me-0">Next project</div>
+        </div>
+    </div>
+    <div class="d-flex w-100 justify-content-center mt-1">
+        <div class="fs-2 hover-underline-animation mb-4">
+            <a href="${work.nextProjectLink}">${work.nextProject}</a>
+        </div>
+    </div>
 		`;
 	}
 }
