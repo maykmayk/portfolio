@@ -10,7 +10,7 @@ function loadWorkDetails(workId) {
 			name: "Nunnarella",
 			subTitle: "Crafting Delicious Experiences",
             haveCover: true,
-			coverUrl: "./asset/images/works/nunnarella/headerImg.jpg",
+			coverUrl: "./asset/images/works/nunnarella/headerImg.png",
 			slogan: "Where food tastes like famiglia",
             text: "Nunnarella is a wannabe traditional Italian restaurant that brings the authentic taste of Italy to your table. With its warm and welcoming atmosphere, Nullarella takes pride in its traditional approach to cooking, with recipes passed down from generations of Italian families. The new revamped branding showcases the passion and commitment that goes into every dish we serve. We've taken inspiration from Italy's rich cultural heritage, its colors, textures, and designs to create an ambiance that transports you to a different world.",
             showSeeMore: true,
