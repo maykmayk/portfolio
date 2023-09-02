@@ -166,11 +166,11 @@ function loadWorkDetails(workId) {
 
 		workDetailsContainer.innerHTML = `
     <div class="d-flex justify-content-center">
-        <div class="titleWorkPage lh-1">
+        <div class="titleWorkPage ">
             ${work.name || ''}
         </div>
     </div>
-    <div class="d-flex justify-content-center subWork mb-5">
+    <div class="d-flex justify-content-center fs-6 lh-4 text-center mw-100 mb-5">
         ${work.subTitle || ''}
     </div>
 
@@ -201,7 +201,7 @@ function loadWorkDetails(workId) {
             ` : ''}
         </div>
         <div class="col-12 col-md-6 mt-md-0 mt-3">
-            <div class="sideWorkText">
+            <div class="fs-6">
                 ${work.text || ''}
             </div>
         </div>
@@ -209,7 +209,7 @@ function loadWorkDetails(workId) {
 	
 	<!-- gallery -->
         ${work.haveVideo ? `
-        <div class="padding row mb-4">
+        <div class="px-4 row mb-4">
             <iframe width="560" height="315" src="${work.urlVideo}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         ` : ''}
@@ -224,12 +224,12 @@ function loadWorkDetails(workId) {
     </div>
     ` : ''}
     <div class="d-flex w-100 justify-content-center mt-5">
-        <div class="fs-5">
+        <div class="fs-6">
             <div class="seeWorks me-0">Next project</div>
         </div>
     </div>
     <div class="d-flex w-100 justify-content-center mt-1">
-        <div class="fs-2 hover-underline-animation mb-4">
+        <div class="fs-5 hover-underline-animation mb-4">
             <a href="${work.nextProjectLink}">${work.nextProject}</a>
         </div>
     </div>
