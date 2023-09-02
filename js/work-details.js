@@ -150,7 +150,7 @@ function loadWorkDetails(workId) {
         if (work.images && work.images.length > 0) {
             for (let i = 0; i < work.images.length; i += 2) {
                 imagesHtml += `
-                    <div class="padding row mb-4">
+                    <div class="px-4 row mb-4">
                         <div class="col-12 col-md-6 mb-4 mb-md-0">
                             <img src="${work.images[i]}" class="galleryImg">
                         </div>`;
@@ -174,7 +174,7 @@ function loadWorkDetails(workId) {
         ${work.subTitle || ''}
     </div>
 
-    <div class="row padding mb-5">
+    <div class="row mb-5 px-4">
         <div class="col-12">
             ${work.haveCover ? `
                 <img src="${work.coverUrl}" class="headerImgWork">
@@ -187,7 +187,7 @@ function loadWorkDetails(workId) {
         </div>
     </div>
 
-    <div class="padding row mb-5">
+    <div class="row mb-5 px-4">
         <div class="col-12 col-md-6">
             <div class="sideWorkTitle">
                 ${work.slogan || ''}

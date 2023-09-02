@@ -68,6 +68,9 @@ ul {
     height: 50%;
 }
 
+.grey {
+    color: #a4a4a4;
+}
 
 .box{
     height: 20%;
@@ -96,8 +99,8 @@ ul {
 }
 
 .divider {
-    height: 20vh;
-  }
+    height: 20vmin;
+}
 
 .dividerSolid{
     height: 2.5px;
@@ -138,12 +141,6 @@ ul {
     width: 100%;
     aspect-ratio: 1/1;
     border-radius: 10px;
-}
-
-.get-touch{
-    font-size: 15px;
-    align-self: flex-end;
-    text-align: right;
 }
 
 .headerImgWork{
@@ -237,6 +234,10 @@ ul {
     max-width: 100%;
 }
 
+.neueMed {
+    font-family: "Nueue Haas Medium";
+}
+
 .num{
     font-size: 25px;
     line-height: 35px;
@@ -298,12 +299,6 @@ ul {
     z-index: 0;
 }
 
-
-
-.title {
-    padding: 25px;
-}
-
 .titleWorkPage{
     font-size: 100px;
     font-family:"Editorial Reg"; 
@@ -311,9 +306,9 @@ ul {
 }
 
 .textAbout{
-    margin-top: 40px;
-    font-size: 25px;
-    line-height: 35px;
+    /* margin-top: 40px;
+    font-size: 25px; */
+    line-height: 1;
 }
 
 .textValues{
@@ -332,19 +327,6 @@ ul {
 
 .seeMore{
     font-size: 15px;
-}
-
-.seeWorks {
-    margin-top:10px;
-    margin-right: 20px;
-    text-align: end;
-    font-size: 15px;
-    align-self: flex-end;
-    text-align: right;
-}
-
-.side-title{
-    font-size: 17px;
 }
 
 .sideWorkTitle{
