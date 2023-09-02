@@ -20,7 +20,7 @@
   
 
 ::selection {
-    background: var(--orange);
+    color: var(--orange);
 }
 
 a, a:hover, a:focus, a:active {
@@ -55,10 +55,6 @@ ul {
     overflow: hidden;
 }
 
-.titleSideBar{
-    font-size: 30px;
-}
-
 .arrow {
     height: 17px;
     transform:rotateX(180deg)
@@ -74,44 +70,10 @@ ul {
 
 .box{
     height: 20%;
-    padding-left: 25px;
-}
-
-.carda{
-    height: 200px;
-    border-radius: 10px;
-    background-color: #F4F4F4;
-    border: var(--black)1a .4px solid;
-}
-
-.card-container{
-    padding-left: 25px;
-}
-
-.cardText{
-    font-size: 20px;
-    line-height: 25px;
-}
-
-.cardSub{
-    font-size: 10px;
-    text-align: center;
 }
 
 .divider {
     height: 20vmin;
-}
-
-.dividerSolid{
-    height: 2.5px;
-    background-color: var(--black);
-    border-radius: 10px;
-    /* mix-blend-mode: exclusion; */
-}
-
-.dividerSolid2{
-    height: 1.5px;
-    background-color: var(--black)20;
 }
 
 .footerTitle{
@@ -127,13 +89,6 @@ ul {
 
 .footerLogo{
     width: 5%;
-}
-
-.genreWork{
-    padding: 5px 20px;
-    background-color: #EFEFEF;
-    color: #090909;
-    border-radius: 999px;
 }
 
 .galleryImg{
@@ -178,15 +133,6 @@ ul {
 .link {
     color: var(--link);
     text-decoration: underline;
-}
-
-.logoFooter{
-    max-width: 80%;
-}
-
-.copy {
-    font-family:"Nueue Haas"; 
-    font-size: 10px;
 }
 
 .bigFoot{
@@ -238,6 +184,10 @@ ul {
     font-family: "Nueue Haas Medium";
 }
 
+.neue {
+    font-family: "Nueue Haas";
+}
+
 .num{
     font-size: 25px;
     line-height: 35px;
@@ -271,11 +221,6 @@ ul {
     transform: translateX(-50%);
     z-index: 1;
     width: 2vmax;
-}
-
-.padding{
-    padding-left: 25px;
-    padding-right: 25px;
 }
 
 .portrait{
@@ -325,10 +270,6 @@ ul {
     letter-spacing: -3px;
 }
 
-.seeMore{
-    font-size: 15px;
-}
-
 .sideWorkTitle{
     font-family:"Editorial Reg"; 
     line-height: 99%;
@@ -344,10 +285,6 @@ ul {
 .spanRectSub{
     width: 70px;
     vertical-align:-20%;
-}
-
-.underTitle{
-    font-size: 12px;
 }
 
 .workContainer{
@@ -404,8 +341,6 @@ ul {
 .closebtn {
     font-size: 30px;
   }
-  
-
 
 /* underline hover */
 .hover-underline-animation {
