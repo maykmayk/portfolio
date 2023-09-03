@@ -1,15 +1,5 @@
 const _app = {}
 
-_app.openNav = () => {
-	document.querySelector(".menuMob").style.marginTop = "0px";
-	document.querySelector(".navBar").style.opacity = "0";
-}
-	
-_app.closeNav = () => {
-	document.querySelector(".menuMob").style.marginTop = "-100vh";
-	document.querySelector(".navBar").style.opacity = "1";
-}
-
 _app.owlCarousel = () => {
 	$(document).ready(function(){
 		$(".owl-carousel").owlCarousel({
@@ -56,24 +46,50 @@ _app.owlCarousel = () => {
 
 _app.startUp = () => {
 	_app.owlCarousel();
+	_app.menuGestor()
 
-	document.querySelector(".menuIcon").addEventListener("click", () => {
-		_app.openNav();
-	})
-	document.querySelector(".closebtn").addEventListener("click", () => {
-		_app.closeNav();
-	})
+	var workCont = document.querySelectorAll(".workImg");
+	workCont.forEach(work => {
+		work.addEventListener("mouseover", function(e) {
+			_app.startFollowing();
+		})
+		work.addEventListener("mouseleave", function(e) {
+			_app.leaveFollowing();
+		})
+	});
 }
 
-_app.navEl = document.querySelector("#navbar");
-_app.prevScroll = window.scrollY;
-document.addEventListener("wheel", (e) => {
+_app.startFollowing = () => {
+	var follow = document.getElementById("follow");
+	follow.style.opacity = "1"
+	follow.style.visibility = "visible"
+  
+	document.addEventListener("mousemove", function(e) {
+	  var offsetX = 10; // Sposta l'elemento di 10 pixel orizzontalmente
+	  var offsetY = 10; // Sposta l'elemento di 10 pixel verticalmente
+  
+	  follow.style.left = e.pageX + offsetX + "px";
+	  follow.style.top = e.pageY + offsetY + "px";
+	});
+  }
+
+_app.leaveFollowing = () => {
+	var follow = document.getElementById("follow");
+	follow.style.opacity = "0"
+	follow.style.visibility = "hidden"
+}  
+
+_app.menuGestor = () =>{
+	_app.navEl = document.querySelector("#navbar");
+	_app.prevScroll = window.scrollY;
+	document.addEventListener("wheel", (e) => {
 	if (e.deltaY > 0) {
-	  _app.navEl.classList.add("closed");
+		_app.navEl.classList.add("closed");
 	} else {
-	  _app.navEl.classList.remove("closed");
+		_app.navEl.classList.remove("closed");
 	}
-})
+	})
+}
 
 _app.startUp();
 	

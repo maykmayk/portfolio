@@ -116,6 +116,16 @@ ul {
     -moz-transition: .5s background-color;
 }
 
+#follow{
+    position: absolute;
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 5px 10px;
+    pointer-events: none; /* Per evitare interferenze con gli eventi del mouse sui div sottostanti */
+    border-radius: 999px;
+    transition: opacity 0.2s ease, visibility 0.2s ease 0.2s; /* Applica la transizione su opacity e visibility */
+}
+
 .little:hover{
     background-color: transparent;
     color: var(--white);
