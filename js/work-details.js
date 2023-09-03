@@ -165,8 +165,8 @@ function loadWorkDetails(workId) {
         }
 
 		workDetailsContainer.innerHTML = `
-    <div class="d-flex justify-content-center">
-        <div class="titleWorkPage ">
+    <div class="d-flex justify-content-center pt-3">
+        <div class="titleWorkPage editorial">
             ${work.name || ''}
         </div>
     </div>

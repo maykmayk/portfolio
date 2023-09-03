@@ -18,7 +18,6 @@
     --orange: #f97b22;
 }
   
-
 ::selection {
     color: var(--orange);
 }
@@ -60,16 +59,8 @@ ul {
     transform:rotateX(180deg)
 }
 
-.aboutSection{
-    height: 50%;
-}
-
 .grey {
     color: #a4a4a4;
-}
-
-.box{
-    height: 20%;
 }
 
 .divider {
@@ -180,6 +171,10 @@ ul {
     max-width: 100%;
 }
 
+.editorial {
+    font-family: "Editorial Reg";
+}
+
 .neueMed {
     font-family: "Nueue Haas Medium";
 }
@@ -201,8 +196,9 @@ ul {
 }
 
 .navBar {
+    transition: all 300ms ease-in-out;
     height: 70px;
-    transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    background-color: var(--white);
 }
 
 .noMarg{
@@ -246,8 +242,7 @@ ul {
 
 .titleWorkPage{
     font-size: 100px;
-    font-family:"Editorial Reg"; 
-    letter-spacing: -4px;
+    letter-spacing: -.5vmin;
 }
 
 .textAbout{
@@ -263,11 +258,9 @@ ul {
     margin-top: 7px;
 }
 
-.sectionTitle{
-    font-family:"Editorial Reg"; 
-    font-size: 60px;
-    line-height: 65px;
-    letter-spacing: -3px;
+.sectionTitle{    
+    font-size: 10vmin;
+    letter-spacing: -.3vmin;
 }
 
 .sideWorkTitle{
@@ -417,6 +410,11 @@ ul {
     cursor: pointer;
 }
 
+.closed {
+    transform: translateY(-100%);
+    transition: all 300ms ease-in-out;
+  }
+
 @media screen and (max-width: 767px) {
     .rect {
         height: 30vh;
@@ -426,10 +424,8 @@ ul {
         margin-left: 25px;
     }
     .titleWorkPage{
-        font-size: 50px;
-        letter-spacing: -2px;
-        /* font-family:"Nueue Haas Medium";  */
-        line-height: 80%;
+        font-size: 50;
+        letter-spacing: -.5vmin;
     }
     .arrowMenu{
         margin-top: 10px;

@@ -65,6 +65,16 @@ _app.startUp = () => {
 	})
 }
 
+_app.navEl = document.querySelector("#navbar");
+_app.prevScroll = window.scrollY;
+document.addEventListener("wheel", (e) => {
+	if (e.deltaY > 0) {
+	  _app.navEl.classList.add("closed");
+	} else {
+	  _app.navEl.classList.remove("closed");
+	}
+})
+
 _app.startUp();
 	
 
