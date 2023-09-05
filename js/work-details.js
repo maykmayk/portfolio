@@ -26,6 +26,11 @@ function loadWorkDetails(workId) {
                 "./asset/images/works/nunnarella/5Nunna.jpeg",
                 "./asset/images/works/nunnarella/6Nunna.gif",
             ],
+            tags: [
+                "Brand Identity",
+                "Web Design",
+                "Design System",
+            ],
             haveVideo: false,
             urlVideo: "",
             nextProjectLink: "./work-details.html?work=visart",
@@ -51,6 +56,11 @@ function loadWorkDetails(workId) {
                 "./asset/images/works/visart/7Vis.png",
                 "./asset/images/works/visart/8Vis.png",
             ],
+            tags: [
+                "Brand Identity",
+                "Web Design",
+                "Design System",
+            ],
             haveVideo: false,
             urlVideo: "",
             nextProjectLink: "./work-details.html?work=versacrum",
@@ -72,6 +82,12 @@ function loadWorkDetails(workId) {
                 "./asset/images/works/verSacrum/vs3.png",
                 "./asset/images/works/verSacrum/vs4.png",
             ],
+            tags: [
+                "Brand Identity",
+                "Web Development",
+                "Design System",
+                "Clothing Design",
+            ],
             haveVideo: false,
             urlVideo: "",
             nextProjectLink: "./work-details.html?work=md",
@@ -91,6 +107,10 @@ function loadWorkDetails(workId) {
                 "",
                 "",
             ],
+            tags: [
+                "Video Making",
+                "Story Telling",
+            ],
             haveVideo: true,
             urlVideo: "https://www.youtube-nocookie.com/embed/B0g1aZwxekg?si=N2v5waI9IYJduDaB&amp;start=1",
             nextProjectLink: "./work-details.html?work=regular",
@@ -109,6 +129,12 @@ function loadWorkDetails(workId) {
             images: [
                 "",
                 "",
+            ],
+            tags: [
+                "Brand Identity",
+                "Web Development",
+                "Design System",
+                "Magazine Design",
             ],
             haveVideo: false,
             urlVideo: "",
@@ -132,6 +158,11 @@ function loadWorkDetails(workId) {
                 "./asset/images/works/spark/spark4.png",
                 "./asset/images/works/spark/spark5.png",
                 "./asset/images/works/spark/spark6.png",
+            ],
+            tags: [
+                "Brand Identity",
+                "Web Development",
+                "Design System",
             ],
             haveVideo: false,
             urlVideo: "",
@@ -164,6 +195,16 @@ function loadWorkDetails(workId) {
             }
         }
 
+        let tags = ''
+
+        for (let i = 0; i < work.tags.length; i++) {
+            tags += `
+            <div class="tagWork text-nowrap">
+                ${work.tags[i]}
+            </div>
+            `
+        }
+
 		workDetailsContainer.innerHTML = `
     <div class="d-flex justify-content-center pt-3">
         <div class="titleWorkPage editorial">
@@ -188,17 +229,22 @@ function loadWorkDetails(workId) {
     </div>
 
     <div class="row mb-5 px-4">
-        <div class="col-12 col-md-6">
-            <div class="sideWorkTitle">
-                ${work.slogan || ''}
-            </div>
-            ${work.showSeeMore ? `
-                <div class="fs-6 hover-underline-animation mb-4 mt-3">
-                    <a href="${work.showMoreLink}" target="_blank">
-                        See more...<img src="./asset/images/icons/arrow-down-right.svg" class="arrow" draggable="false">
-                    </a>
+        <div class="col-12 col-md-6 d-flex flex-column align-items-start">
+            <div class="mb-auto">
+                <div class="sideWorkTitle">
+                    ${work.slogan || ''}
                 </div>
-            ` : ''}
+                ${work.showSeeMore ? `
+                    <div class="fs-6 hover-underline-animation mb-md-4 mb-0 mt-3">
+                        <a href="${work.showMoreLink}" target="_blank">
+                            See more...<img src="./asset/images/icons/arrow-down-right.svg" class="arrow" draggable="false">
+                        </a>
+                    </div>
+                ` : ''}
+            </div>
+            <div id="tags" class="d-flex gap-2 flex-wrap mt-3 mt-md-0 text-center">
+                ${tags}
+            </div>
         </div>
         <div class="col-12 col-md-6 mt-md-0 mt-3">
             <div class="fs-6">
@@ -229,8 +275,10 @@ function loadWorkDetails(workId) {
         </div>
     </div>
     <div class="d-flex w-100 justify-content-center mt-1">
-        <div class="fs-5 hover-underline-animation mb-4">
-            <a href="${work.nextProjectLink}">${work.nextProject}</a>
+        <div class="fs-1 hover-underline-animation mb-4">
+            <a href="${work.nextProjectLink}">
+                ${work.nextProject} <img src="./asset/images/icons/arrow-down-right.svg">
+            </a>
         </div>
     </div>
 		`;
