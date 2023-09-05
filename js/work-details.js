@@ -24,7 +24,7 @@ function loadWorkDetails(workId) {
                 "./asset/images/works/nunnarella/3Nunna.png",
                 "./asset/images/works/nunnarella/8Nunna.jpg",
                 "./asset/images/works/nunnarella/5Nunna.jpg",
-                "./asset/images/works/nunnarella/6Nunna.gif",
+                "./asset/images/works/nunnarella/6Nunna.jpg",
             ],
             tags: [
                 "Brand Identity",
