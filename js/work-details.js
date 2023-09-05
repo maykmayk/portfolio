@@ -19,12 +19,12 @@ function loadWorkDetails(workId) {
             images: [
                 "./asset/images/works/nunnarella/1Nunna.jpg",
                 "./asset/images/works/nunnarella/7Nunna.gif",
-                "./asset/images/works/nunnarella/2Nunna.jpg",
                 "./asset/images/works/nunnarella/4Nunna.jpg",
-                "./asset/images/works/nunnarella/3Nunna.png",
                 "./asset/images/works/nunnarella/8Nunna.jpg",
                 "./asset/images/works/nunnarella/5Nunna.jpg",
                 "./asset/images/works/nunnarella/6Nunna.jpg",
+                "./asset/images/works/nunnarella/3Nunna.png",
+                "./asset/images/works/nunnarella/2Nunna.jpg",
             ],
             tags: [
                 "Brand Identity",
