@@ -23,7 +23,7 @@ function loadWorkDetails(workId) {
                 "./asset/images/works/nunnarella/8Nunna.jpg",
                 "../asset/images/works/nunnarella/5Nunna.png",
                 "../asset/images/works/nunnarella/6Nunna.png",
-                "./asset/images/works/nunnarella/3Nunna.jpg",
+                "./asset/images/works/nunnarella/Asset 96@600x.png",
                 "./asset/images/works/nunnarella/2Nunna.jpg",
             ],
             tags: [
