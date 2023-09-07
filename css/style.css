@@ -452,6 +452,10 @@ ul {
   }
 
 @media screen and (max-width: 767px) {
+    .closed {
+        transform: none;
+        transition: all 300ms ease-in-out;
+      }
     .rect {
         height: 30vh;
     }
