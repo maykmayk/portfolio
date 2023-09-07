@@ -48,7 +48,7 @@ _app.smooth = () => {
 	const lenis = new Lenis({
 		direction: 'vertical',
 		smooth: true,
-		smoothTouch: true,
+		smoothTouch: false,
 		touchMultiplier: 2,
 	  })
 
@@ -62,13 +62,8 @@ _app.smooth = () => {
 	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 		anchor.addEventListener('click', function (e) {
 			e.preventDefault();
-			if (this.getAttribute('href') == "#main") {
 				lenis.scrollTo(this.getAttribute('href'), {offset:-100})
 				_app.navEl.classList.remove("closed");
-			} else {
-				lenis.scrollTo(this.getAttribute('href'), {offset:-10})
-				_app.navEl.classList.add("closed");
-			}
 		});
 	})
 }
