@@ -48,7 +48,7 @@ _app.smooth = () => {
 	const lenis = new Lenis({
 		direction: 'vertical',
 		smooth: true,
-		smoothTouch: false,
+		smoothTouch: true,
 		touchMultiplier: 2,
 	  })
 
