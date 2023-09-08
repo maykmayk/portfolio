@@ -366,10 +366,19 @@ ul {
   .overlay a:hover, .overlay a:focus {
     color: #f1f1f1;
   }
-  
-.closebtn {
-    font-size: 30px;
-  }
+
+.hover-underline-animation a{
+    cursor: ne-resize;
+}
+
+a .hover-underline-animation{
+    cursor: ne-resize;
+}
+
+footer {
+    height: 25vmin;
+    border-top: 1px solid var(--link);
+}
 
 /* underline hover */
 .hover-underline-animation {
@@ -409,42 +418,6 @@ ul {
     left: 0;
     transform-origin: center;
   }
-
-.menuMob{
-    height: 100vh;
-    background-color: var(--black);
-    color: var(--white);
-    margin-top: -100vh;
-    transition: margin 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.elMobMen{
-    font-size: 20vmin;
-    font-family: "Editorial Reg";
-    line-height: 90%;
-    transition: color, .7s;
-}
-
-.elMobMen:hover {
-    color: var(--orange);
-}
-
-.arrowMenu{
-    margin-top: 40px;
-    max-width: 15vw;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .7s ;
-}
-
-.elMobMen:hover .arrowMenu{
-    opacity: 1;
-    visibility: visible;
-}
-
-.menuIcon:hover{
-    cursor: pointer;
-}
 
 .closed {
     transform: translateY(-100%);
