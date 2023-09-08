@@ -12,8 +12,26 @@
     <link rel="shortcut icon" type="image/png" href="./asset/images/favicon.ico"/>
     <title>Michele de Vita - Portfolio</title>
 </head>
-<body-container>
-    <div id="navbar" style="border-bottom: 1px solid #cbcbcb;" class="navBar d-flex justify-content-between align-items-center p-4 fixed-top">
+<body>
+    <div class="d-flex overlay position-fixed vh-100 vw-100">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar d-none d-md-block"></div>
+        <div class="bar d-none d-md-block"></div>
+        <div class="bar d-none d-md-block"></div>
+        <div class="bar d-none d-md-block"></div>
+        <div class="bar d-none d-md-block"></div>
+        <div class="bar d-none d-md-block"></div>
+    </div>
+    <h1 class="editorial counter position-fixed h-100 w-100 d-flex justify-content-end align-items-end lh-1">
+        0
+    </h1>
+
+    <div id="navbar" style="border-bottom: 1px solid #cbcbcb;" class="navBar d-flex justify-content-between align-items-center p-4 ">
         <div>
             <a href="./index.html"><img src="./asset/images/logo.png" style="width: 40px;"></a>
         </div>
@@ -28,16 +46,16 @@
         <div class="w-100 title p-4 pt-5">
             <img src="./asset/images/titles/title1.svg" class="w-100">
         </div>
-        <div class="w-100 m-0 row box px-4">
-            <div class="p-0 col-12 col-md-4 fs-6">
+        <div class="w-100 m-0 row px-4">
+            <div class="line p-0 col-12 col-md-4 fs-6 "><span>
                 Since 2018 handcrafting a digital presence for modern brands involving creating a unique and authentic identity that effectively engages the audience.
-            </div>
+            </div></span>
             <div class="p-0 col-12 col-md-2  mb-2"></div>
-            <div class="p-0 col-12 col-md-4 fs-6 mb-2">
+            <div class="line p-0 col-12 col-md-4 fs-6  mb-2"><span>
                 If you have a potential project or and think I'd be the ideal partner to bring it to life,
-                please get in touch at <span class="link"><a href="mailto:mvitade@gmail.com?subject=Oggetto%20del%20messaggio" target="_blank">mvitade@gmail.com</a></span> I'd love to hear from you!
-            </div>
-            <div class="p-0 col-12 col-md-2 fs-6 text-end align-self-end">
+                please get in touch at <div class="link d-inline"><a href="mailto:mvitade@gmail.com?subject=Oggetto%20del%20messaggio" target="_blank">mvitade@gmail.com</a></div> I'd love to hear from you!
+            </span></div>
+            <div class="p-0 col-12 col-md-2 fs-6 text-end">
                 <a href="mailto:mvitade@gmail.com?subject=Oggetto%20del%20messaggio"><div class="hover-underline-animation">Get in touch<img src="./asset/images/icons/arrow-down-right.svg" class="arrow" draggable="false"></a></div>
             </div>
         </div>
@@ -218,6 +236,7 @@
     <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
     <script src="./lib/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> 
     <script src="./js/bootstrap.js"></script>
     <script src="./js/main.js"></script>
 </body>

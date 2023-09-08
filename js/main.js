@@ -44,6 +44,46 @@ _app.owlCarousel = () => {
 	});
 }
 
+_app.pageReveal = () => {
+	
+	function startLoader() {
+		let counterElement = document.querySelector(".counter");
+		let currentValue = 0;
+		let targetValue = 100;
+		let increment = 1;
+	  
+		function updateCounter() {
+		  if (currentValue >= targetValue) {
+			return;
+		  }
+	  
+		  currentValue += increment;
+		  counterElement.textContent = currentValue;
+	  
+		  requestAnimationFrame(updateCounter);
+		}
+	  
+		updateCounter();
+	  }
+	  
+	  startLoader();
+	  
+
+	gsap.to(".counter", 0.25, {
+		delay: 2.5,
+		opacity: 0,
+	})
+
+	gsap.to(".bar", 0.25, {
+		delay: 2.5,
+		height: 0,
+		stagger: {
+			amount: 0.5,
+		},
+		ease: "power4.inOut",
+	})
+}
+
 _app.smooth = () => {
 	const lenis = new Lenis({
 		direction: 'vertical',
@@ -68,10 +108,26 @@ _app.smooth = () => {
 	})
 }
 
+_app.textAnim = () => {
+		const tl = gsap.timeline();
+	
+		tl.from(".line span", 1.8, {
+		y: 100,
+		ease: "power4.out",
+		delay: 3,
+		skewY: 7,
+		stagger: {
+			amount: 0.3
+		}
+		})
+}
+
 _app.startUp = () => {
 	_app.owlCarousel();
-	_app.menuGestor()
+	_app.menuGestor();
 	_app.smooth();
+	_app.pageReveal();
+	_app.textAnim();
 
 	var workCont = document.querySelectorAll(".workImg");
 	workCont.forEach(work => {
@@ -106,6 +162,9 @@ _app.leaveFollowing = () => {
 
 _app.menuGestor = () =>{
 	_app.navEl = document.querySelector("#navbar");
+	setTimeout(() => {
+		_app.navEl.classList.add("fixed-top")
+	}, 3000);
 	_app.prevScroll = window.scrollY;
 	document.addEventListener("wheel", (e) => {
 	if (e.deltaY > 0) {
