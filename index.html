@@ -13,23 +13,43 @@
     <title>Michele de Vita - Portfolio</title>
 </head>
 <body>
-    <div class="d-flex overlay position-fixed vh-100 vw-100">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar d-none d-md-block"></div>
-        <div class="bar d-none d-md-block"></div>
-        <div class="bar d-none d-md-block"></div>
-        <div class="bar d-none d-md-block"></div>
-        <div class="bar d-none d-md-block"></div>
-        <div class="bar d-none d-md-block"></div>
+    <div class="loading-screen">
+        <div class="loading-section">
+            <div class="d-flex align-items-baseline">
+                <div class="title">mayke</div>
+                <div class="bracket bracket1">(</div>
+                <div id="loader"></div>
+                <div class="bracket bracket2">)</div>
+                <div class="title">art</div>
+            </div>
+        </div>
+        <div class="position-absolute top-0 d-flex align-items-center justify-content-center flex-column w-100 h-auto">
+            <div class="topOne">
+                <img src="./asset/images/loaderPhotos/nunnarellaCover.jpg"/>
+                <img src="./asset/images/loaderPhotos/regularCoverVertical.png"/>
+                <img src="./asset/images/loaderPhotos/sparkCoverVertical.png"/>
+                <img src="./asset/images/loaderPhotos/verSacrumVertical.png"/>
+                <img src="./asset/images/loaderPhotos/mdCover2.png"/>
+                <img src="./asset/images/loaderPhotos/visartCoverVertical.jpg"/>
+                <img src="./asset/images/loaderPhotos/randomVertical.jpg"/>
+            </div>
+        </div>
+        <div class="position-absolute bottom-0 d-flex align-items-center justify-content-center flex-column w-100 h-auto">
+            <div class="loading-images">
+                <img src="./asset/images/loaderPhotos/randomVertical.jpg"/>
+                <img src="./asset/images/loaderPhotos/visartCoverVertical.jpg"/>
+                <img src="./asset/images/loaderPhotos/mdCover2.png"/>
+                <img src="./asset/images/loaderPhotos/verSacrumVertical.png"/>
+                <img src="./asset/images/loaderPhotos/sparkCoverVertical.png"/>
+                <img src="./asset/images/loaderPhotos/regularCoverVertical.png"/>
+                <img src="./asset/images/loaderPhotos/nunnarellaCover.jpg"/>
+            </div>
+            <div class="bottom-section">
+                <div class="bottom-line">An aesthete creative developer</div>
+                <div class="bottom-line">2022 &#169;</div>
+            </div>
+        </div>
     </div>
-    <h1 class="editorial counter position-fixed h-100 w-100 d-flex justify-content-end align-items-end lh-1">
-        0
-    </h1>
 
     <div id="navbar" style="border-bottom: 1px solid #cbcbcb;" class="navBar d-flex justify-content-between align-items-center p-4 ">
         <div>
@@ -42,11 +62,11 @@
         </div>
     </div>
 
-    <div class="main mt-5" id="main">
+    <div class="main mt-5 welcome-screen" id="main">
         <div class="w-100 title p-4 pt-5">
             <img src="./asset/images/titles/title1.svg" class="w-100">
         </div>
-        <div class="w-100 m-0 row px-4">
+        <div class="w-100 m-0 row px-4 opacity-0 invisible" id="text-open">
             <div class="line p-0 col-12 col-md-4 fs-6 "><span>
                 Since 2018 handcrafting a digital presence for modern brands involving creating a unique and authentic identity that effectively engages the audience.
             </div></span>
@@ -55,9 +75,9 @@
                 If you have a potential project or and think I'd be the ideal partner to bring it to life,
                 please get in touch at <div class="link d-inline"><a href="mailto:mvitade@gmail.com?subject=Oggetto%20del%20messaggio" target="_blank">mvitade@gmail.com</a></div> I'd love to hear from you!
             </span></div>
-            <div class="p-0 col-12 col-md-2 fs-6 text-end d-flex align-items-end justify-content-end">
+            <div class="line p-0 col-12 col-md-2 fs-6 text-end d-flex align-items-end justify-content-end"><span>
                 <a href="mailto:mvitade@gmail.com?subject=Oggetto%20del%20messaggio"><div class="hover-underline-animation">Get in touch<img src="./asset/images/icons/arrow-down-right.svg" class="arrow" draggable="false"></a></div>
-            </div>
+            </span></div>
         </div>
         <div class="w-100 owl-carousel owl-theme m-0 mt-5">
             <div class="item"><a href="./work-details.html?work=nunnarella">
@@ -229,7 +249,7 @@
                 <a href="mailto:mvitade@gmail.com?subject=Oggetto%20del%20messaggio" target="_blank"><div class="neue fs-5 hover-underline-animation">Mail</div></a>
             </div>
         </footer>
-        <div class="mt-4 d-flex d-md-none align-self-end justify-content-center overflow-hidden h-50">
+        <div class="mt-5 d-flex d-md-none align-self-end justify-content-center overflow-hidden h-50">
             <img src="./asset/images/logoAnim2.gif" class="w-100">
         </div>
     </div>
