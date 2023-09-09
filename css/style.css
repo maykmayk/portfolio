@@ -420,7 +420,7 @@ footer {
   }
 
 /* loader  */
-.loading-screen {
+/* .loading-screen {
     position: absolute;
     z-index: 10;
     width: 100%;
@@ -482,7 +482,7 @@ footer {
   }
   
   /* animation sliding  */
-  @keyframes slidingTop {
+/* @keyframes slidingTop {
     from {
       transform: translateX(-20%);
     }
@@ -518,7 +518,7 @@ footer {
   }
   .bottom-section .bottom-line {
     font-size: 12px;
-  }
+  } */
 
 @media screen and (max-width: 767px) {
     .closed {
