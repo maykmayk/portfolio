@@ -47,7 +47,7 @@ _app.owlCarousel = () => {
 _app.pageReveal = () => {
 	
 	function startLoader() {
-		let counterElement = document.querySelector(".counter");
+		_app.counterElement = document.querySelector(".counter");
 		let currentValue = 0;
 		let targetValue = 100;
 		let increment = 1;
@@ -58,7 +58,7 @@ _app.pageReveal = () => {
 		  }
 	  
 		  currentValue += increment;
-		  counterElement.textContent = currentValue;
+		  _app.counterElement.textContent = currentValue;
 	  
 		  requestAnimationFrame(updateCounter);
 		}
@@ -82,6 +82,12 @@ _app.pageReveal = () => {
 		},
 		ease: "power4.inOut",
 	})
+
+	setTimeout(() => {
+		_app.bar = document.querySelector(".overlay")
+		_app.counterElement.classList.add("d-none")
+		_app.bar.classList.add("d-none")
+	}, 3500);
 }
 
 _app.smooth = () => {
@@ -109,17 +115,18 @@ _app.smooth = () => {
 }
 
 _app.textAnim = () => {
-		const tl = gsap.timeline();
-	
-		tl.from(".line span", 1.8, {
-		y: 100,
-		ease: "power4.out",
-		delay: 3,
-		skewY: 7,
-		stagger: {
-			amount: 0.3
-		}
-		})
+	const tl = gsap.timeline();
+
+	// Prima animazione (.line span)
+	tl.from(".line span", 1.8, {
+	y: 100,
+	ease: "power4.out",
+	delay: 3,
+	skewY: 7,
+	stagger: {
+		amount: 0.3
+	}
+	});
 }
 
 _app.startUp = () => {
