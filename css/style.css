@@ -426,9 +426,10 @@ ul {
   }
 
   .linez {
-    height: 2px;
+    height: 1px;
     border-top: 1px solid var(--black);
     z-index: 1;
+    transform-origin: right top;
   }
 
   .item-1 {
@@ -453,6 +454,11 @@ ul {
 
 a .hover-underline-animation{
     cursor: ne-resize;
+}
+
+.ne-resize {
+    cursor: ne-resize;
+
 }
 
 footer {

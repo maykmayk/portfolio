@@ -72,10 +72,17 @@ _app.smooth = () => {
 _app.textAnim = () => {
 	const tl = gsap.timeline();
 
+	tl.from(".headWork", {
+		delay: .5,
+		duration: 1,
+		y: -300,
+		stagger: {
+			amount: 2,
+		},
+	});
 	tl.from(".line span", 1.8, {
 		y: 100,
 		ease: "power4.out",
-		delay: 0.5,
 		skewY: 7,
 		stagger: {
 			amount: 0.3
@@ -86,6 +93,14 @@ _app.textAnim = () => {
 _app.workAnim = () => {
 	const tl = gsap.timeline();
 
+	tl.from(".headWork", {
+		delay: .5,
+		duration: 1,
+		y: -300,
+		stagger: {
+			amount: 2,
+		},
+	});
 	tl.from(".linez", {
 		duration: 1,
 		width: "0%",
