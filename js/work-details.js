@@ -206,16 +206,19 @@ function loadWorkDetails(workId) {
         }
 
 		workDetailsContainer.innerHTML = `
-    <div class="d-flex justify-content-center pt-3" id="main">
-        <div class="titleWorkPage editorial">
-            ${work.name || ''}
+        <div class="headerDetails">
+            <div class="d-flex justify-content-center pt-3" id="main">
+                <div class="titleWorkPage editorial">
+                    ${work.name || ''}
+                </div>
+            </div>
+            <div class="d-flex justify-content-center fs-6 lh-4 text-center mw-100 mb-5">
+                ${work.subTitle || ''}
+            </div>
         </div>
-    </div>
-    <div class="d-flex justify-content-center fs-6 lh-4 text-center mw-100 mb-5">
-        ${work.subTitle || ''}
-    </div>
+    
 
-    <div class="row mb-5 px-4">
+    <div class="row px-4">
         <div class="col-12">
             ${work.haveCover ? `
                 <img src="${work.coverUrl}" class="headerImgWork">
@@ -228,7 +231,7 @@ function loadWorkDetails(workId) {
         </div>
     </div>
 
-    <div class="row mb-5 px-4">
+    <div class="row mb-5 px-4 mt-5">
         <div class="col-12 col-md-6 d-flex flex-column align-items-start">
             <div class="mb-auto">
                 <div class="sideWorkTitle">

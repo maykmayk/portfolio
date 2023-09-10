@@ -73,22 +73,28 @@ _app.textAnim = () => {
 	const tl = gsap.timeline();
 
 	tl.from(".headWork", {
-		delay: .5,
-		duration: 1,
-		skewY: 7,
-		y: -300,
-		stagger: {
-			amount: 2,
-		},
+	delay: 0.5,
+	duration: 1,
+	skewY: 7,
+	y: -300,
+	stagger: {
+		amount: 2,
+	},
 	});
-	tl.from(".line span", 1.8, {
-		y: 100,
-		ease: "power4.out",
-		skewY: 7,
-		stagger: {
-			amount: 0.3
-		}
-	});
+
+	tl.from(".line span", {
+	duration: 1.8,
+	y: 100,
+	ease: "power4.out",
+	skewY: 7,
+	stagger: {
+		amount: 0.3,
+	},
+	}, "-=1"); // "-=1" makes sure that the second animation starts at the same time as the first one
+
+	// Start the timeline
+	tl.play();
+
 }
 
 _app.workListAnim = () => {
@@ -110,55 +116,45 @@ _app.workListAnim = () => {
 			amount: 2,
 		},
 	});
-	tl.from(
-	".work-item div, .work-item p",
-	{
+	tl.from(".work-item div, .work-item p",{
 		y: 150,
 		duration: 0.5,
 		stagger: {
-		amount: 2.5,
+			amount: 2.5,
 		},
-	},
-	"-=3"
-	);
+	},"-=3");
 }
 
 _app.workDetAnim = () => {
 	const tl = gsap.timeline();
-	let element = document.querySelector(".titleWorkPage");
 
-	if (element) {
-		tl.from(element, {
-			delay: .5,
-			duration: 1,
-			skewY: 7,
-			y: -300,
-			stagger: {
-				amount: 2,
-			},
-		});
-	}
+	tl.from(".headerDetails", {
+		delay: 0.5,
+		duration: 1,
+		skewY: 7,
+		y: -200,
+	});
 }
 
 _app.startUp = () => {
+	_app.menuGestor();
+	_app.owlCarousel();
 	if (window.location.pathname.includes("index.html")) {
-		_app.owlCarousel();
 		_app.menuGestor();
 		_app.textAnim();
 	}
-	
-	_app.menuGestor();
 
 	if (window.location.pathname.includes("works.html")) {
 		_app.workListAnim();
 	}
 
 	if (window.location.pathname.includes("work-details.html")) {
-		document.addEventListener('DOMContentLoaded', function () {		
-			_app.workDetAnim()
-		})
+		if (window.location.pathname.includes("work-details.html")) {
+			window.onload = function() {
+				_app.workDetAnim();
+			};
+		}
 	}
-	
 	_app.smooth();
 }
 

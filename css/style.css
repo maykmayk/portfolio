@@ -122,14 +122,14 @@ ul {
     object-fit: cover;
     width: 100%;
     aspect-ratio: 1/1;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 .headerImgWork{
     object-fit: cover;
     width: 100%;
     aspect-ratio: 16/6;
-    border-radius: 15px;
+    /* border-radius: 15px; */
 }
 
 .image{
