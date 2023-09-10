@@ -90,7 +90,20 @@ _app.textAnim = () => {
 	});
 }
 
-_app.workAnim = () => {
+_app.workDetail = () => {
+	const tl = gsap.timeline();
+
+	tl.from(".titleWorkPage", {
+		delay: .5,
+		duration: 1,
+		y: -300,
+		stagger: {
+			amount: 2,
+		},
+	});
+}
+
+_app.workListAnim = () => {
 	const tl = gsap.timeline();
 
 	tl.from(".headWork", {
@@ -131,16 +144,11 @@ _app.startUp = () => {
 	_app.menuGestor();
 
 	if (window.location.pathname.includes("works.html")) {
-		_app.workAnim();
-		// var workCont = document.querySelectorAll(".workImg");
-		// workCont.forEach(work => {
-		// 	work.addEventListener("mouseover", function(e) {
-		// 		_app.startFollowing();
-		// 	})
-		// 	work.addEventListener("mouseleave", function(e) {
-		// 		_app.leaveFollowing();
-		// 	})
-		// });
+		_app.workListAnim();
+	}
+
+	if (window.location.pathname.includes("work-details.html")) {
+		_app.workDetail();
 	}
 	_app.smooth();
 }
