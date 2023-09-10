@@ -75,6 +75,7 @@ _app.textAnim = () => {
 	tl.from(".headWork", {
 		delay: .5,
 		duration: 1,
+		skewY: 7,
 		y: -300,
 		stagger: {
 			amount: 2,
@@ -90,25 +91,13 @@ _app.textAnim = () => {
 	});
 }
 
-_app.workDetail = () => {
-	const tl = gsap.timeline();
-
-	tl.from(".titleWorkPage", {
-		delay: .5,
-		duration: 1,
-		y: -300,
-		stagger: {
-			amount: 2,
-		},
-	});
-}
-
 _app.workListAnim = () => {
 	const tl = gsap.timeline();
 
 	tl.from(".headWork", {
 		delay: .5,
 		duration: 1,
+		skewY: 7,
 		y: -300,
 		stagger: {
 			amount: 2,
@@ -134,6 +123,23 @@ _app.workListAnim = () => {
 	);
 }
 
+_app.workDetAnim = () => {
+	const tl = gsap.timeline();
+	let element = document.querySelector(".titleWorkPage");
+
+	if (element) {
+		tl.from(element, {
+			delay: .5,
+			duration: 1,
+			skewY: 7,
+			y: -300,
+			stagger: {
+				amount: 2,
+			},
+		});
+	}
+}
+
 _app.startUp = () => {
 	if (window.location.pathname.includes("index.html")) {
 		_app.owlCarousel();
@@ -148,8 +154,11 @@ _app.startUp = () => {
 	}
 
 	if (window.location.pathname.includes("work-details.html")) {
-		_app.workDetail();
+		document.addEventListener('DOMContentLoaded', function () {		
+			_app.workDetAnim()
+		})
 	}
+	
 	_app.smooth();
 }
 
