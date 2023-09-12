@@ -199,7 +199,7 @@ function loadWorkDetails(workId) {
 
         for (let i = 0; i < work.tags.length; i++) {
             tags += `
-            <div class="tagWork text-nowrap">
+            <div class="position-relative tagWork text-nowrap">
                 ${work.tags[i]}
             </div>
             `
@@ -245,7 +245,7 @@ function loadWorkDetails(workId) {
                     </div>
                 ` : ''}
             </div>
-            <div id="tags" class="d-flex gap-2 flex-wrap mt-3 mt-md-0 text-center">
+            <div id="tags" class="position-relative d-flex gap-2 flex-wrap mt-3 mt-md-0 text-center">
                 ${tags}
             </div>
         </div>
@@ -272,9 +272,10 @@ function loadWorkDetails(workId) {
         </div>
     </div>
     ` : ''}
-    <div class="d-flex w-100 justify-content-center mt-5">
+    <div class="linez"></div>
+    <div class="d-flex w-100 justify-content-center mt-4">
         <div class="fs-6">
-            <div class="seeWorks me-0">Next project</div>
+            <div class="seeWorks me-0">Go to</div>
         </div>
     </div>
     <div class="d-flex w-100 justify-content-center mt-1">

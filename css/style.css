@@ -129,6 +129,7 @@ ul {
     object-fit: cover;
     width: 100%;
     aspect-ratio: 16/6;
+    min-height: 20vh;
      /* border-radius: 15px;  */
 }
 
@@ -506,8 +507,11 @@ footer {
         margin-left: 25px;
     }
     .titleWorkPage{
-        font-size: 50;
+        font-size: 50px;
         letter-spacing: -.5vmin;
+    }
+    .sideWorkTitle{
+        font-size: 40px;
     }
     .arrowMenu{
         margin-top: 10px;

@@ -1,6 +1,7 @@
 const _app = {}
 _app.body = document.querySelector("body")
 
+
 _app.owlCarousel = () => {
 	$(document).ready(function(){
 		$(".owl-carousel").owlCarousel({
@@ -92,8 +93,6 @@ _app.textAnim = () => {
 	},
 	}, "-=1"); // "-=1" makes sure that the second animation starts at the same time as the first one
 
-	tl.play();
-
 }
 
 _app.workListAnim = () => {
@@ -154,26 +153,6 @@ _app.startUp = () => {
 	}
 	_app.smooth();
 }
-
-_app.startFollowing = () => {
-	var follow = document.getElementById("follow");
-	follow.style.opacity = "1"
-	follow.style.visibility = "visible"
-  
-	document.addEventListener("mousemove", function(e) {
-	  var offsetX = 10; // Sposta l'elemento di 10 pixel orizzontalmente
-	  var offsetY = 10; // Sposta l'elemento di 10 pixel verticalmente
-  
-	  follow.style.left = e.pageX + offsetX + "px";
-	  follow.style.top = e.pageY + offsetY + "px";
-	});
-  }
-
-_app.leaveFollowing = () => {
-	var follow = document.getElementById("follow");
-	follow.style.opacity = "0"
-	follow.style.visibility = "hidden"
-}  
 
 _app.menuGestor = () =>{
 	_app.navEl = document.querySelector("#navbar");
