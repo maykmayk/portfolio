@@ -59,8 +59,16 @@
     <script src="./lib/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/work-details.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.2/dist/simpleParallax.min.js"></script>
+    <script>
+        addEventListener("DOMContentLoaded", (event) => {
+            var image = document.getElementsByClassName('headerImgWork');
+            new simpleParallax(image, {
+                scale: 1.2,
+            });
+        });
+    </script>
 </body>
 </html>

@@ -103,7 +103,7 @@ _app.workListAnim = () => {
 		delay: .5,
 		duration: 1,
 		skewY: 7,
-		y: -300,
+		y: -350,
 		stagger: {
 			amount: 2,
 		},
@@ -125,9 +125,7 @@ _app.workListAnim = () => {
 }
 
 _app.workDetAnim = () => {
-	const tl = gsap.timeline();
-
-	tl.from(".headerDetails", {
+	gsap.from(".headerDetails", {
 		delay: 0.5,
 		duration: 1,
 		skewY: 7,
