@@ -277,7 +277,7 @@ function loadWorkDetails(workId) {
                     </div>
                 ` : ''}
             </div>
-            <div id="tags" class="position-relative d-flex gap-2 flex-wrap mt-3 mt-md-0 text-center">
+            <div id="tags" class="position-relative d-flex gap-2 flex-wrap mt-3 text-center">
                 ${tags}
             </div>
         </div>

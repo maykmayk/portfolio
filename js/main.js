@@ -112,21 +112,6 @@ _app.textAnim = () => {
 		y: 200,
 		ease: "power3.Out"
 	})
-	const timeline = gsap.timeline({
-		scrollTrigger: {
-			trigger: document.documentElement,
-			scrub: true,
-			markers: true,
-			start: "+=750px",
-			end: "+=200px",
-		},
-	})
-
-	timeline
-		.from(".portrait", {
-			borderRadius: "+=999px +=999px +=0 +=0",
-			ease: "power3.Out"
-		})
 }
 
 _app.workListAnim = () => {
@@ -189,8 +174,8 @@ _app.workDetAnim = () => {
 			trigger: ".sloganLine",
 			scrub: true,
 			markers: true,
-			start: "top-=600px",
-			end: "top-=200px",
+			start: "top-=700px",
+			end: "top-=400px",
 		},
 		opacity: 0,
 		left: "-200px",
@@ -223,14 +208,15 @@ _app.workDetAnim = () => {
 		scrollTrigger: {
 			trigger: document.documentElement,
 			scrub: true,
-			start: "+=100px",
-			end: "+=300px",
+			markers: true,
+			start: "0px",
+			end: "+=200px",
 		},
 	})
 
 	timeline
 		.from(".headerImgWork", {
-			clipPath: `inset(15%)`
+			clipPath: `inset(30%)`
 		})
 }
 
