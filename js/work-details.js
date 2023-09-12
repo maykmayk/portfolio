@@ -212,7 +212,7 @@ function loadWorkDetails(workId) {
                     ${work.name || ''}
                 </div>
             </div>
-            <div class="d-flex justify-content-center fs-6 lh-4 text-center mw-100 mb-5">
+            <div class="d-flex justify-content-center fs-6 lh-4 text-center mw-100 mb-md-5 mb-4">
                 ${work.subTitle || ''}
             </div>
         </div>
@@ -231,7 +231,7 @@ function loadWorkDetails(workId) {
         </div>
     </div>
 
-    <div class="row mb-5 px-4 mt-5">
+    <div class="row mb-5 px-4 mt-md-5 mt-4">
         <div class="col-12 col-md-6 d-flex flex-column align-items-start">
             <div class="mb-auto">
                 <div class="sideWorkTitle">
