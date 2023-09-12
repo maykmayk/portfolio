@@ -114,6 +114,7 @@ ul {
 }
 
 .headerImgWork{
+    /* clip-path: inset(15%); */
     object-fit: cover;
     width: 100%;
     aspect-ratio: 16/6;
@@ -288,7 +289,7 @@ ul {
     margin-top: 7px;
 }
 
-.sectionTitle{    
+.sectionTitle{   
     font-size: 10vmin;
     letter-spacing: -.3vmin;
 }

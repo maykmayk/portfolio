@@ -112,6 +112,21 @@ _app.textAnim = () => {
 		y: 200,
 		ease: "power3.Out"
 	})
+	const timeline = gsap.timeline({
+		scrollTrigger: {
+			trigger: document.documentElement,
+			scrub: true,
+			markers: true,
+			start: "+=750px",
+			end: "+=200px",
+		},
+	})
+
+	timeline
+		.from(".portrait", {
+			borderRadius: "+=999px +=999px +=0 +=0",
+			ease: "power3.Out"
+		})
 }
 
 _app.workListAnim = () => {
@@ -169,16 +184,20 @@ _app.workDetAnim = () => {
 	});
 
 	gsap.registerPlugin(ScrollTrigger);
-	gsap.from(".sideWorkTitle", {
+	gsap.from(".sloganLine", {
 		scrollTrigger: {
-			trigger: ".sideWorkTitle",
+			trigger: ".sloganLine",
 			scrub: true,
-			start: "0px bottom",
-			end: "bottom+=200px bottom",
+			markers: true,
+			start: "top-=600px",
+			end: "top-=200px",
 		},
 		opacity: 0,
 		left: "-200px",
-		ease: "power3.Out"
+		ease: "power3.Out",
+		stagger: {
+			amount: 2,
+		},
 	})
 	gsap.from(".linez", {
 		scrollTrigger: {
@@ -200,6 +219,19 @@ _app.workDetAnim = () => {
 		y: 100,
 		ease: "power3.Out",
 	})
+	const timeline = gsap.timeline({
+		scrollTrigger: {
+			trigger: document.documentElement,
+			scrub: true,
+			start: "+=100px",
+			end: "+=300px",
+		},
+	})
+
+	timeline
+		.from(".headerImgWork", {
+			clipPath: `inset(15%)`
+		})
 }
 
 _app.startUp = () => {
