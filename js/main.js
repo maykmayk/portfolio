@@ -173,7 +173,6 @@ _app.workDetAnim = () => {
 		scrollTrigger: {
 			trigger: ".sloganLine",
 			scrub: true,
-			markers: true,
 			start: "top-=700px",
 			end: "top-=400px",
 		},
@@ -208,7 +207,6 @@ _app.workDetAnim = () => {
 		scrollTrigger: {
 			trigger: document.documentElement,
 			scrub: true,
-			markers: true,
 			start: "0px",
 			end: "+=200px",
 		},

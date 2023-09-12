@@ -246,6 +246,12 @@ ul {
     margin: 0!important;
 }
 
+.lineAnim {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+}
+
 .owl-carousel .owl-item .mini-logo {
     mix-blend-mode: difference;
     position: absolute;
