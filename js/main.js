@@ -60,39 +60,58 @@ _app.smooth = () => {
 	}
 
 	requestAnimationFrame(raf)
+	if (window.location.pathname.includes("works.html")) {
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+					lenis.scrollTo(this.getAttribute('href'), {offset:-100})
+					_app.navEl.classList.remove("closed");
+			});
+		})
+	}
 
-	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-		anchor.addEventListener('click', function (e) {
-			e.preventDefault();
-				lenis.scrollTo(this.getAttribute('href'), {offset:-100})
-				_app.navEl.classList.remove("closed");
-		});
-	})
 }
 
 _app.textAnim = () => {
 	const tl = gsap.timeline();
 
 	tl.from(".headWork", {
-	delay: 0.5,
-	duration: 1,
-	skewY: 7,
-	y: -300,
-	stagger: {
-		amount: 2,
-	},
+		delay: 0.5,
+		duration: 1,
+		skewY: 7,
+		y: -300,
+		stagger: {
+			amount: 2,
+		},
+		ease: "power3.Out"
 	});
 
 	tl.from(".line span", {
-	duration: 1.8,
-	y: 100,
-	ease: "power4.out",
-	skewY: 7,
-	stagger: {
-		amount: 0.3,
-	},
-	}, "-=1"); // "-=1" makes sure that the second animation starts at the same time as the first one
+		duration: 1.8,
+		y: 100,
+		ease: "power4.out",
+		skewY: 7,
+		stagger: {
+			amount: 0.3,
+		},
+		ease: "power3.Out"
+	}, "-=1"); 
 
+	gsap.registerPlugin(ScrollTrigger);
+	gsap.from(".textAbout", {
+		scrollTrigger: {
+			trigger: ".textAbout",
+			scrub: true,
+			start: "bottom-=350px bottom",
+			end: "bottom+=250px bottom",
+		},
+		stagger: {
+			amount: 0.3,
+		},
+		opacity: 0,
+		y: 200,
+		ease: "power3.Out"
+	})
 }
 
 _app.workListAnim = () => {
@@ -106,13 +125,15 @@ _app.workListAnim = () => {
 		stagger: {
 			amount: 2,
 		},
+		ease: "power3.Out"
 	});
 	tl.from(".linez", {
 		duration: 1,
 		width: "0%",
 		stagger: {
 			amount: 2,
-		}
+		},
+		ease: "power3.Out"
 	},"-=1");
 	tl.from(".work-item div, .work-item p",{
 		y: 150,
@@ -120,7 +141,22 @@ _app.workListAnim = () => {
 		stagger: {
 			amount: 2.5,
 		},
+		ease: "power3.Out"
 	},"-=3");
+}
+
+_app.footerAnim = () => {
+	gsap.registerPlugin(ScrollTrigger);
+	gsap.from("footer", {
+		scrollTrigger: {
+			trigger: "footer",
+			scrub: true,
+			start: "top-=50px bottom",
+			end: "top+=130px bottom",
+		},
+		opacity: 0,
+		ease: "power3.Out"
+	})
 }
 
 _app.workDetAnim = () => {
@@ -129,12 +165,48 @@ _app.workDetAnim = () => {
 		duration: 1,
 		skewY: 7,
 		y: -200,
+		ease: "power3.Out",
 	});
+
+	gsap.registerPlugin(ScrollTrigger);
+	gsap.from(".sideWorkTitle", {
+		scrollTrigger: {
+			trigger: ".sideWorkTitle",
+			scrub: true,
+			start: "0px bottom",
+			end: "bottom+=200px bottom",
+		},
+		opacity: 0,
+		left: "-200px",
+		ease: "power3.Out"
+	})
+	gsap.from(".linez", {
+		scrollTrigger: {
+			trigger: ".linez",
+			scrub: true,
+			start: "top bottom",
+			end: "top+=150px bottom",
+		},
+		width: "0%",
+		ease: "power3.Out",
+	})
+	gsap.from(".goToNextProject", {
+		scrollTrigger: {
+			trigger: ".goToNextProject",
+			scrub: true,
+			start: "top-=100px bottom",
+			end: "top+=50px bottom",
+		},
+		y: 100,
+		ease: "power3.Out",
+	})
 }
 
 _app.startUp = () => {
-	_app.menuGestor();
 	_app.owlCarousel();
+	_app.smooth();
+	_app.menuGestor();
+	_app.footerAnim()
 	if (window.location.pathname.includes("index.html")) {
 		_app.menuGestor();
 		_app.textAnim();
@@ -151,7 +223,6 @@ _app.startUp = () => {
 			};
 		}
 	}
-	_app.smooth();
 }
 
 _app.menuGestor = () =>{
