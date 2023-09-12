@@ -92,7 +92,6 @@ _app.textAnim = () => {
 	},
 	}, "-=1"); // "-=1" makes sure that the second animation starts at the same time as the first one
 
-	// Start the timeline
 	tl.play();
 
 }
@@ -114,8 +113,8 @@ _app.workListAnim = () => {
 		width: "0%",
 		stagger: {
 			amount: 2,
-		},
-	});
+		}
+	},"-=1");
 	tl.from(".work-item div, .work-item p",{
 		y: 150,
 		duration: 0.5,

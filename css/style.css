@@ -359,21 +359,6 @@ ul {
     z-index: 800;
 }
 
-.bar {
-    width: calc(100% / 12);
-    height: 105vh;
-    background: var(--black);
-}
-
-
-.counter {
-    padding-bottom: 1vmin;
-    padding-right: 5vmin;
-    z-index: 1000;
-    color: var(--white);
-    font-size: 40vmin;
-}
-
 .line{
     height:5em;
     position: relative;
@@ -452,10 +437,14 @@ a .hover-underline-animation{
 
 .ne-resize {
     cursor: ne-resize;
+}
 
+.ctaFinal {
+    z-index: -100;
 }
 
 footer {
+    background: var(--white);
     height: 25vmin;
     border-top: 1px solid var(--link);
 }
