@@ -193,29 +193,23 @@ _app.workDetAnim = () => {
 		width: "0%",
 		ease: "power3.Out",
 	})
-	gsap.from(".goToNextProject", {
-		scrollTrigger: {
-			trigger: ".goToNextProject",
-			scrub: true,
-			start: "top-=100px bottom",
-			end: "top+=50px bottom",
-		},
-		y: 100,
-		ease: "power3.Out",
-	})
-	const timeline = gsap.timeline({
-		scrollTrigger: {
-			trigger: document.documentElement,
-			scrub: true,
-			start: "0px",
-			end: "+=200px",
-		},
-	})
+	let mm = gsap.matchMedia();
 
-	timeline
-		.from(".headerImgWork", {
-			clipPath: `inset(30%)`
+	mm.add("(min-width: 767px)", () => {
+		const timeline = gsap.timeline({
+			scrollTrigger: {
+				trigger: document.documentElement,
+				scrub: true,
+				start: "0px",
+				end: "+=200px",
+			},
 		})
+	
+		timeline
+			.from(".headerImgWork", {
+				clipPath: `inset(30%)`
+			})
+	});
 }
 
 _app.startUp = () => {
