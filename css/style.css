@@ -271,6 +271,22 @@ ul {
     z-index: 0;
 }
 
+.title {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.subTitleWorkList {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.headWork {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.lineIntro span {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
 .titleWorkPage{
     font-size: 100px;
     letter-spacing: -.5vmin;

@@ -75,26 +75,18 @@ _app.smooth = () => {
 _app.textAnim = () => {
 	const tl = gsap.timeline();
 
-	tl.from(".headWork", {
-		delay: 0.5,
+	tl.from(".headWork .w-100", {
+		delay: .5,
+		y: 300,
+        skewY: 2,
 		duration: 1,
-		skewY: 7,
-		y: -300,
-		stagger: {
-			amount: 2,
-		},
-		ease: "power3.Out"
 	});
 
 	tl.from(".lineIntro span", {
-		duration: 1.8,
-		y: 100,
-		ease: "power4.out",
-		skewY: 7,
-		stagger: {
-			amount: 0.3,
-		},
-		ease: "power3.Out"
+		delay: .5,
+		y: 300,
+        skewY: 2,
+		duration: 1.5,
 	}, "-=1"); 
 
 	gsap.registerPlugin(ScrollTrigger);
@@ -161,18 +153,21 @@ _app.textAnim = () => {
 
 _app.workListAnim = () => {
 	const tl = gsap.timeline();
-
-	tl.from(".headWork", {
+	tl.from(".title .w-100", {
 		delay: .5,
+		y: 300,
+        skewY: 2,
 		duration: 1,
-		skewY: 7,
-		y: -350,
-		stagger: {
-			amount: 2,
-		},
-		ease: "power3.Out"
 	});
+
+	tl.from(".subTitleWorkList .fs-4", {
+		y: 150,
+        skewY: 2,
+		duration: 1,
+	}, "-=1");
+
 	tl.from(".linez", {
+		delay: 1,
 		duration: 1,
 		width: "0%",
 		stagger: {
@@ -180,6 +175,7 @@ _app.workListAnim = () => {
 		},
 		ease: "power3.Out"
 	},"-=1");
+
 	tl.from(".work-item div, .work-item p",{
 		y: 150,
 		duration: 0.5,
@@ -208,6 +204,91 @@ _app.workDetAnim = () => {
 			amount: 2,
 		},
 	})
+
+	// buttons
+	var hoverMouse = function(elements) {
+		elements.forEach(function(element) {
+			var self = element;
+			var hover = false;
+			var offsetHoverMax = self.getAttribute("offset-hover-max") || 0.7;
+			var offsetHoverMin = self.getAttribute("offset-hover-min") || 0.5;
+		
+			var attachEventsListener = function() {
+				window.addEventListener("mousemove", function(e) {
+				var hoverArea = hover ? offsetHoverMax : offsetHoverMin;
+		
+				// cursor
+				var cursor = {
+					x: e.clientX,
+					y: e.clientY + window.scrollY
+				};
+		
+				// size
+				var width = self.offsetWidth;
+				var height = self.offsetHeight;
+		
+				// position
+				var offset = self.getBoundingClientRect();
+				var elPos = {
+					x: offset.left + width / 2,
+					y: offset.top + height / 2
+				};
+		
+				// comparaison
+				var x = cursor.x - elPos.x;
+				var y = cursor.y - elPos.y;
+		
+				// dist
+				var dist = Math.sqrt(x * x + y * y);
+		
+				// mutex hover
+				var mutHover = false;
+		
+				// anim
+				if (dist < width * hoverArea) {
+					mutHover = true;
+					if (!hover) {
+					hover = true;
+					}
+					onHover(x, y);
+				}
+		
+				// reset
+				if (!mutHover && hover) {
+					onLeave();
+					hover = false;
+				}
+				});
+			};
+	  
+			var onHover = function(x, y) {
+				console.log("hover");
+				TweenMax.to(self, 0.4, {
+					x: x * 0.8,
+					y: y * 0.8,
+					rotation: x * 0.05,
+					ease: Power2.easeOut
+				});
+			};
+		
+			var onLeave = function() {
+				console.log("leave");
+				TweenMax.to(self, 0.7, {
+					x: 0,
+					y: 0,
+					scale: 1,
+					rotation: 0,
+					ease: Elastic.easeOut.config(1.2, 0.4)
+				});
+			};
+		
+			attachEventsListener();
+		});
+	};
+	  
+	var anchorElements = Array.from(document.querySelectorAll('.tagWork'));
+	hoverMouse(anchorElements);
+		
 
 	// titleAnimating
 	const title = new SplitType("#animTitle")
