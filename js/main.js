@@ -86,7 +86,7 @@ _app.textAnim = () => {
 		ease: "power3.Out"
 	});
 
-	tl.from(".line span", {
+	tl.from(".lineIntro span", {
 		duration: 1.8,
 		y: 100,
 		ease: "power4.out",
@@ -145,29 +145,8 @@ _app.workListAnim = () => {
 	},"-=3");
 }
 
-_app.footerAnim = () => {
-	gsap.registerPlugin(ScrollTrigger);
-	gsap.from("footer", {
-		scrollTrigger: {
-			trigger: "footer",
-			scrub: true,
-			start: "top-=50px bottom",
-			end: "top+=130px bottom",
-		},
-		opacity: 0,
-		ease: "power3.Out"
-	})
-}
-
 _app.workDetAnim = () => {
-	gsap.from(".headerDetails", {
-		delay: 0.5,
-		duration: 1,
-		skewY: 7,
-		y: -200,
-		ease: "power3.Out",
-	});
-
+	// line animating slogan
 	gsap.registerPlugin(ScrollTrigger);
 	gsap.from(".sloganLine", {
 		scrollTrigger: {
@@ -177,29 +156,30 @@ _app.workDetAnim = () => {
 			end: "top-=400px",
 		},
 		opacity: 0,
-		left: "-200px",
+		y: 0,
+		duration: 1,
 		ease: "power3.Out",
 		stagger: {
 			amount: 2,
 		},
 	})
-	gsap.from(".linez", {
-		scrollTrigger: {
-			trigger: ".linez",
-			scrub: true,
-			start: "top bottom",
-			end: "top+=150px bottom",
-		},
-		width: "0%",
-		ease: "power3.Out",
-	})
-	let mm = gsap.matchMedia();
 
+	// titleAnimating
+	const title = new SplitType("#animTitle")
+	gsap.to(".char", {
+		y: 0,
+		stagger: 0.03,
+		delay: 0.5,
+		duration: .1
+	})
+	
+	// image zoom
+	let mm = gsap.matchMedia();
 	mm.add("(min-width: 767px)", () => {
 		const timeline = gsap.timeline({
 			scrollTrigger: {
 				trigger: document.documentElement,
-				scrub: true,
+				toggleActions: "play none none none",
 				start: "0px",
 				end: "+=200px",
 			},
@@ -207,19 +187,68 @@ _app.workDetAnim = () => {
 	
 		timeline
 			.from(".headerImgWork", {
-				clipPath: `inset(30%)`
+				borderRadius: '+=10%',
+				scale: 1.1,
+				clipPath: 'inset(0% 20%)'
 			})
 	});
+
+	// gallery skew
+	let proxy = { skew: 0 },
+    skewSetter = gsap.quickSetter(".skewElem", "skewY", "deg"), // fast
+    clamp = gsap.utils.clamp(-20, 20); // don't let the skew go beyond 20 degrees. 
+	ScrollTrigger.create({
+		onUpdate: (self) => {
+			let skew = clamp(self.getVelocity() / -500);
+			// only do something if the skew is MORE severe. Remember, we're always tweening back to 0, so if the user slows their scrolling quickly, it's more natural to just let the tween handle that smoothly rather than jumping to the smaller skew.
+			if (Math.abs(skew) > Math.abs(proxy.skew)) {
+				proxy.skew = skew;
+				gsap.to(proxy, {skew: 0, duration: 0.8, ease: "power3", overwrite: true, onUpdate: () => skewSetter(proxy.skew)});
+			}
+		}
+	});
+	gsap.set(".skewElem", {transformOrigin: "right center", force3D: true});
+	  
+
+	gsap.utils.toArray(".containerHover").forEach((el) => {
+		const image = el.querySelector("img.swipeimage"),
+		  setX = gsap.quickTo(image, "x", { duration: 0.6, ease: "power3" }),
+		  setY = gsap.quickTo(image, "y", { duration: 0.6, ease: "power3" }),
+		  align = (e) => {
+			const top = el.getBoundingClientRect().top;
+			setX(e.clientX);
+			setY(e.clientY - top);
+		  },
+		  startFollow = () => document.addEventListener("mousemove", align),
+		  stopFollow = () => document.removeEventListener("mousemove", align),
+		  fade = gsap.to(image, {
+			autoAlpha: 1,
+			ease: "none",
+			paused: true,
+			onReverseComplete: stopFollow
+		  });
+	  
+		el.addEventListener("mouseenter", (e) => {
+		  fade.play();
+		  startFollow();
+		  align(e);
+		});
+	  
+		el.addEventListener("mouseleave", () => fade.reverse());
+	  });
 }
 
 _app.startUp = () => {
-	_app.owlCarousel();
 	_app.smooth();
 	_app.menuGestor();
-	_app.footerAnim()
 	if (window.location.pathname.includes("index.html")) {
+		_app.owlCarousel();
 		_app.menuGestor();
 		_app.textAnim();
+	}
+	
+	if (window.location.pathname.includes("miao.html")) {
+		_app.miao();
 	}
 
 	if (window.location.pathname.includes("works.html")) {
@@ -227,12 +256,29 @@ _app.startUp = () => {
 	}
 
 	if (window.location.pathname.includes("work-details.html")) {
-		if (window.location.pathname.includes("work-details.html")) {
-			window.onload = function() {
-				_app.workDetAnim();
-			};
-		}
+		window.onload = function() {
+			_app.workDetAnim();
+		};
+	
 	}
+}
+
+_app.miao = () => {
+	const timeline = gsap.timeline({
+		scrollTrigger: {
+			trigger: document.documentElement,
+			scrub: true,
+			markers: true,
+			start: "top+=200px",
+			end: "top+=600px",
+		},
+	})
+
+	timeline
+		.from(".imageWorkDet", {
+			scale: `1.1`,
+			clipPath: `inset(0% 30%)`
+		})
 }
 
 _app.menuGestor = () =>{

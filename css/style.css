@@ -122,12 +122,6 @@ ul {
      /* border-radius: 15px;  */
 }
 
-.image{
-    border-radius: 999px 999px 0 0;
-    object-fit: cover;
-    height: 100%;
-}
-
 .little{
     font-size: 15px;
     position: absolute; 
@@ -246,12 +240,6 @@ ul {
     margin: 0!important;
 }
 
-.lineAnim {
-    position: relative;
-    overflow: hidden;
-    display: inline-flex;
-}
-
 .owl-carousel .owl-item .mini-logo {
     mix-blend-mode: difference;
     position: absolute;
@@ -286,6 +274,12 @@ ul {
 .titleWorkPage{
     font-size: 100px;
     letter-spacing: -.5vmin;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.char {
+    transform: translateY(115px);
+    transition: transform .5s;
 }
 
 .textValues{
@@ -306,6 +300,25 @@ ul {
     font-size: 50px;
     letter-spacing: -2px;
 }
+
+.containerHover {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+  }
+
+.containerHover img.swipeimage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9;
+  }
 
 .spanRect{
     width: 20vmin;
@@ -371,13 +384,18 @@ ul {
     z-index: 800;
 }
 
-.line{
+.titleWordDet{
+    font-size: 10vw;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.lineIntro {
     height:5em;
     position: relative;
     overflow: hidden;
 }
 
-.line span{
+.lineIntro span{
     position: absolute;
 }
 
@@ -501,6 +519,17 @@ footer {
     transform-origin: center;
   }
 
+  .image{
+    border-radius: 999px 999px 0 0;
+    object-fit: cover;
+    height: 100%;
+    transition: background-size .3s ease-in;
+    -moz-transition: background-size .3s ease-in;
+    -ms-transition: background-size .3s ease-in;
+    -o-transition: background-size .3s ease-in;
+    -webkit-transition: background-size .3s ease-in;
+}
+
 .closed {
     transform: translateY(-100%);
     transition: all 300ms ease-in-out;
@@ -529,7 +558,7 @@ footer {
         margin-top: 10px;
         max-width: 15vw;
     }
-    .line:last-child{
+    .lineIntro:last-child{
         height:2em;
         position: relative;
     }

@@ -38,7 +38,7 @@ function loadWorkDetails(workId) {
             haveVideo: false,
             urlVideo: "",
             nextProjectLink: "./work-details.html?work=visart",
-            nextProject: "Visart"
+            nextProjectImage: "./asset/images/works/visart/3Vis.png"
         },
 		visart: {
 			name: "Visart",
@@ -72,7 +72,7 @@ function loadWorkDetails(workId) {
             haveVideo: false,
             urlVideo: "",
             nextProjectLink: "./work-details.html?work=versacrum",
-            nextProject: "Ver Sacrum"
+            nextProjectImage: "./asset/images/works/verSacrumCover.png"
 		},
         versacrum: {
             name: "Ver Sacrum",
@@ -102,7 +102,7 @@ function loadWorkDetails(workId) {
             haveVideo: false,
             urlVideo: "",
             nextProjectLink: "./work-details.html?work=md",
-            nextProject: "Magnificent Desolation"
+            nextProjectImage: "./asset/images/works/magnificent Desolation/mdCover.png"
         },
         md: {
             name: "A Magnificent Desolation",
@@ -129,7 +129,7 @@ function loadWorkDetails(workId) {
             haveVideo: true,
             urlVideo: "https://www.youtube-nocookie.com/embed/B0g1aZwxekg?si=N2v5waI9IYJduDaB&amp;start=1",
             nextProjectLink: "./work-details.html?work=regular",
-            nextProject: "Regular"
+            nextProjectImage: "./asset/images/works/regularCover.png"
         },
         regular: {
             name: "Regular",
@@ -157,7 +157,7 @@ function loadWorkDetails(workId) {
             haveVideo: false,
             urlVideo: "",
             nextProjectLink: "./work-details.html?work=spark",
-            nextProject: "Spark"
+            nextProjectImage: "./asset/images/works/sparkCover.gif"
         },
         spark: {
             name: "The Spark",
@@ -189,7 +189,7 @@ function loadWorkDetails(workId) {
             haveVideo: false,
             urlVideo: "",
             nextProjectLink: "./work-details.html?work=nunnarella",
-            nextProject: "Nunnarella"
+            nextProjectImage: "./asset/images/works/nunnarella/nuvolanunna.jpg"
         }
 	};
 
@@ -205,12 +205,12 @@ function loadWorkDetails(workId) {
                 imagesHtml += `
                     <div class="px-4 row mb-4">
                         <div class="col-12 col-md-6 mb-4 mb-md-0">
-                            <img src="${work.images[i]}" class="galleryImg">
+                            <img src="${work.images[i]}" class="galleryImg skewElem">
                         </div>`;
                 if (i + 1 < work.images.length) {
                     imagesHtml += `
                         <div class="col-12 col-md-6" >
-                            <img src="${work.images[i + 1]}" class="galleryImg">
+                            <img src="${work.images[i + 1]}" class="galleryImg skewElem">
                         </div>`;
                 }
                 imagesHtml += `</div>`;
@@ -240,8 +240,8 @@ function loadWorkDetails(workId) {
 		workDetailsContainer.innerHTML = `
         <div class="headerDetails">
             <div class="d-flex justify-content-center pt-3" id="main">
-                <div class="titleWorkPage editorial">
-                    ${work.name || ''}
+            <div class="titleWorkPage editorial" id="animTitle">
+            ${work.name || ''}
                 </div>
             </div>
             <div class="d-flex justify-content-center fs-6 lh-4 text-center mw-100 mb-md-5 mb-4">
@@ -305,24 +305,26 @@ function loadWorkDetails(workId) {
     </div>
     ` : ''}
     <div class="linez"></div>
-    <div class="goToNextProject">
-        <div class="d-flex w-100 justify-content-center mt-4">
-            <div class="fs-6">
-                <div class="seeWorks me-0">Go to</div>
+    <div class="containerHover"><a href="${work.nextProjectLink}">
+        <div class="d-flex w-100 h-100 justify-content-center align-items-center">
+            <div class="fs-2">
+                <div class="seeWorks me-0">Next Project</div>
             </div>
         </div>
-        <div class="d-flex w-100 justify-content-center mt-1">
-            <div class="fs-1 hover-underline-animation mb-4">
-                <a href="${work.nextProjectLink}">
-                    ${work.nextProject} <img src="./asset/images/icons/arrow-down-right.svg">
-                </a>
-            </div>
-        </div>
-    </div>
+        <img class="swipeimage" src="${work.nextProjectImage}">
+        <div class="swipecursor"></div>
+    </a></div>
 		`;
 	}
 }
 
+        // <div class="d-flex w-100 justify-content-center mt-1">
+        //     <div class="fs-1 hover-underline-animation mb-4">
+        //         <a href="${work.nextProjectLink}">
+        //             ${work.nextProject} <img src="./asset/images/icons/arrow-down-right.svg">
+        //         </a>
+        //     </div>
+        // </div>
 // Chiamata alla funzione di caricamento dei dettagli del lavoro quando il documento è pronto
 document.addEventListener("DOMContentLoaded", () => {
     const workId = getUrlParameter('work');
