@@ -281,8 +281,8 @@ function loadWorkDetails(workId) {
                 ${tags}
             </div>
         </div>
-        <div class="col-12 col-md-6 mt-md-0 mt-3">
-            <div class="fs-6">
+        <div class="col-12 col-md-6 mt-md-0 mt-3 d-flex align-items-start">
+            <div class="fs-6 reveal-type" data-bg-color="#cccccc" data-fg-color="black">
                 ${work.text || ''}
             </div>
         </div>
