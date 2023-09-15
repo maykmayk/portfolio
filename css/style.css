@@ -271,6 +271,10 @@ ul {
     z-index: 0;
 }
 
+.footerEl {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
 .title {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
@@ -494,6 +498,7 @@ footer {
     background: var(--white);
     height: 25vmin;
     border-top: 1px solid var(--link);
+
 }
 
 /* underline hover */

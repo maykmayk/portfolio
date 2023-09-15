@@ -203,6 +203,7 @@ _app.workDetAnim = () => {
 		stagger: {
 			amount: 2,
 		},
+		
 	})
 
 	// buttons
@@ -407,7 +408,7 @@ _app.workDetAnim = () => {
 		});
 	  
 		el.addEventListener("mouseleave", () => fade.reverse());
-	  });
+	});
 }
 
 _app.startUp = () => {

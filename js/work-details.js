@@ -240,8 +240,8 @@ function loadWorkDetails(workId) {
 		workDetailsContainer.innerHTML = `
         <div class="headerDetails">
             <div class="d-flex justify-content-center pt-3" id="main">
-            <div class="titleWorkPage editorial" id="animTitle">
-            ${work.name || ''}
+                <div class="titleWorkPage editorial" id="animTitle">
+                    ${work.name || ''}
                 </div>
             </div>
             <div class="d-flex justify-content-center fs-6 lh-4 text-center mw-100 mb-md-5 mb-4">
