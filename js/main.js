@@ -104,51 +104,6 @@ _app.textAnim = () => {
 		y: 200,
 		ease: "power3.Out"
 	})
-
-	const revealTypeElements = document.querySelectorAll('.reveal-type');
-
-	revealTypeElements.forEach((element, i) => {
-	const bg = element.dataset.bgColor;
-	const fg = element.dataset.fgColor;
-
-	// Seleziona solo il testo all'interno dell'elemento "reveal-type"
-	const text = element.textContent;
-
-	// Crea un div per il testo
-	const textContainer = document.createElement('div');
-	textContainer.innerHTML = text;
-
-	// Applica SplitType solo al testo all'interno del div appena creato
-	const textSplit = new SplitType(textContainer, { types: 'chars' });
-
-	// Rimuovi la classe "chars" dai caratteri
-	textSplit.chars.forEach(char => {
-		char.classList.remove('char');
-	});
-
-	// Aggiungi il div con il testo splittato all'elemento "reveal-type"
-	element.innerHTML = '';
-	element.appendChild(textContainer);
-
-	// Applica l'animazione GSAP al testo splittato
-	gsap.fromTo(textSplit.chars,
-		{
-		color: bg,
-		},
-		{
-		color: fg,
-		duration: 0.3,
-		stagger: 0.02,
-		scrollTrigger: {
-			trigger: element,
-			start: 'top 80%',
-			end: 'top 20%',
-			scrub: true,
-			markers: false,
-			toggleActions: 'play play reverse reverse'
-		}
-		});
-	});
 }
 
 _app.workListAnim = () => {
@@ -412,10 +367,10 @@ _app.workDetAnim = () => {
 }
 
 _app.startUp = () => {
+	_app.owlCarousel();
 	_app.smooth();
 	_app.menuGestor();
 	if (window.location.pathname.includes("index.html")) {
-		_app.owlCarousel();
 		_app.menuGestor();
 		_app.textAnim();
 	}
