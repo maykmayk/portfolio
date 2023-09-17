@@ -60,16 +60,15 @@ _app.smooth = () => {
 	}
 
 	requestAnimationFrame(raf)
-	if (window.location.pathname.includes("works.html")) {
+	if (window.innerWidth >= 767) { 
 		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-			anchor.addEventListener('click', function (e) {
-				e.preventDefault();
-					lenis.scrollTo(this.getAttribute('href'), {offset:-100})
-					_app.navEl.classList.remove("closed");
-			});
-		})
-	}
-
+		  anchor.addEventListener('click', function (e) {
+			e.preventDefault();
+			lenis.scrollTo(this.getAttribute('href'), {offset: -100})
+			_app.navEl.classList.remove("closed");
+		  });
+		});
+	  }
 }
 
 _app.textAnim = () => {
@@ -82,11 +81,11 @@ _app.textAnim = () => {
 		duration: 1,
 	});
 
-	tl.from(".lineIntro span", {
+	tl.from(".lineIntro .fs-6", {
 		delay: .5,
-		y: 300,
+		y: 150,
         skewY: 2,
-		duration: 1.5,
+		duration: 1,
 	}, "-=1"); 
 
 	gsap.registerPlugin(ScrollTrigger);

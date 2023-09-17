@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./lib/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="./lib/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" type="image/png" href="./asset/images/favicon.ico"/>
     <title>Michele de Vita - Portfolio</title>
@@ -32,17 +33,23 @@
             <img src="./asset/images/titles/title1.svg" class="w-100">
         </div></span>
         <div class="w-100 m-0 row px-4" id="text-open">
-            <div class="lineIntro p-0 col-12 col-md-4 fs-6 "><span>
-                Since 2018 handcrafting a digital presence for modern brands involving creating a unique and authentic identity that effectively engages the audience.
-            </div></span>
+            <div class="lineIntro p-0 col-12 col-md-4">
+                <div class="fs-6">
+                    Since 2018 handcrafting a digital presence for modern brands involving creating a unique and authentic identity that effectively engages the audience.
+                </div>
+            </div>
             <div class="p-0 col-12 col-md-2  mb-2"></div>
-            <div class="lineIntro p-0 col-12 col-md-4 fs-6  mb-2"><span>
-                If you have a potential project or and think I'd be the ideal partner to bring it to life,
-                please get in touch at <div class="link d-inline"><a href="mailto:mvitade@gmail.com?subject=Oggetto%20del%20messaggio" target="_blank">mvitade@gmail.com</a></div> I'd love to hear from you!
-            </span></div>
-            <div class="lineIntro p-0 col-12 col-md-2 fs-6 text-end d-flex align-items-end justify-content-end"><span>
-                <a href="mailto:mvitade@gmail.com?subject=Oggetto%20del%20messaggio"><div class="hover-underline-animation">Get in touch<img src="./asset/images/icons/arrow-down-right.svg" class="arrow" draggable="false"></a></div>
-            </span></div>
+            <div class="lineIntro p-0 col-12 col-md-4 mb-2">
+                <div class="fs-6">
+                    If you have a potential project or and think I'd be the ideal partner to bring it to life,
+                    please get in touch at <div class="link d-inline"><a href="mailto:mvitade@gmail.com?subject=Oggetto%20del%20messaggio" target="_blank">mvitade@gmail.com</a></div> I'd love to hear from you!
+                </div>
+            </div>
+            <div class="lineIntro p-0 col-12 col-md-2 text-end d-flex align-items-end justify-content-end">
+                <div class="fs-6">
+                    <a href="mailto:mvitade@gmail.com?subject=Oggetto%20del%20messaggio"><div class="hover-underline-animation">Get in touch<img src="./asset/images/icons/arrow-down-right.svg" class="arrow" draggable="false"></a></div>
+                </div>
+            </div>
         </div>
         <div class="w-100 owl-carousel owl-theme m-0 mt-5">
             <div class="item"><a href="./work-details.html?work=nunnarella">
@@ -101,8 +108,8 @@
             </div>
             <div class="col-12 col-md-1"></div>
             <div class="col-12 col-md-5 d-flex flex-column p-0">
-                <div class="portraitContainer">
-                    <img src="./asset/images/portrait.jpg" alt="just_michele_devita" class="portrait" >
+                <div data-jarallax data-speed="0.9" class="jarallax portraitContainer">
+                    <img src="./asset/images/portrait.jpg" alt="just_michele_devita" class=" jarallax-img portrait" >
                 </div>
                 <div class="w-100 fs-6 d-md-flex d-block justify-content-end mt-2">
                     <!-- <a href="#"><div class="hover-underline-animation">My CV awaits your click<img src="./asset/images/icons/arrow-down-right.svg" class="arrow" draggable="false"></a></div> -->
@@ -196,7 +203,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="./js/main.js"></script>
+    <script>
+
+    </script>
 </body>
 </html>

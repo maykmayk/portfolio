@@ -271,10 +271,6 @@ ul {
     z-index: 0;
 }
 
-.footerEl {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-
 .title {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
@@ -287,7 +283,7 @@ ul {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-.lineIntro span {
+.lineIntro{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
@@ -408,7 +404,7 @@ ul {
     font-size: 10vw;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
-
+/* 
 .lineIntro {
     height:5em;
     position: relative;
@@ -417,7 +413,7 @@ ul {
 
 .lineIntro span{
     position: absolute;
-}
+} */
 
   .work-items {
     height: min-content;
