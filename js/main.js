@@ -115,6 +115,7 @@ _app.workListAnim = () => {
 	});
 
 	tl.from(".subTitleWorkList .fs-4", {
+		delay: .5,
 		y: 150,
         skewY: 2,
 		duration: 1,
