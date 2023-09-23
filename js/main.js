@@ -144,22 +144,22 @@ _app.workListAnim = () => {
 _app.workDetAnim = () => {
 	// line animating slogan
 	gsap.registerPlugin(ScrollTrigger);
-	gsap.from(".sloganLine", {
-		scrollTrigger: {
-			trigger: ".sloganLine",
-			scrub: true,
-			start: "top-=700px",
-			end: "top-=400px",
-		},
-		opacity: 0,
-		y: 0,
-		duration: 1,
-		ease: "power3.Out",
-		stagger: {
-			amount: 2,
-		},
+	// gsap.from(".sloganLine", {
+	// 	scrollTrigger: {
+	// 		trigger: ".sloganLine",
+	// 		scrub: true,
+	// 		start: "top-=700px",
+	// 		end: "top-=400px",
+	// 	},
+	// 	opacity: 0,
+	// 	y: 0,
+	// 	duration: 1,
+	// 	ease: "power3.Out",
+	// 	stagger: {
+	// 		amount: 2,
+	// 	},
 		
-	})
+	// })
 
 	// buttons
 	var hoverMouse = function(elements) {
