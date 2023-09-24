@@ -71,6 +71,7 @@ body {
     font-family: "Nueue Haas";
     background-color: var(--white);
     max-width: 100%;
+    overflow-x: hidden;
 }
 
 li {
