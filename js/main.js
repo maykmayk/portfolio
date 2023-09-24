@@ -60,15 +60,6 @@ _app.smooth = () => {
 	}
 
 	requestAnimationFrame(raf)
-	if (window.innerWidth >= 1000) { 
-		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-			anchor.addEventListener('click', function (e) {
-				e.preventDefault();
-				lenis.scrollTo(this.getAttribute('href'), {offset: -100})
-				_app.navEl.classList.remove("closed");
-			});
-		});
-	}
 }
 
 _app.textAnim = () => {
