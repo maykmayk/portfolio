@@ -127,7 +127,7 @@ function loadWorkDetails(workId) {
                 "Story Telling",
             ],
             haveVideo: true,
-            urlVideo: "https://www.youtube-nocookie.com/embed/B0g1aZwxekg?si=N2v5waI9IYJduDaB&amp;start=1",
+            urlVideo: "https://www.youtube.com/embed/B0g1aZwxekg?si=W8Ddgo2bcn7KfHpp",
             nextProjectLink: "./work-details.html?work=regular",
             nextProjectImage: "./asset/images/works/regularCover.png"
         },
@@ -291,7 +291,7 @@ function loadWorkDetails(workId) {
 	<!-- gallery -->
         ${work.haveVideo ? `
         <div class="px-4 row mb-4">
-            <iframe width="560" height="315" src="${work.urlVideo}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="515" src="${work.urlVideo}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         ` : ''}
         ${work.haveImages ? imagesHtml : ''}

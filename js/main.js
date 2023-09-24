@@ -270,7 +270,7 @@ _app.workDetAnim = () => {
 	textContainer.innerHTML = text;
 
 	// Applica SplitType solo al testo all'interno del div appena creato
-	const textSplit = new SplitType(textContainer, { types: 'chars' });
+	const textSplit = new SplitType(textContainer);
 
 	// Rimuovi la classe "chars" dai caratteri
 	textSplit.chars.forEach(char => {
@@ -367,46 +367,18 @@ _app.workDetAnim = () => {
 }
 
 _app.startUp = () => {
-	_app.owlCarousel();
-	_app.smooth();
-	_app.menuGestor();
-	if (window.location.pathname.includes("index.html")) {
+	window.addEventListener("load", () => {
+		_app.owlCarousel();
+		_app.smooth();
 		_app.menuGestor();
-		_app.textAnim();
-	}
-	
-	if (window.location.pathname.includes("miao.html")) {
-		_app.miao();
-	}
-
-	if (window.location.pathname.includes("works.html")) {
-		_app.workListAnim();
-	}
-
-	if (window.location.pathname.includes("work-details.html")) {
-		window.onload = function() {
+		if (window.location.pathname.includes("work-details.html")) {
 			_app.workDetAnim();
-		};
-	
-	}
-}
-
-_app.miao = () => {
-	const timeline = gsap.timeline({
-		scrollTrigger: {
-			trigger: document.documentElement,
-			scrub: true,
-			markers: true,
-			start: "top+=200px",
-			end: "top+=600px",
-		},
-	})
-
-	timeline
-		.from(".imageWorkDet", {
-			scale: `1.1`,
-			clipPath: `inset(0% 30%)`
-		})
+		} else if (window.location.pathname.includes("works.html")) {
+			_app.workListAnim();
+		} else {
+			_app.textAnim();
+		}
+	});
 }
 
 _app.menuGestor = () =>{
