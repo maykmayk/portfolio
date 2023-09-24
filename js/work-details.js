@@ -43,8 +43,8 @@ function loadWorkDetails(workId) {
 		visart: {
 			name: "Visart",
 			subTitle: "Connect Your Design Activity",
-            haveCover: true,
-			coverUrl: "./asset/images/works/visart/visartCover.png",
+            haveCover: false,
+            videoCover: "./asset/images/works/visart/visCover.mp4",
 			slogan: "Empower your design without limits",
             sloganLines: [
                 "Empower your design",
