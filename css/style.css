@@ -405,16 +405,6 @@ ul {
     font-size: 10vw;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
-/* 
-.lineIntro {
-    height:5em;
-    position: relative;
-    overflow: hidden;
-}
-
-.lineIntro span{
-    position: absolute;
-} */
 
   .work-items {
     height: min-content;
@@ -485,10 +475,6 @@ a .hover-underline-animation{
 
 .ne-resize {
     cursor: ne-resize;
-}
-
-.ctaFinal {
-    z-index: -100;
 }
 
 footer {
