@@ -265,11 +265,12 @@ ul {
 }
 
 .rect{
-    height: 60vh;
+    height: 25rem;
     background-color: var(--orange);
     width: 100%;
     border-radius: 999px 999px 0 0;
     z-index: 0;
+    cursor: ew-resize !important;
 }
 
 .title {
@@ -490,16 +491,23 @@ footer {
     position: relative;
     color: var(--black);
   }
+
+.hover-underline-animation .arrow{
+    transition: rotate .3s ease-in-out;
+}
   
+.hover-underline-animation:hover .arrow{
+    rotate: 90deg;
+}
+
   .hover-underline-animation::after {
     content: '';
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 2px;
+    border-top: .1rem solid var(--black);
     bottom: 0;
     left: 0;
-    background-color: var(--black);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
@@ -538,6 +546,23 @@ footer {
     transform: translateY(-100%);
     transition: all 300ms ease-in-out;
   }
+
+iframe {
+    aspect-ratio: 16/9;
+}
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+.rotating-image:hover {
+    animation: rotate 2s linear infinite; 
+}
 
 @media screen and (max-width: 767px) {
     .closed {

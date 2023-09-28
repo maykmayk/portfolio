@@ -143,10 +143,12 @@ function loadWorkDetails(workId) {
             text: "Regular ain't your typical typography magazine bossing you around with what fonts to use. Nah! Each month, we'll hook you up with the juiciest typo news, unveil the most mesmerizing font of the month, and drop some mind-blowing typographic tricks that'll leave you saying, 'Whoa! So buckle up, typo explorers, 'cause Regular's about to rock your typophile world!",
             showSeeMore: false,
             showMoreLink: "",
-            haveImages: false,
+            haveImages: true,
             images: [
-                "",
-                "",
+                "./asset/images/works/regular/1Reg.png",
+                "./asset/images/works/regular/3Reg.png",
+                "./asset/images/works/regular/4Reg.png",
+                "./asset/images/works/regular/2Reg.png",
             ],
             tags: [
                 "Brand Identity",
@@ -291,7 +293,7 @@ function loadWorkDetails(workId) {
 	<!-- gallery -->
         ${work.haveVideo ? `
         <div class="px-4 row mb-4">
-            <iframe width="560" height="515" src="${work.urlVideo}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe src="${work.urlVideo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
         </div>
         ` : ''}
         ${work.haveImages ? imagesHtml : ''}

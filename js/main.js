@@ -156,7 +156,11 @@ _app.workDetAnim = () => {
 	const title = new SplitType("#animTitle")
 	gsap.to(".char", {
 		y: 0,
-		stagger: 0.03,
+		// stagger: 0.03,
+		stagger : {
+			amount: 0.3,
+			from: 'random'
+		},
 		delay: 0.5,
 		duration: .1
 	})
@@ -277,15 +281,64 @@ _app.startUp = () => {
 		_app.owlCarousel();
 		_app.smooth();
 		_app.menuGestor();
+		_app.copyEmail();
 		if (window.location.pathname.includes("work-details.html")) {
 			_app.workDetAnim();
 		} else if (window.location.pathname.includes("works.html")) {
 			_app.workListAnim();
+			_app.playPauseVideo();
 		} else {
 			_app.textAnim();
 		}
 	});
 }
+
+_app.playPauseVideo = () => {
+    let videos = document.querySelectorAll("video");
+    videos.forEach((video) => {
+        // We can only control playback without insteraction if video is mute
+        video.muted = true;
+        // Play is a promise so we need to check we have it
+        let playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.then((_) => {
+                let observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (
+                                entry.intersectionRatio !== 1 &&
+                                !video.paused
+                            ) {
+                                video.pause();
+                            } else if (video.paused) {
+                                video.play();
+                            }
+                        });
+                    },
+                    { threshold: 0.2 }
+                );
+                observer.observe(video);
+            });
+        }
+    });
+}
+
+_app.copyEmail = () => {
+	let emailElements = document.querySelectorAll(".email");
+  
+	emailElements.forEach((element) => {
+		element.addEventListener("click", () => {
+			let copyText = "mvitade@gmail.com";
+	
+			document.addEventListener("copy", (e) => {
+				e.clipboardData.setData("text/plain", copyText);
+				e.preventDefault();
+				console.log("Testo copiato con successo: " + copyText);
+			});
+			document.execCommand("copy");
+		});
+	});
+}  
 
 _app.menuGestor = () =>{
 	_app.navEl = document.querySelector("#navbar");
@@ -304,6 +357,4 @@ _app.menuGestor = () =>{
 }
 
 _app.startUp();
-	
-
 	
