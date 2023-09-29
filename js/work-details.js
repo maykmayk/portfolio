@@ -8,6 +8,7 @@ function loadWorkDetails(workId) {
 	const workDetails = {
 		nunnarella: {
 			name: "Nunnarella",
+            number: "05",
 			subTitle: "Crafting Delicious Experiences",
             haveCover: true,
 			coverUrl: "./asset/images/works/nunnarella/headerImg.jpg",
@@ -38,6 +39,7 @@ function loadWorkDetails(workId) {
         },
 		visart: {
 			name: "Visart",
+            number: "04",
 			subTitle: "Connect Your Design Activity",
             haveCover: false,
             videoCover: "./asset/images/works/visart/visCover.mp4",
@@ -68,6 +70,7 @@ function loadWorkDetails(workId) {
 		},
         versacrum: {
             name: "Ver Sacrum",
+            number: "02",
 			subTitle: "Art Is Erotic",
             haveCover: true,
 			coverUrl: "./asset/images/works/verSacrumCover.png",
@@ -95,6 +98,7 @@ function loadWorkDetails(workId) {
         },
         md: {
             name: "A Magnificent Desolation",
+            number: "06",
 			subTitle: "Cinematic Short Film",
             haveCover: true,
 			coverUrl: "./asset/images/works/magnificent Desolation/mdCover.png",
@@ -122,6 +126,7 @@ function loadWorkDetails(workId) {
         },
         regular: {
             name: "Regular",
+            number: "03",
 			subTitle: "Typo Fanzine",
             haveCover: true,
 			coverUrl: "./asset/images/works/regularCover.png",
@@ -149,6 +154,7 @@ function loadWorkDetails(workId) {
         },
         spark: {
             name: "The Spark",
+            number: "01",
 			subTitle: "Personal Branding",
             haveCover: false,
             videoCover: "./asset/images/works/spark/introSpark.mp4",
@@ -214,11 +220,16 @@ function loadWorkDetails(workId) {
 		workDetailsContainer.innerHTML = `
         <div class="headerDetails">
             <div class="d-flex justify-content-center pt-3" id="main">
-                <div class="titleWorkPage editorial" id="animTitle">
-                    ${work.name || ''}
+                <div class="d-flex align-items-center">
+                    <div class="titleWorkPage editorial" id="animTitle">
+                        ${work.name || ''}
+                    </div>
+                    <div class="fs-6 mb-5 editorial numberWork">
+                        [${work.number || ''}]
+                    </div>
                 </div>
             </div>
-            <div class="d-flex justify-content-center fs-6 lh-4 text-center mw-100 mb-md-5 mb-4">
+            <div class="d-flex justify-content-center fs-6 lh-4 text-center mw-100 mb-md-5 mb-4 subtitleWork">
                 ${work.subTitle || ''}
             </div>
         </div>

@@ -164,6 +164,24 @@ _app.workDetAnim = () => {
 		delay: 0.5,
 		duration: .1
 	})
+	gsap.from(".numberWork", {
+		opacity: 0,
+		stagger : {
+			amount: 0.3,
+			from: 'random'
+		},
+		duration: 1,
+		delay: 1,
+	})
+	gsap.from(".subtitleWork", {
+		opacity: 0,
+		stagger : {
+			amount: 0.3,
+			from: 'random'
+		},
+		duration: 1,
+		delay: 1,
+	})
 
 	// right side text anim"
 	const revealTypeElements = document.querySelectorAll('.reveal-type');
