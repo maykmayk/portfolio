@@ -224,7 +224,7 @@ function loadWorkDetails(workId) {
                     <div class="titleWorkPage editorial" id="animTitle">
                         ${work.name || ''}
                     </div>
-                    <div class="fs-6 mb-5 editorial numberWork">
+                    <div class="fs-6 mb-md-5 mb-3 ms-2 editorial numberWork">
                         [${work.number || ''}]
                     </div>
                 </div>
