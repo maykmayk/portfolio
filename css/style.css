@@ -111,16 +111,13 @@ ul {
     object-fit: cover;
     width: 100%;
     aspect-ratio: 1/1;
-    /* border-radius: 10px; */
 }
 
 .headerImgWork{
-    /* clip-path: inset(15%); */
     object-fit: cover;
     width: 100%;
     aspect-ratio: 16/6;
     min-height: 20vh;
-     /* border-radius: 15px;  */
 }
 
 .little{
@@ -479,10 +476,10 @@ a .hover-underline-animation{
 }
 
 footer {
-    background: var(--white);
+    background-color: var(--white);
     height: 25vmin;
     border-top: 1px solid var(--link);
-
+    z-index: 999;
 }
 
 /* underline hover */
@@ -553,15 +550,15 @@ iframe {
 
 @keyframes rotate {
     0% {
-      transform: rotate(0deg);
+      transform: translate3d(0px, 0px, 0px) rotateY(0deg);
     }
     100% {
-      transform: rotate(360deg);
+      transform: translate3d(0px, 0px, 0px) rotateY(-360deg);
     }
   }
   
 .rotating-image:hover {
-    animation: rotate 2s linear infinite; 
+    animation: rotate 3s linear infinite; 
 }
 
 @media screen and (max-width: 767px) {
