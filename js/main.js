@@ -340,9 +340,6 @@ _app.copyEmail = () => {
 
 _app.menuGestor = () =>{
 	_app.navEl = document.querySelector("#navbar");
-	setTimeout(() => {
-		_app.navEl.classList.add("fixed-top")
-	}, 6000);
 
 	_app.prevScroll = window.scrollY;
 	document.addEventListener("wheel", (e) => {
