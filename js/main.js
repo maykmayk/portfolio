@@ -1,6 +1,4 @@
-const _app = {}
-_app.body = document.querySelector("body")
-
+const _app = {};
 
 _app.owlCarousel = () => {
 	$(document).ready(function(){
@@ -44,7 +42,7 @@ _app.owlCarousel = () => {
 			animatedImage.css('transform', 'translateZ(50px)');
 		}
 	});
-}
+};
 
 _app.smooth = () => {
 	const lenis = new Lenis({
@@ -133,25 +131,7 @@ _app.workListAnim = () => {
 }
 
 _app.workDetAnim = () => {
-	// line animating slogan
 	gsap.registerPlugin(ScrollTrigger);
-	// gsap.from(".sloganLine", {
-	// 	scrollTrigger: {
-	// 		trigger: ".sloganLine",
-	// 		scrub: true,
-	// 		start: "top-=700px",
-	// 		end: "top-=400px",
-	// 	},
-	// 	opacity: 0,
-	// 	y: 0,
-	// 	duration: 1,
-	// 	ease: "power3.Out",
-	// 	stagger: {
-	// 		amount: 2,
-	// 	},
-		
-	// })
-
 	// titleAnimating
 	const title = new SplitType("#animTitle")
 	gsap.to(".char", {
