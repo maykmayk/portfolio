@@ -277,7 +277,9 @@ _app.workDetAnim = () => {
 _app.startUp = () => {
 	window.addEventListener("load", () => {
 		_app.owlCarousel();
-		_app.smooth();
+		if (window.innerWidth > 768) {		
+			_app.smooth();
+		}
 		_app.menuGestor();
 		_app.copyEmail();
 		if (window.location.pathname.includes("work-details.html")) {

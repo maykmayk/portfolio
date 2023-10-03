@@ -122,7 +122,7 @@ function loadWorkDetails(workId) {
             haveVideo: true,
             urlVideo: "https://www.youtube.com/embed/B0g1aZwxekg?si=W8Ddgo2bcn7KfHpp",
             nextProjectLink: "./work-details.html?work=regular",
-            nextProjectImage: "./asset/images/works/regularCover.png"
+            nextProjectImage: "./asset/images/works/regular/1Reg.jpg"
         },
         regular: {
             name: "Regular",
@@ -140,6 +140,8 @@ function loadWorkDetails(workId) {
                 "./asset/images/works/regular/3Reg.jpg",
                 "./asset/images/works/regular/4Reg.jpg",
                 "./asset/images/works/regular/2Reg.jpg",
+                "./asset/images/works/regular/5Reg.jpg",
+                "./asset/images/works/regular/6Reg.jpg",
             ],
             tags: [
                 "Brand Identity",
