@@ -276,6 +276,7 @@ _app.workDetAnim = () => {
 
 _app.startUp = () => {
 	_app.owlCarousel();
+	_app.hour();
 	if (window.innerWidth > 768) {		
 		_app.smooth();
 	}
@@ -339,6 +340,28 @@ _app.copyEmail = () => {
 		});
 	});
 }  
+
+_app.hour = () => {
+	function updateMilanTime() {
+		const milanTimezoneOffset = 2; // Milano è UTC+2
+		const now = new Date();
+		const utcTime = now.getTime() + now.getTimezoneOffset() * 60000; // Converti in tempo UTC
+		const milanTime = new Date(utcTime + (milanTimezoneOffset * 60 * 60 * 1000));
+	  
+		let hours = milanTime.getHours();
+		const minutes = milanTime.getMinutes();
+		const ampm = hours >= 12 ? 'PM' : 'AM';
+	  
+		if (hours > 12) {
+		  hours -= 12;
+		}
+	  
+		const formattedTime = `${hours}:${minutes < 10 ? '0' : ''}${minutes} ${ampm}`;
+		document.querySelector('.timeCont').textContent = formattedTime;
+	  }
+	  
+	  setInterval(updateMilanTime, 1000);
+}
 
 _app.menuGestor = () =>{
 	_app.navEl = document.querySelector("#navbar");

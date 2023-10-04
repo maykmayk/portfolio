@@ -2,50 +2,60 @@
     font-family: "Nueue Haas";
     src: url("../asset/font/NeueHaasDisplay-Roman.ttf");
 }
+
 @font-face {
     font-family: "Nueue Haas Medium";
     src: url("../asset/font/NeueHaasDisplay-Mediu.ttf");
 }
+
 @font-face {
     font-family: "Editorial Reg";
     src: url("../asset/font/InstrumentSerif-Regular.ttf");
 }
+
 @font-face {
     font-family: "Alfer";
     src: url("../asset/font/Alfer.otf");
 }
+
 .alfer {
     font-family: "Alfer";
 }
+
 @font-face {
     font-family: "Cinema";
     src: url("../asset/font/Cinema.otf");
 }
+
 .cinema {
     font-family: "Cinema";
 }
+
 @font-face {
     font-family: "DirtyLine";
     src: url("../asset/font/Dirtyline\ 36daysoftype\ 2022.otf");
 }
+
 .dirtyLine {
     font-family: "DirtyLine";
 }
+
 @font-face {
     font-family: "Plumpelo";
     src: url("../asset/font/Plumpelo.otf");
 }
+
 .plumpelo {
     font-family: "Plumpelo";
 }
 
 html.lenis {
     height: auto;
-  }
-  
+}
+
 .lenis.lenis-smooth {
     scroll-behavior: auto;
-  }
+}
 
 :root {
     --white: #EFEFEF;
@@ -53,12 +63,15 @@ html.lenis {
     --link: #a4a4a4;
     --orange: #f97b22;
 }
-  
+
 ::selection {
     color: var(--orange);
 }
 
-a, a:hover, a:focus, a:active {
+a,
+a:hover,
+a:focus,
+a:active {
     text-decoration: none;
     color: inherit;
 }
@@ -92,7 +105,7 @@ ul {
 
 .arrow {
     height: 17px;
-    transform:rotateX(180deg)
+    transform: rotateX(180deg);
 }
 
 .grey {
@@ -103,30 +116,30 @@ ul {
     height: 20vmin;
 }
 
-.footerLogo{
+.footerLogo {
     width: 5%;
 }
 
-.galleryImg{
+.galleryImg {
     object-fit: cover;
     width: 100%;
     aspect-ratio: 1/1;
 }
 
-.headerImgWork{
+.headerImgWork {
     object-fit: cover;
     width: 100%;
     aspect-ratio: 16/6;
     min-height: 20vh;
 }
 
-.little{
+.little {
     font-size: 15px;
-    position: absolute; 
+    position: absolute;
     margin: 14px;
-    padding: 5px 20px;  
-    background-color: var(--white); 
-    border: 1px solid var(--white); 
+    padding: 5px 20px;
+    background-color: var(--white);
+    border: 1px solid var(--white);
     text-align: center;
     border-radius: 999px;
     transition: .5s background-color;
@@ -134,17 +147,19 @@ ul {
     -moz-transition: .5s background-color;
 }
 
-#follow{
+#follow {
     position: absolute;
     background-color: var(--orange);
     color: var(--white);
     padding: 5px 10px;
-    pointer-events: none; /* Per evitare interferenze con gli eventi del mouse sui div sottostanti */
+    pointer-events: none;
+    /* Per evitare interferenze con gli eventi del mouse sui div sottostanti */
     border-radius: 999px;
-    transition: opacity 0.2s ease, visibility 0.2s ease 0.2s; /* Applica la transizione su opacity e visibility */
+    transition: opacity 0.2s ease, visibility 0.2s ease 0.2s;
+    /* Applica la transizione su opacity e visibility */
 }
 
-.little:hover{
+.little:hover {
     background-color: transparent;
     color: var(--white);
 }
@@ -154,31 +169,30 @@ ul {
     text-decoration: underline;
 }
 
-.bigFoot{
+.bigFoot {
     font-family: "Editorial Reg";
     font-size: 150px;
     letter-spacing: -4px;
 }
 
-.helloFoot{
-    font-family:"Nueue Haas"; 
+.helloFoot {
+    font-family: "Nueue Haas";
     font-size: 20px;
 }
 
 .mailFoot {
-    font-family:"Nueue Haas"; 
+    font-family: "Nueue Haas";
     font-size: 20px;
 }
 
-.linksFooter{
-    font-family:"Nueue Haas"; 
+.linksFooter {
+    font-family: "Nueue Haas";
     font-size: 2vmin;
     text-transform: uppercase;
 }
 
 .linksFooter:hover {
     color: var(--orange);
-
 }
 
 .logo {
@@ -186,13 +200,13 @@ ul {
     width: 60px;
 }
 
-.logoCard{
+.logoCard {
     height: 100%;
     max-height: 160px;
 }
 
-.nameWork{
-    font-family:"Nueue Haas Medium"; 
+.nameWork {
+    font-family: "Nueue Haas Medium";
     font-size: 30px;
     line-height: 35px;
     text-align: center;
@@ -211,30 +225,30 @@ ul {
     font-family: "Nueue Haas";
 }
 
-.num{
+.num {
     font-size: 25px;
     line-height: 35px;
     max-width: 70%;
     margin-top: 7px;
-    font-family:"Nueue Haas Medium"; 
+    font-family: "Nueue Haas Medium";
 }
 
-.magin-left{
+.magin-left {
     margin-left: 25px;
 }
 
 .navBar {
-    z-index: 100;;
+    z-index: 100;
     transition: all 300ms ease-in-out;
     height: 70px;
     background-color: var(--white);
 }
 
-.noMarg{
+.noMarg {
     margin-left: 0!important;
 }
 
-.noMargAll{
+.noMargAll {
     margin: 0!important;
 }
 
@@ -248,20 +262,20 @@ ul {
     width: 2vmax;
 }
 
-.portrait{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+.portrait {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     /* border-radius: 10px; */
-    aspect-ratio: 1/1 !important
+    aspect-ratio: 1/1 !important;
 }
 
-.portraitContainer{
-    width:100%;
-    aspect-ratio: 1/1 !important
+.portraitContainer {
+    width: 100%;
+    aspect-ratio: 1/1 !important;
 }
 
-.rect{
+.rect {
     height: 25rem;
     background-color: var(--orange);
     width: 100%;
@@ -282,11 +296,11 @@ ul {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-.lineIntro{
+.lineIntro {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-.titleWorkPage{
+.titleWorkPage {
     font-size: 100px;
     letter-spacing: -.5vmin;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -297,20 +311,20 @@ ul {
     transition: transform .5s;
 }
 
-.textValues{
+.textValues {
     font-size: 25px;
     line-height: 35px;
     max-width: 70%;
     margin-top: 7px;
 }
 
-.sectionTitle{   
+.sectionTitle {
     font-size: 10vmin;
     letter-spacing: -.3vmin;
 }
 
-.sideWorkTitle{
-    font-family:"Editorial Reg"; 
+.sideWorkTitle {
+    font-family: "Editorial Reg";
     line-height: 99%;
     font-size: 50px;
     letter-spacing: -2px;
@@ -320,7 +334,7 @@ ul {
     position: relative;
     width: 100%;
     height: 15vh;
-  }
+}
 
 .containerHover img.swipeimage {
     position: absolute;
@@ -333,24 +347,24 @@ ul {
     opacity: 0;
     pointer-events: none;
     z-index: 9;
-  }
+}
 
-.spanRect{
+.spanRect {
     width: 20vmin;
-    vertical-align:-10%;
+    vertical-align: -10%;
 }
 
-.spanRectSub{
+.spanRectSub {
     width: 70px;
-    vertical-align:-20%;
+    vertical-align: -20%;
 }
 
-.workContainer{
+.workContainer {
     width: 100%;
     aspect-ratio: 16/12;
 }
 
-.workImg{
+.workImg {
     border-radius: 10px;
     object-fit: cover;
     width: 100%;
@@ -358,27 +372,28 @@ ul {
     transition: all 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.workImg:hover{
+.workImg:hover {
     border-radius: 0px;
 }
 
-.description{
+.description {
     position: relative;
 }
-.description p{
+
+.description p {
     margin: 0px;
     position: relative;
 }
 
-.sideWorkTitle{
+.sideWorkTitle {
     position: relative;
 }
 
-.sideWorkTitle div{
+.sideWorkTitle div {
     position: relative;
 }
 
-.tagWork{
+.tagWork {
     border-radius: 999px;
     border: 1px solid #cbcbcb;
     padding: 5px 20px;
@@ -389,7 +404,7 @@ ul {
     transition: background-color .3s linear;
 }
 
-.tagWork:hover{
+.tagWork:hover {
     border: 1px solid var(--black);
     background-color: var(--black);
     color: var(--white);
@@ -399,75 +414,80 @@ ul {
     z-index: 800;
 }
 
-.titleWordDet{
+.titleWordDet {
     font-size: 10vw;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-  .work-items {
+.work-items {
     height: min-content;
-  }
-  .work-items span {
+}
+
+.work-items span {
     overflow: hidden;
-  } 
-  
-  .work-item h1 {
+}
+
+.work-item h1 {
     cursor: pointer;
-  }
-  
-  .work-item span {
+}
+
+.work-item span {
     overflow: hidden;
-  }
-  
-  .work-item p {
+}
+
+.work-item p {
     align-self: flex-start;
     padding-top: 25px;
     padding-left: 5px;
     font-family: "Nueue Haas";
     font-size: 15px;
-  }
-  
-  .work-item span img {
+}
+
+.work-item span img {
     height: 80px;
     margin-left: -100px;
     transform-origin: left;
     object-fit: contain;
     transition: all 0.45s cubic-bezier(0.39, 0.575, 0.565, 1);
-  }
+}
 
-  .work-item:hover span img {
+.work-item:hover span img {
     margin-left: 2px;
-  }
+}
 
-  .linez {
+.linez {
     width: 100%;
     height: 1px;
     border-top: 1px solid var(--link);
     z-index: 1;
     transform-origin: right top;
-  }
+}
 
-  .item-1 {
+.item-1 {
     margin-left: 5vw;
-  }
-  .item-2 {
+}
+
+.item-2 {
     margin-left: 35vw;
-  }
-  .item-3 {
-    margin-left: 15vw;
-  }
-  .item-4 {
-    margin-left: 20vw;
-  }
-  .item-5 {
-    margin-left: 5vw;
-  }
+}
 
-.hover-underline-animation a{
+.item-3 {
+    margin-left: 15vw;
+}
+
+.item-4 {
+    margin-left: 20vw;
+}
+
+.item-5 {
+    margin-left: 5vw;
+}
+
+.hover-underline-animation a {
     cursor: ne-resize;
 }
 
-a .hover-underline-animation{
+a .hover-underline-animation {
     cursor: ne-resize;
 }
 
@@ -482,22 +502,43 @@ footer {
     z-index: 999;
 }
 
+.blinkingCircle{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--black);
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 /* underline hover */
+
 .hover-underline-animation {
     display: inline-block;
     position: relative;
     color: var(--black);
-  }
+}
 
-.hover-underline-animation .arrow{
+.hover-underline-animation .arrow {
     transition: rotate .3s ease-in-out;
 }
-  
-.hover-underline-animation:hover .arrow{
+
+.hover-underline-animation:hover .arrow {
     rotate: 90deg;
 }
 
-  .hover-underline-animation::after {
+.hover-underline-animation::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -507,28 +548,28 @@ footer {
     left: 0;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
-  }
-  
-  .hover-underline-animation:hover::after {
+}
+
+.hover-underline-animation:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
-  }
+}
 
-  .animated-image {
+.animated-image {
     transform-style: preserve-3d;
     transition: all 0.3s ease;
-  }
-  
-  .animated-image img {
+}
+
+.animated-image img {
     max-width: 100%;
     max-height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     transform-origin: center;
-  }
+}
 
-  .image{
+.image {
     border-radius: 999px 999px 0 0;
     object-fit: cover;
     height: 100%;
@@ -542,7 +583,7 @@ footer {
 .closed {
     transform: translateY(-100%);
     transition: all 300ms ease-in-out;
-  }
+}
 
 iframe {
     aspect-ratio: 16/9;
@@ -550,67 +591,80 @@ iframe {
 
 @keyframes rotate {
     0% {
-      transform: translate3d(0px, 0px, 0px) rotateY(0deg);
+        transform: translate3d(0px, 0px, 0px) rotateY(0deg);
     }
+
     100% {
-      transform: translate3d(0px, 0px, 0px) rotateY(-360deg);
+        transform: translate3d(0px, 0px, 0px) rotateY(-360deg);
     }
-  }
-  
+}
+
 .rotating-image:hover {
-    animation: rotate 3s linear infinite; 
+    animation: rotate 3s linear infinite;
 }
 
 @media screen and (max-width: 767px) {
     .closed {
         transform: none;
         transition: all 300ms ease-in-out;
-      }
+    }
+
     .rect {
         height: 30vh;
     }
-    .leftClient{
+
+    .leftClient {
         text-align: left;
         margin-left: 25px;
     }
-    .titleWorkPage{
+
+    .titleWorkPage {
         font-size: 50px;
         letter-spacing: -.5vmin;
     }
-    .sideWorkTitle{
+
+    .sideWorkTitle {
         font-size: 40px;
     }
-    .arrowMenu{
+
+    .arrowMenu {
         margin-top: 10px;
         max-width: 15vw;
     }
-    .lineIntro:last-child{
-        height:2em;
+
+    .lineIntro:last-child {
+        height: 2em;
         position: relative;
     }
+
     .item-1 {
         margin-left: 0%;
-      }
-      .item-2 {
+    }
+
+    .item-2 {
         margin-left: 0%;
-      }
-      .item-3 {
+    }
+
+    .item-3 {
         margin-left: 0%;
-      }
-      .item-4,
-      .item-6 {
+    }
+
+    .item-4,
+    .item-6 {
         margin-left: 0%;
-      }
-      .item-5 {
+    }
+
+    .item-5 {
         margin-left: 0%;
-      }
-    
+    }
 }
 
 @media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-    font-size: 100px;
+    .overlay a {
+        font-size: 20px;
+    }
 
+    .overlay .closebtn {
+        font-size: 100px;
     }
 }
