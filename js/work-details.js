@@ -129,7 +129,7 @@ function loadWorkDetails(workId) {
             number: "03",
 			subTitle: "Typo Fanzine",
             haveCover: true,
-			coverUrl: "./asset/images/works/regularCover.png",
+			coverUrl: "./asset/images/works/regular/regularCover.jpg",
             slogan: "The Font Folklore",
             text: "Regular ain't your typical typography magazine bossing you around with what fonts to use. Nah! Each month, we'll hook you up with the juiciest typo news, unveil the most mesmerizing font of the month, and drop some mind-blowing typographic tricks that'll leave you saying, 'Whoa! So buckle up, typo explorers, 'cause Regular's about to rock your typophile world!",
             showSeeMore: false,
@@ -142,6 +142,8 @@ function loadWorkDetails(workId) {
                 "./asset/images/works/regular/2Reg.jpg",
                 "./asset/images/works/regular/5Reg.jpg",
                 "./asset/images/works/regular/6Reg.jpg",
+                "./asset/images/works/regular/8Reg.jpg",
+                "./asset/images/works/regular/7Reg.jpg",
             ],
             tags: [
                 "Brand Identity",

@@ -275,22 +275,22 @@ _app.workDetAnim = () => {
 }
 
 _app.startUp = () => {
-	window.addEventListener("load", () => {
-		_app.owlCarousel();
-		if (window.innerWidth > 768) {		
-			_app.smooth();
-		}
-		_app.menuGestor();
-		_app.copyEmail();
-		if (window.location.pathname.includes("work-details.html")) {
+	_app.owlCarousel();
+	if (window.innerWidth > 768) {		
+		_app.smooth();
+	}
+	_app.menuGestor();
+	_app.copyEmail();
+	if (window.location.pathname.includes("work-details.html")) {
+		window.addEventListener("load", () => {
 			_app.workDetAnim();
-		} else if (window.location.pathname.includes("works.html")) {
-			_app.workListAnim();
-			_app.playPauseVideo();
-		} else {
-			_app.textAnim();
-		}
-	});
+		});	
+	} else if (window.location.pathname.includes("works.html")) {
+		_app.workListAnim();
+		_app.playPauseVideo();
+	} else {
+		_app.textAnim();
+	}
 }
 
 _app.playPauseVideo = () => {
