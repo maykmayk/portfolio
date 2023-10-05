@@ -547,7 +547,7 @@ footer {
     bottom: 0;
     left: 0;
     transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+    transition: transform .5s cubic-bezier(1,0,0,1);
 }
 
 .hover-underline-animation:hover::after {
@@ -557,7 +557,7 @@ footer {
 
 .animated-image {
     transform-style: preserve-3d;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(1,0,0,1);
 }
 
 .animated-image img {
@@ -573,11 +573,6 @@ footer {
     border-radius: 999px 999px 0 0;
     object-fit: cover;
     height: 100%;
-    transition: background-size .3s ease-in;
-    -moz-transition: background-size .3s ease-in;
-    -ms-transition: background-size .3s ease-in;
-    -o-transition: background-size .3s ease-in;
-    -webkit-transition: background-size .3s ease-in;
 }
 
 .closed {

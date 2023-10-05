@@ -94,34 +94,6 @@ function loadWorkDetails(workId) {
             haveVideo: false,
             urlVideo: "",
             nextProjectLink: "./work-details.html?work=md",
-            nextProjectImage: "./asset/images/works/magnificent Desolation/mdCover.png"
-        },
-        md: {
-            name: "A Magnificent Desolation",
-            number: "06",
-			subTitle: "Cinematic Short Film",
-            haveCover: true,
-			coverUrl: "./asset/images/works/magnificent Desolation/mdCover.png",
-            sloganLines: [
-                "We missed the most",
-                "important thing:",
-                "Perseverance",
-            ],
-            text: "A Magnificent Desolation is a film who celebrates the values that have made space exploration possible: the human spirit of curiosity, determination, and exploration. It reminds us of the power of innovation, collaboration, and risk-taking to achieve the seemingly impossible. It invites us to dream big, push boundaries, and reach for the stars. The film is a full sensory experience that evokes wonder, awe, and inspiration. It is a call to action to pursue our passions and to always strive for new horizons. This short cinematic film is more than just a story about space exploration; it's a celebration of the values that have made it possible. It is a reminder that humanity has an inherent desire to explore and to push the boundaries of what is possible.",
-            showSeeMore: false,
-            showMoreLink: "",
-            haveImages: false,
-            images: [
-                "",
-                "",
-            ],
-            tags: [
-                "Video Making",
-                "Story Telling",
-            ],
-            haveVideo: true,
-            urlVideo: "https://www.youtube.com/embed/B0g1aZwxekg?si=W8Ddgo2bcn7KfHpp",
-            nextProjectLink: "./work-details.html?work=regular",
             nextProjectImage: "./asset/images/works/regular/1Reg.jpg"
         },
         regular: {
