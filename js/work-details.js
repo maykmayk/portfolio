@@ -93,7 +93,7 @@ function loadWorkDetails(workId) {
             ],
             haveVideo: false,
             urlVideo: "",
-            nextProjectLink: "./work-details.html?work=md",
+            nextProjectLink: "./work-details.html?work=regular",
             nextProjectImage: "./asset/images/works/regular/1Reg.jpg"
         },
         regular: {
