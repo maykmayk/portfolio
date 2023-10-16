@@ -275,6 +275,7 @@ _app.workDetAnim = () => {
 }
 
 _app.startUp = () => {
+	console.log('%cHandmade by mayke - mvitade@gmail.com', 'color: white; background: linear-gradient(90deg, #7bb8f2 0%, #dee7f8 100%); font-size: 20px')
 	_app.owlCarousel();
 	_app.hour();
 	if (window.innerWidth > 768) {		
