@@ -274,8 +274,20 @@ _app.workDetAnim = () => {
 	});
 }
 
+_app.copy = () => {
+	var styles = [
+		' background: linear-gradient(90deg, #7bb8f2 0%, #dee7f8 100%);'
+		, 'color: black'
+		, 'display: block'
+		, 'padding: 20px 10px'
+		, 'text-align: center'
+	].join(';');
+	
+	console.log('%cHandmade by mayke - mvitade@gmail.com', styles);
+}
+
 _app.startUp = () => {
-	console.log('%cHandmade by mayke - mvitade@gmail.com', 'color: white; background: linear-gradient(90deg, #7bb8f2 0%, #dee7f8 100%); font-size: 20px')
+	_app.copy();
 	_app.owlCarousel();
 	_app.hour();
 	if (window.innerWidth > 768) {		
