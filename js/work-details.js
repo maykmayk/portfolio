@@ -133,7 +133,7 @@ function loadWorkDetails(workId) {
             number: "01",
 			subTitle: "Personal Branding",
             haveCover: false,
-            videoCover: "./asset/images/works/spark/introSpark.mp4",
+            videoCover: "./asset/images/works/spark/renderLogoAnim.mp4",
             slogan: "Design creates culture.<br> Culture shapes values.<br> Values determine the future.",
             text: "My personal branding is a true labor of love, meticulously crafted to represent who I am as a creative professional. It's more than just a design - it's a visual composition that speaks volumes about my personality and work ethic. The color scheme is carefully chosen to convey energy and warmth, while the typography represents elegance and clarity. Every component of my branding - especially my logo - is a blend of simplicity and creativity that makes a lasting impression on my audience. But my branding is more than just eye-candy - it serves a strategic purpose. It communicates my value proposition, sets me apart from competitors, and positions me as an authority in my industry. My personal branding is a true reflection of my brand identity and what I have to offer to my clients, building relationships, and helping me achieve my business objectives.",
             showSeeMore: false,
