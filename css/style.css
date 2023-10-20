@@ -338,7 +338,7 @@ ul {
 
 .containerHover img.swipeimage {
     position: absolute;
-    top: 0;
+    top: 7vh;
     left: 0;
     width: 200px;
     height: 200px;

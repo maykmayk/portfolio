@@ -249,11 +249,8 @@ _app.workDetAnim = () => {
 	gsap.utils.toArray(".containerHover").forEach((el) => {
 		const image = el.querySelector("img.swipeimage"),
 		  setX = gsap.quickTo(image, "x", { duration: 0.6, ease: "power3" }),
-		  setY = gsap.quickTo(image, "y", { duration: 0.6, ease: "power3" }),
 		  align = (e) => {
-			const top = el.getBoundingClientRect().top;
 			setX(e.clientX);
-			setY(e.clientY - top);
 		  },
 		  startFollow = () => document.addEventListener("mousemove", align),
 		  stopFollow = () => document.removeEventListener("mousemove", align),
