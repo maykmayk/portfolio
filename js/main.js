@@ -345,7 +345,7 @@ _app.pixel = () => {
 	
 		reveal(){
 			this.canvas.classList.add('active');
-			this.percent = this.percent < .1 ? this.percent += .005 : this.percent += .2;
+			this.percent = this.percent < .1 ? this.percent += .002 : this.percent += .2;
 			if(this.percent > 1) this.percent = 1;
 			this.scaledWidth = this.width * this.percent;
 			this.scaledHeight = this.height * this.percent;
