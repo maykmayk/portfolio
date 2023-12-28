@@ -170,7 +170,7 @@ function loadWorkDetails(workId) {
             for (let i = 0; i < work.images.length; i += 2) {
                 imagesHtml += `
                     <div class="px-4 row mb-2 g-md-2 g-0">
-                        <div class="col-12 col-md-6 mb-4 mb-md-0 position-relative">
+                        <div class="col-12 col-md-6 mb-2 mb-md-0 position-relative">
                             <img src="${work.images[i]}" class="galleryImg">
                         </div>`;
                 if (i + 1 < work.images.length) {
@@ -264,7 +264,10 @@ function loadWorkDetails(workId) {
             See more...<img src="./asset/images/icons/arrow-down-right.svg" class="arrow" draggable="false"></a>
         </div>
     </div>
-    ` : ''}
+    ` : `
+    <div class="d-block d-md-none" style="height: 5vh"></div>
+    `}
+
     <div class="linez"></div>
     <div class="containerHover"><a href="${work.nextProjectLink}">
         <div class="d-flex w-100 h-100 justify-content-center align-items-center">
