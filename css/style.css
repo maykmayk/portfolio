@@ -580,18 +580,6 @@ footer {
     transition: all 300ms ease-in-out;
 }
 
-canvas{
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: .5s;
-}
-
-canvas.active{
-    opacity: 1;
-}
-
 iframe {
     aspect-ratio: 16/9;
 }
