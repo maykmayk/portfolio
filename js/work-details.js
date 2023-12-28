@@ -169,14 +169,14 @@ function loadWorkDetails(workId) {
         if (work.images && work.images.length > 0) {
             for (let i = 0; i < work.images.length; i += 2) {
                 imagesHtml += `
-                    <div class="px-4 row mb-4">
-                        <div class="col-12 col-md-6 mb-4 mb-md-0">
-                            <img src="${work.images[i]}" class="galleryImg skewElem">
+                    <div class="px-4 row mb-2 g-md-2 g-0">
+                        <div class="col-12 col-md-6 mb-4 mb-md-0 position-relative">
+                            <img src="${work.images[i]}" class="galleryImg">
                         </div>`;
                 if (i + 1 < work.images.length) {
                     imagesHtml += `
-                        <div class="col-12 col-md-6" >
-                            <img src="${work.images[i + 1]}" class="galleryImg skewElem">
+                        <div class="col-12 col-md-6  g-md-2 g-0 position-relative" >
+                            <img src="${work.images[i + 1]}" class="galleryImg">
                         </div>`;
                 }
                 imagesHtml += `</div>`;
@@ -279,14 +279,6 @@ function loadWorkDetails(workId) {
 	}
 }
 
-        // <div class="d-flex w-100 justify-content-center mt-1">
-        //     <div class="fs-1 hover-underline-animation mb-4">
-        //         <a href="${work.nextProjectLink}">
-        //             ${work.nextProject} <img src="./asset/images/icons/arrow-down-right.svg">
-        //         </a>
-        //     </div>
-        // </div>
-// Chiamata alla funzione di caricamento dei dettagli del lavoro quando il documento è pronto
 document.addEventListener("DOMContentLoaded", () => {
     const workId = getUrlParameter('work');
     loadWorkDetails(workId);

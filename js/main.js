@@ -231,7 +231,7 @@ _app.workDetAnim = () => {
 
 	// gallery skew
 	let proxy = { skew: 0 },
-    skewSetter = gsap.quickSetter(".skewElem", "skewY", "deg"), // fast
+    skewSetter = gsap.quickSetter("canvas", "skewY", "deg"), // fast
     clamp = gsap.utils.clamp(-20, 20); // don't let the skew go beyond 20 degrees. 
 	ScrollTrigger.create({
 		onUpdate: (self) => {
@@ -243,7 +243,7 @@ _app.workDetAnim = () => {
 			}
 		}
 	});
-	gsap.set(".skewElem", {transformOrigin: "right center", force3D: true});
+	gsap.set("canvas", {transformOrigin: "right center", force3D: true});
 	  
 	// hover nextProj
 	gsap.utils.toArray(".containerHover").forEach((el) => {
@@ -283,6 +283,114 @@ _app.copy = () => {
 	console.log('%cHandmade by mayke - mvitade@gmail.com', styles);
 }
 
+_app.pixel = () => {
+	let imageArray = [];
+
+	let options = {
+		root: null, // Cambia la radice a seconda della tua struttura HTML
+		rootMargin: '0px',
+		threshold: 1.0
+	};
+
+	let callback = (entries => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				// console.log(entry.target.classList[0]);
+				imageArray[+entry.target.classList[0]].reveal();
+			}
+		});
+	});
+
+	let observer = new IntersectionObserver(callback, options);
+	class PixelImage{
+		constructor(id, image, width, height){
+			this.id = id;
+			this.image = image;
+			this.styleWidth = width;
+			this.styleHeight = height;
+			this.width = width * window.devicePixelRatio;
+			this.height = height * window.devicePixelRatio;
+			this.percent = .001;
+			this.applyCanvas();
+			this.draw();
+		}
+	
+		applyCanvas(){
+			this.canvas = document.createElement('canvas');
+			this.canvas.classList.add(this.id);
+			this.ctx = this.canvas.getContext('2d');
+			this.image.parentElement.appendChild(this.canvas);
+			this.canvas.width = this.width;
+			this.canvas.height = this.height;
+			this.canvas.style.width = `${this.styleWidth}px`;
+			this.canvas.style.height = `${this.styleHeight}px`;
+			this.scaledWidth = this.width * this.percent;
+			this.scaledHeight = this.height * this.percent;
+	
+			// turn off image aliasing
+			this.ctx.msImageSmoothingEnabled = false;
+			this.ctx.mozImageSmoothingEnabled = false;
+			this.ctx.webkitImageSmoothingEnabled = false;
+			this.ctx.imageSmoothingEnabled = false;
+
+			// this.canvas.classList.add('w-100');
+	
+			observer.observe(this.canvas);
+		}
+	
+		draw(){
+			this.ctx.drawImage(this.image, 0, 0, this.scaledWidth, this.scaledHeight);
+			this.ctx.drawImage(this.canvas, 0, 0, this.scaledWidth, this.scaledHeight, 0, 0, this.width, this.height);
+		}
+	
+		reveal(){
+			this.canvas.classList.add('active');
+			this.percent = this.percent < .1 ? this.percent += .005 : this.percent += .2;
+			if(this.percent > 1) this.percent = 1;
+			this.scaledWidth = this.width * this.percent;
+			this.scaledHeight = this.height * this.percent;
+	
+			this.ctx.drawImage(this.image, 0, 0, this.scaledWidth, this.scaledHeight);
+			this.ctx.drawImage(this.canvas, 0, 0, this.scaledWidth, this.scaledHeight, 0, 0, this.width, this.height);
+			if(this.percent < 1) requestAnimationFrame(this.reveal.bind(this));
+		}
+	}
+	
+	function generatePixelImages() {
+		let images = document.querySelectorAll('.galleryImg');
+		images.forEach((image, idx) => {
+			image.style.opacity = '0';
+			let { width, height } = image.getBoundingClientRect();
+			let pixelImage = new PixelImage(idx, image, width, height);
+			imageArray.push(pixelImage);
+	
+			// Osserva il canvas associato a ogni immagine
+			observer.observe(pixelImage.canvas);
+		});
+	}
+
+	function handleResize() {
+        imageArray.forEach(pixelImage => {
+            // Update canvas size based on new image dimensions and device pixel ratio
+            let { width, height } = pixelImage.image.getBoundingClientRect();
+            pixelImage.width = width * window.devicePixelRatio;
+            pixelImage.height = height * window.devicePixelRatio;
+            pixelImage.canvas.width = pixelImage.width;
+            pixelImage.canvas.height = pixelImage.height;
+            pixelImage.canvas.style.width = `${width}px`;
+            pixelImage.canvas.style.height = `${height}px`;
+
+            // Redraw the pixel image with the updated size
+            pixelImage.draw();
+        });
+    }
+
+    // Event listener for screen resize
+    window.addEventListener('resize', handleResize);
+
+    generatePixelImages();
+}
+
 _app.startUp = () => {
 	_app.copy();
 	_app.owlCarousel();
@@ -294,6 +402,7 @@ _app.startUp = () => {
 	_app.copyEmail();
 	if (window.location.pathname.includes("work-details.html")) {
 		window.addEventListener("load", () => {
+			_app.pixel();
 			_app.workDetAnim();
 		});	
 	} else if (window.location.pathname.includes("works.html")) {
