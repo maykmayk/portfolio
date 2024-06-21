@@ -1,11 +1,15 @@
 @font-face {
     font-family: "Nueue Haas";
-    src: url("../asset/font/NeueHaasDisplay-Roman.ttf");
+    /* src: url("../asset/font/NeueHaasDisplay-Roman.ttf"); */
+    src: url("../asset/font/InterTight-VariableFont_wght.ttf");
+    font-weight: 400;
 }
 
 @font-face {
     font-family: "Nueue Haas Medium";
-    src: url("../asset/font/NeueHaasDisplay-Mediu.ttf");
+    /* src: url("../asset/font/NeueHaasDisplay-Mediu.ttf"); */
+    src: url("../asset/font/InterTight-VariableFont_wght.ttf");
+    font-weight: 600;
 }
 
 @font-face {
@@ -15,7 +19,9 @@
 
 @font-face {
     font-family: "Alfer";
-    src: url("../asset/font/Alfer.otf");
+    /* src: url("../asset/font/Alfer.otf"); */
+    src: url("../asset/font/InterTight-VariableFont_wght.ttf");
+    font-weight: 600;
 }
 
 .alfer {
@@ -24,7 +30,9 @@
 
 @font-face {
     font-family: "Cinema";
-    src: url("../asset/font/Cinema.otf");
+    /* src: url("../asset/font/Cinema.otf"); */
+    src: url("../asset/font/InterTight-VariableFont_wght.ttf");
+    font-weight: 600;
 }
 
 .cinema {
@@ -33,7 +41,9 @@
 
 @font-face {
     font-family: "DirtyLine";
-    src: url("../asset/font/Dirtyline\ 36daysoftype\ 2022.otf");
+    /* src: url("../asset/font/Dirtyline\ 36daysoftype\ 2022.otf"); */
+    src: url("../asset/font/InterTight-VariableFont_wght.ttf");
+    font-weight: 600;
 }
 
 .dirtyLine {
@@ -42,7 +52,9 @@
 
 @font-face {
     font-family: "Plumpelo";
-    src: url("../asset/font/Plumpelo.otf");
+    /* src: url("../asset/font/Plumpelo.otf"); */
+    src: url("../asset/font/InterTight-VariableFont_wght.ttf");
+    font-weight: 600;
 }
 
 .plumpelo {
