@@ -156,6 +156,35 @@ function loadWorkDetails(workId) {
             urlVideo: "",
             nextProjectLink: "./work-details.html?work=nunnarella",
             nextProjectImage: "./asset/images/works/nunnarella/nuvolanunna.jpg"
+        },
+        domu: {
+            name: "Domu",
+            number: "05",
+			subTitle: "Web & App Design",
+            haveCover: false,
+            videoCover: "./asset/images/works/domu/domu_cover.mp4",
+            slogan: "Transform your <br>condo life with Domu",
+            text: "Domu is a modern, all-in-one platform designed to simplify condominium living. Developed by a team of three full-stack developers, including myself, Domu seamlessly integrates essential features to enhance residential management. From effortless rent payments to organizing community activities, managing complaints, and tracking deliveries, Domu is crafted for convenience. The app’s intuitive design prioritizes user experience, ensuring smooth navigation across both mobile and web platforms. Every aspect of Domu, from the clean interface to its secure infrastructure, reflects our commitment to creating a tool that builds stronger communities and streamlines day-to-day tasks for residents and managers alike.",
+            showSeeMore: false,
+            showMoreLink: "",
+            haveImages: true,
+            images: [
+                "./asset/images/works/domu/domu1.png",
+                "./asset/images/works/domu/domu2.png",
+                "./asset/images/works/domu/domu3.png",
+                "./asset/images/works/domu/domu4.png",
+                "./asset/images/works/domu/domu5.png",
+                "./asset/images/works/domu/domu6.png",
+            ],
+            tags: [
+                "Brand Identity",
+                "App & Web Development",
+                "Design System",
+            ],
+            haveVideo: false,
+            urlVideo: "",
+            nextProjectLink: "./work-details.html?work=spark",
+            nextProjectImage: "./asset/images/works/spark/spark1.png"
         }
 	};
 
