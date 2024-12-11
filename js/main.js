@@ -286,7 +286,8 @@ _app.copy = () => {
 _app.startUp = () => {
 	_app.copy();
 	_app.owlCarousel();
-	_app.hour();
+	setInterval(updateMilanTime, 1000);
+	updateMilanTime();
 	if (window.innerWidth > 768) {		
 		_app.smooth();
 	}
@@ -351,26 +352,17 @@ _app.copyEmail = () => {
 	});
 }  
 
-_app.hour = () => {
-	function updateMilanTime() {
-		const milanTimezoneOffset = 2; // Milano è UTC+2
-		const now = new Date();
-		const utcTime = now.getTime() + now.getTimezoneOffset() * 60000; // Converti in tempo UTC
-		const milanTime = new Date(utcTime + (milanTimezoneOffset * 60 * 60 * 1000));
-	  
-		let hours = milanTime.getHours();
-		const minutes = milanTime.getMinutes();
-		const ampm = hours >= 12 ? 'PM' : 'AM';
-	  
-		if (hours > 12) {
-		  hours -= 12;
-		}
-	  
-		const formattedTime = `${hours}:${minutes < 10 ? '0' : ''}${minutes} ${ampm}`;
-		document.querySelector('.timeCont').textContent = formattedTime;
-	  }
-	  
-	  setInterval(updateMilanTime, 1000);
+function updateMilanTime() {
+    const now = new Date();
+    const options = {
+        timeZone: 'Europe/Rome', // Fuso orario di Milano
+        hour: 'numeric', // Usa 'numeric' per evitare zeri iniziali
+        minute: '2-digit',
+        hour12: true // Formato AM/PM
+    };
+    const milanTime = new Intl.DateTimeFormat('en-US', options).format(now);
+
+    document.querySelector('.timeCont').textContent = milanTime;
 }
 
 _app.menuGestor = () =>{
