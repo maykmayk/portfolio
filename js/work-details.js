@@ -157,6 +157,35 @@ function loadWorkDetails(workId) {
             urlVideo: "",
             nextProjectLink: "./work-details.html?work=spark",
             nextProjectImage: "./asset/images/works/spark/spark1.png"
+        },
+        bastoni: {
+            name: "Alessandro Bastoni Identity",
+            number: "06",
+			subTitle: "Logo & Identity Design",
+            haveCover: true,
+			coverUrl: "./asset/images/works/bastoCover.png",
+            slogan: "A Story behind the Logo",
+            text: "The number 95 reflects a journey of growth and excellence, while the infinity loop symbolizes timeless loyalty-a bond without end. The initials AB add a bold signature of identity, blending passion and individuality seamlessly. blend of innovation and elegance. reshaping what It means to defend, pushing boundaries and redefining the art of modern football. The serpent, fierce and iconic, pays tribute to Inter's proud heritage. It embodies strength, resilience, and a deep connection to the club's traditions, representing both legacy and pride. Every balance essence element of of tells a tradition, greatness story evolution on and off a and the perfect the pitch.",
+            showSeeMore: true,
+            showMoreLink: "https://www.instagram.com/p/DEMlo7jI-Uv/?hl=it&img_index=1",
+            haveImages: true,
+            images: [
+                "./asset/images/works/basto/video1.gif",
+                "./asset/images/works/basto/basto2.jpg",
+                "./asset/images/works/basto/basto6.png",
+                "./asset/images/works/basto/video4.gif",
+                "./asset/images/works/basto/basto3.jpg",
+                "./asset/images/works/basto/basto7.png",
+            ],
+            tags: [
+                "Brand Identity",
+                "Logo Design",
+                "Design System",
+            ],
+            haveVideo: false,
+            urlVideo: "",
+            nextProjectLink: "./work-details.html?work=domu",
+            nextProjectImage: "./asset/images/works/domu/domu2.png"
         }
 	};
 
