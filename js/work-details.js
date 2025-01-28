@@ -159,7 +159,7 @@ function loadWorkDetails(workId) {
             nextProjectImage: "./asset/images/works/spark/spark1.png"
         },
         bastoni: {
-            name: "Alessandro Bastoni Identity",
+            name: "Alessandro Bastoni",
             number: "06",
 			subTitle: "Logo & Identity Design",
             haveCover: true,
