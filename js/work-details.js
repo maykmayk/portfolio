@@ -111,12 +111,12 @@ function loadWorkDetails(workId) {
             haveImages: true,
             images: [
                 "./asset/images/works/visart/1Vis.png",
+                "./asset/images/works/visart/2Vis.gif",
+                "./asset/images/works/visart/7Vis.gif",
                 "./asset/images/works/visart/5Vis.png",
                 "./asset/images/works/visart/3Vis.png",
                 "./asset/images/works/visart/4Vis.png",
-                "./asset/images/works/visart/2Vis.png",
                 "./asset/images/works/visart/6Vis.png",
-                "./asset/images/works/visart/7Vis.png",
                 "./asset/images/works/visart/8Vis.png",
             ],
             tags: [
@@ -141,10 +141,10 @@ function loadWorkDetails(workId) {
             showMoreLink: "",
             haveImages: true,
             images: [
-                "./asset/images/works/domu/domu1.png",
+                "./asset/images/works/domu/domu1.gif",
                 "./asset/images/works/domu/domu2.png",
                 "./asset/images/works/domu/domu3.png",
-                "./asset/images/works/domu/domu4.png",
+                "./asset/images/works/domu/domu4.gif",
                 "./asset/images/works/domu/domu5.png",
                 "./asset/images/works/domu/domu6.png",
             ],
