@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Space Invaders</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: 'Press Start 2P', monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 6vh;
+        }
+
+        h1,
+        p {
+            margin: 20px 0;
+        }
+
+        canvas {
+            margin-top: 5vh;
+            border: 2px solid white;
+        }
+        a {
+            color: white;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>50m37h1ng w3nt wr0ng</h1>
+    <p>M1k3 sy45: A/D t0 m0v3, sp4C3 t0 sh00t</p>
+    <canvas id="gameCanvas" width="800" height="400"></canvas>
+    <p style="margin-top: 5vh;"><a href="./index.html">Back home</a></p>
+
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+
+        const PIXEL_SIZE = 2;
+        const PLAYER_SIZE = 10 * PIXEL_SIZE;
+        const ENEMY_SIZE = 6 * PIXEL_SIZE;
+        const BULLET_SIZE = 2 * PIXEL_SIZE;
+
+        let playerX = canvas.width / 2;
+        let bullets = [];
+        let enemyBullets = [];
+        let enemies = [];
+        let gameOver = false;
+        let victory = false;
+        const keysPressed = {};
+
+        function setupEnemies() {
+            const patterns = {
+                4: [
+                    [0, 0, 1, 1, 0, 0],
+                    [0, 1, 0, 1, 0, 0],
+                    [1, 0, 0, 1, 0, 0],
+                    [1, 1, 1, 1, 1, 1],
+                    [0, 0, 0, 1, 0, 0],
+                    [0, 0, 0, 1, 0, 0],
+                    [0, 0, 0, 1, 0, 0]
+                ],
+                0: [
+                    [0, 1, 1, 1, 1, 0],
+                    [1, 0, 0, 0, 0, 1],
+                    [1, 0, 0, 0, 0, 1],
+                    [1, 0, 0, 0, 0, 1],
+                    [1, 0, 0, 0, 0, 1],
+                    [1, 0, 0, 0, 0, 1],
+                    [0, 1, 1, 1, 1, 0]
+                ]
+            };
+
+            let startX = canvas.width / 2 - (ENEMY_SIZE * 14);
+            let startY = 50;
+
+            ['4', '0', '4'].forEach((digit, digitIndex) => {
+                const pattern = patterns[digit];
+                pattern.forEach((row, rowIndex) => {
+                    row.forEach((cell, cellIndex) => {
+                        if (cell === 1) {
+                            enemies.push({
+                                x: startX + (cellIndex * ENEMY_SIZE * 1) + (digitIndex * ENEMY_SIZE * 10),
+                                y: startY + (rowIndex * ENEMY_SIZE * 1),
+                                alive: true
+                            });
+                        }
+                    });
+                });
+            });
+        }
+
+        function drawPixelatedRect(x, y, width, height, color = '#fff') {
+            ctx.fillStyle = color;
+            for (let i = 0; i < width; i += PIXEL_SIZE) {
+                for (let j = 0; j < height; j += PIXEL_SIZE) {
+                    ctx.fillRect(Math.floor(x + i), Math.floor(y + j), PIXEL_SIZE - 1, PIXEL_SIZE - 1);
+                }
+            }
+        }
+
+        function draw() {
+            ctx.fillStyle = '#000';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            drawPixelatedRect(playerX - PLAYER_SIZE / 2, canvas.height - PLAYER_SIZE - 20, PLAYER_SIZE, PLAYER_SIZE);
+
+            bullets.forEach(bullet => {
+                if (bullet.active) {
+                    drawPixelatedRect(bullet.x - BULLET_SIZE / 2, bullet.y, BULLET_SIZE, BULLET_SIZE * 2, '#ff0000');
+                }
+            });
+
+            enemyBullets.forEach(bullet => {
+                if (bullet.active) {
+                    drawPixelatedRect(bullet.x - BULLET_SIZE / 2, bullet.y, BULLET_SIZE, BULLET_SIZE * 2);
+                }
+            });
+
+            enemies.forEach(enemy => {
+                if (enemy.alive) {
+                    drawPixelatedRect(enemy.x, enemy.y, ENEMY_SIZE, ENEMY_SIZE);
+                }
+            });
+
+            if (gameOver || victory) {
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#fff';
+                ctx.textAlign = 'center';
+                ctx.font = '20px "Press Start 2P"';
+                ctx.fillText(victory ? 'Victory Royale!' : 'Game Over - Press R to Restart', canvas.width / 2, canvas.height / 2);
+            }
+        }
+
+        function update() {
+            const speed = 5;
+            if (keysPressed['a'] || keysPressed['arrowleft']) {
+                playerX = Math.max(PLAYER_SIZE / 2, playerX - speed);
+            }
+            if (keysPressed['d'] || keysPressed['arrowright']) {
+                playerX = Math.min(canvas.width - PLAYER_SIZE / 2, playerX + speed);
+            }
+
+            bullets.forEach(bullet => {
+                if (!bullet.active) return;
+                bullet.y -= 8;
+
+                enemies.forEach(enemy => {
+                    if (enemy.alive && bullet.active && bullet.x > enemy.x && bullet.x < enemy.x + ENEMY_SIZE && bullet.y > enemy.y && bullet.y < enemy.y + ENEMY_SIZE) {
+                        enemy.alive = false;
+                        bullet.active = false;
+                    }
+                });
+
+                if (bullet.y < 0) bullet.active = false;
+            });
+
+            bullets = bullets.filter(bullet => bullet.active);
+
+            if (enemies.every(enemy => !enemy.alive)) victory = true;
+
+            enemyBullets.forEach(bullet => {
+                if (!bullet.active) return;
+                bullet.y += 5;
+
+                if (bullet.x > playerX - PLAYER_SIZE / 2 && bullet.x < playerX + PLAYER_SIZE / 2 && bullet.y > canvas.height - PLAYER_SIZE - 20 && bullet.y < canvas.height - 20) {
+                    gameOver = true;
+                    bullet.active = false;
+                }
+
+                if (bullet.y > canvas.height) bullet.active = false;
+            });
+
+            enemyBullets = enemyBullets.filter(bullet => bullet.active);
+        }
+
+        function randomEnemyShoot() {
+            const aliveEnemies = enemies.filter(enemy => enemy.alive);
+            if (aliveEnemies.length > 0) {
+                const shooter = aliveEnemies[Math.floor(Math.random() * aliveEnemies.length)];
+                enemyBullets.push({ x: shooter.x + ENEMY_SIZE / 2, y: shooter.y + ENEMY_SIZE, active: true });
+            }
+        }
+
+        function gameLoop() {
+            if (!gameOver && !victory) {
+                update();
+                draw();
+                requestAnimationFrame(gameLoop);
+            } else {
+                draw();
+            }
+        }
+
+        function handleKeyDown(e) {
+            if ((gameOver || victory) && e.key.toLowerCase() === 'r') {
+                gameOver = false;
+                victory = false;
+                enemies = [];
+                bullets = [];
+                enemyBullets = [];
+                playerX = canvas.width / 2;
+                setupEnemies();
+                gameLoop();
+                return;
+            }
+
+            keysPressed[e.key.toLowerCase()] = true;
+
+            if (e.key === ' ') {
+                bullets.push({ x: playerX, y: canvas.height - PLAYER_SIZE - 20, active: true });
+            }
+        }
+
+        function handleKeyUp(e) {
+            keysPressed[e.key.toLowerCase()] = false;
+        }
+
+        function handleClick() {
+            if (!gameOver && !victory) {
+                bullets.push({ x: playerX, y: canvas.height - PLAYER_SIZE - 20, active: true });
+            }
+        }
+
+        window.addEventListener('keydown', handleKeyDown);
+        window.addEventListener('keyup', handleKeyUp);
+        canvas.addEventListener('click', handleClick);
+
+        setupEnemies();
+        setInterval(randomEnemyShoot, 1000);
+        gameLoop();
+    </script>
+</body>
+
+</html>

@@ -298,7 +298,7 @@ function loadWorkDetails(workId) {
     <div class="linez"></div>
     <div class="containerHover"><a href="${work.nextProjectLink}">
         <div class="d-flex w-100 h-100 justify-content-center align-items-center">
-            <div class="fs-2">
+            <div class="fs-5">
                 <div class="seeWorks me-0">Next Project</div>
             </div>
         </div>
