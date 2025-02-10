@@ -28,18 +28,38 @@
             margin-top: 5vh;
             border: 2px solid white;
         }
+
         a {
             color: white;
+        }
+
+        /* Media query for mobile screens */
+        @media (max-width: 768px) {
+            canvas {
+                display: none;
+            }
+
+            #miao {
+                display: none;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1>50m37h1ng w3nt wr0ng</h1>
-    <p>M1k3 sy45: A/D t0 m0v3, sp4C3 t0 sh00t</p>
+    <h1 style="text-align: center;">50m37h1ng w3nt wr0ng</h1>
+    <p id="miao">M1k3 sy45: A/D t0 m0v3, sp4C3 t0 sh00t</p>
     <canvas id="gameCanvas" width="800" height="400"></canvas>
-    <p style="margin-top: 5vh;"><a href="./index.html">Back home</a></p>
+    <p style="margin-top: 5vh; text-align: center;"><a href="./index.html">Back home</a></p>
 
     <script>
         const canvas = document.getElementById('gameCanvas');
